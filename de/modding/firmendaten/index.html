@@ -1,0 +1,1541 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ventyres3d.github.io/fleet-road-realism/de/modding/firmendaten/">
+      
+      
+        <link rel="prev" href="../frachtdaten/">
+      
+      
+        <link rel="next" href="../fahrverbote/">
+      
+      
+        
+          <link rel="alternate" href="/fleet-road-realism/de/" hreflang="de">
+        
+          <link rel="alternate" href="/fleet-road-realism/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Firmen- und Containerdaten - Fleet & Road Realism Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#firmen-und-containerdaten" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Fleet &amp; Road Realism Wiki" class="md-header__button md-logo" aria-label="Fleet & Road Realism Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fleet & Road Realism Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Firmen- und Containerdaten
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Dunkel"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkel" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Hell"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hell" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/fleet-road-realism/de/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/fleet-road-realism/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fleet &amp; Road Realism Wiki" class="md-nav__button md-logo" aria-label="Fleet & Road Realism Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5z"/></svg>
+
+    </a>
+    Fleet & Road Realism Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spieler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Spieler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spieler/funktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spieler/einstellungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einstellungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fahrzeugdaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fahrzeugdaten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frachtdaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frachtdaten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmen- und Containerdaten
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmen- und Containerdaten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-firmen-dateien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Firmen-Dateien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1a-offnungszeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1a. Öffnungszeiten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1b-reachstacker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1b. Reachstacker (Container)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1c-frachtfilter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1c. Frachtfilter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1d-auflieger-auftrage-was-am-ziel-passiert-ruckfahrten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1d. Auflieger-Aufträge: was am Ziel passiert (Rückfahrten)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1e-wartezeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1e. Wartezeiten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1f-spuren-je-aufbau-parkschwierigkeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1f. Spuren je Aufbau (Parkschwierigkeit)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1g-teilladungen-und-tourplanung-frachtmarkt-eigener-auflieger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1g. Teilladungen und Tourplanung (Frachtmarkt, eigener Auflieger)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-containerfracht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Containerfracht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbol-fur-leercontainer-zuruck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbol für "Leercontainer zurück"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-land-datei-fahrerlohn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Land-Datei (Fahrerlohn)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispieldateien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispieldateien
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fahrverbote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lkw-Fahrverbote
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ladungssicherung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ladungssicherung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-firmen-dateien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Firmen-Dateien
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1a-offnungszeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1a. Öffnungszeiten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1b-reachstacker-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1b. Reachstacker (Container)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1c-frachtfilter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1c. Frachtfilter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1d-auflieger-auftrage-was-am-ziel-passiert-ruckfahrten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1d. Auflieger-Aufträge: was am Ziel passiert (Rückfahrten)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1e-wartezeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1e. Wartezeiten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1f-spuren-je-aufbau-parkschwierigkeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1f. Spuren je Aufbau (Parkschwierigkeit)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1g-teilladungen-und-tourplanung-frachtmarkt-eigener-auflieger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1g. Teilladungen und Tourplanung (Frachtmarkt, eigener Auflieger)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-containerfracht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Containerfracht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbol-fur-leercontainer-zuruck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbol für "Leercontainer zurück"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-land-datei-fahrerlohn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Land-Datei (Fahrerlohn)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispieldateien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispieldateien
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="firmen-und-containerdaten">Firmen- und Containerdaten<a class="headerlink" href="#firmen-und-containerdaten" title="Permanent link">&para;</a></h1>
+<p>Kleine optionale Dateien sagen der Mod, wann eine Firma offen ist, ob sie einen Reachstacker für Container hat und was eine Containerfracht ist. Sie funktionieren mit jeder Karte und jeder Fracht-Mod: die Dateien liegen neben den Dateien, die das Spiel ohnehin lädt. Die Beispiele im Ordner def/ dieses Pakets zeigen das Format.</p>
+<h2 id="1-firmen-dateien">1. Firmen-Dateien<a class="headerlink" href="#1-firmen-dateien" title="Permanent link">&para;</a></h2>
+<p>Gleicher Ordner und gleicher Name wie die Firmen-Dateien des Spiels, nur mit .v3def:</p>
+<div class="highlight"><pre><span></span><code>alle Städte   /def/company/your_company.sui
+           -&gt; /def/company/your_company.v3def
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>eine Stadt    /def/company/your_company/editor/your_city.sii
+           -&gt; /def/company/your_company/editor/your_city.v3def
+</code></pre></div>
+<p>Der Name der Stadt-Datei ist das Stadt-Token (Name der Editor-Datei bis zum ersten Punkt). Eine Stadt-Datei ersetzt in dieser Stadt die Öffnungszeiten der Firmen-Datei, und eine container_load-Zeile in einer Stadt-Datei gilt nur für diese Stadt (z. B. eine Firma, die nur an einem Standort einen Reachstacker hat).</p>
+<h2 id="1a-offnungszeiten">1a. Öffnungszeiten<a class="headerlink" href="#1a-offnungszeiten" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>working_time :
+{
+monday: (06.00, 22.00)
+saturday: (07.00, 12.00);(13.00, 16.00)
+sunday: closed
+}
+</code></pre></div>
+<ul>
+<li>Tage: monday tuesday wednesday thursday friday saturday sunday</li>
+<li>eine oder mehrere Zeitspannen (hh.mm, hh.mm), mehrere getrennt durch ;</li>
+<li>24.00 = Ende des Tages; ein Ende vor oder gleich dem Anfang läuft über Mitternacht, z. B. (22.00, 06.00)</li>
+<li>closed = ganzen Tag geschlossen</li>
+<li>fehlender Tag = ganzen Tag offen</li>
+<li>keine Datei oder kein working_time-Block = die Firma ist immer offen</li>
+</ul>
+<p>Solange eine Firma geschlossen ist, sind ihre Angebote ausgeblendet, es wird dort keine neue Fracht erzeugt, und ihr Firmenpunkt zeigt "geschlossen" mit den Öffnungszeiten.</p>
+<p>Schwertransporte (oversize) können in derselben Datei eigene Zeiten haben:</p>
+<div class="highlight"><pre><span></span><code>working_time_oversize :
+{
+monday: (07.00, 16.00)
+saturday: closed
+sunday: closed
+}
+</code></pre></div>
+<ul>
+<li>gleiches Format wie working_time</li>
+<li>gilt für das Laden (Start) und Entladen (Ziel) von Schwertransporten; fehlender Block = working_time gilt</li>
+<li>ein Schwertransport-Angebot erscheint nur, wenn es jetzt geladen, gefahren (50 km/h im Schnitt, höchstens 10 h Fahrt je 24 h, 45 min Pause nach 4,5 h) und in diesen Zeiten vor Freitag 15:00 entladen werden kann (keine Schwertransporte Fr 15:00 - Mo 09:00)</li>
+</ul>
+<h2 id="1b-reachstacker-container">1b. Reachstacker (Container)<a class="headerlink" href="#1b-reachstacker-container" title="Permanent link">&para;</a></h2>
+<table class="kv">
+<tr><td><code>container_load: true</code></td><td>Reachstacker: Containerfracht wird an eigene Container-Chassis vergeben, ein Container wird beim Abliefern abgehoben</td></tr>
+<tr><td><code>container_load: false</code></td><td>kein Reachstacker: keine Containerfracht für eigene Container-Chassis, der Container bleibt auf dem Chassis</td></tr>
+</table>
+
+<p>Firmen ohne die Zeile: der Frachtmarkt bleibt unverändert; beim Abliefern gilt die Firma als ohne Reachstacker (Container bleibt).</p>
+<p>Was mit einem eigenen Container-Chassis passiert:</p>
+<ul>
+<li>Ein Container wird nur dort auf- und abgesetzt, wo die Firma einen Reachstacker hat.</li>
+<li>Bei einer Firma ohne Reachstacker abgeliefert, bleibt der Container auf dem Chassis. Das Chassis arbeitet dann wie der Aufliegertyp des Containers (siehe 2.), mit Leergewicht und Innenvolumen des Containers, und der Frachtmarkt bietet Fracht für diesen Aufliegertyp an.</li>
+<li>Direkt nach dem Entladen dort bietet der Frachtmarkt dieser Firma auch "Leercontainer" zurück zu einer der 10 nächsten Firmen mit Reachstacker an: wenig Lohn, kein Beladen. Das Angebot gilt, solange der Lkw auf dem Firmenhof bleibt.</li>
+<li>Eine Fracht, die im Container zu einer Firma mit Reachstacker gefahren wird, nimmt den Container vom Chassis.</li>
+</ul>
+<h2 id="1c-frachtfilter">1c. Frachtfilter<a class="headerlink" href="#1c-frachtfilter" title="Permanent link">&para;</a></h2>
+<p>Blöcke mit einer Fracht je Zeile, geschrieben als cargo_data-Name des Spiels (cargo.&lt;name&gt;, wie in der Fracht-.sui):</p>
+<div class="highlight"><pre><span></span><code>ignore_in :                  Fracht, die die Firma nie annimmt
+{                            (Frachtmarkt und Auflieger-Aufträge)
+cargo.air_mails
+}
+ignore_out :                 Fracht, die die Firma nie verschickt
+{ ... }
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>freight_market: false        keine Frachtmarkt-Angebote für eigene Auflieger
+                             bei dieser Firma ("Frachtmarkt" / "Externer
+                             Frachtmarkt"); die Firma lädt auch nie Fracht
+                             auf einen Auflieger, der nicht ihr eigener ist
+freight_market_ignore_in : { ... }    nur für den Frachtmarkt
+freight_market_ignore_out : { ... }
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>semi_trailerjob_in: false    keine Auflieger-Aufträge ("Frachtaufträge",
+semi_trailerjob_out: false   Auflieger wird gestellt) zu / von dieser Firma
+semi_trailerjob_ignore_in : { ... }   nur für Auflieger-Aufträge
+semi_trailerjob_ignore_out : { ... }
+</code></pre></div>
+<ul>
+<li>für freight_market / semi_trailerjob_in / _out ist nur false erlaubt; fehlende Zeile = das Spiel listet vollständig</li>
+<li>die Filter addieren sich (z. B. ignore_out und semi_trailerjob_ignore_out)</li>
+<li>was bei einer Firma ankommt, entscheiden nur ihr in-Ordner im Spiel und diese Filter</li>
+</ul>
+<h2 id="1d-auflieger-auftrage-was-am-ziel-passiert-ruckfahrten">1d. Auflieger-Aufträge: was am Ziel passiert (Rückfahrten)<a class="headerlink" href="#1d-auflieger-auftrage-was-am-ziel-passiert-ruckfahrten" title="Permanent link">&para;</a></h2>
+<p>Bei Auflieger-Aufträgen entscheidet die Zielfirma je Aufbau des Aufliegers, was nach der Ankunft passiert:</p>
+<div class="highlight"><pre><span></span><code>semi_trailerjob_return_full :    entladen, Rückfracht bei dieser Firma
+{                                laden, zurück zum Absender
+curtainside
+dryvan
+}
+semi_trailerjob_return_empty :   nur entladen; die Rückfracht wird bei der
+{                                nächsten passenden Firma geladen (zuerst
+fueltank                         in der Stadt, sonst ausserhalb), sonst leer
+lowbed                           zurück
+}
+semi_trailerjob_drop: true       reiner Abstellplatz (z. B. unbegleitete
+                                 Auflieger für Fähre oder Bahn): jeder
+                                 Auflieger wird nur abgestellt, der Auftrag
+                                 endet dort
+trailer_hub: true                Umschlagplatz (Bahn- oder Fährterminal):
+                                 nimmt als ABSENDER beladene Auflieger
+                                 zurück, die Rückfracht muss nicht in
+                                 seiner in-Liste stehen
+</code></pre></div>
+<p>Aufbau ohne Eintrag: curtainside, dryvan, refrigerated, insulated, flatbed, container, flatbed_cont = return_full; jeder andere Aufbau (Tanks, Silo, Kipper, Tieflader, Holz, Viehtransporter, Autotransporter ...) = return_empty. Faustregel: return_full für einen Spezialaufbau nur dort, wo die Firma diesen Aufbau selbst belädt (Steinbruch - Kipper, Sägewerk - Holz, Autoterminal - Autotransporter); Tieflader immer return_empty.</p>
+<p>Rückfracht:</p>
+<ul>
+<li>geladen, wie der Frachtmarkt des Spiels einen Auflieger belädt, der nicht der Firma gehört: die Fracht muss zum Auflieger passen (Aufbau, Volumen, Gewicht), die ladende Firma muss sie verschicken dürfen (ignore_out, freight_market-Regeln; semi_trailerjob_out gilt nicht, die Firma lädt nur), der Absender muss sie annehmen (seine in-Liste, ignore_in, semi_trailerjob-Regeln), ausser der Absender ist ein trailer_hub</li>
+<li>zufällig nach den Frachtgewichtungen des Spiels gewählt, fest je Angebot</li>
+<li>Container: ladende Firma mit container_load: true - der Container wird abgehoben und jede Containerfracht kommt aufs Chassis; mit container_load: false - der Container bleibt, ein Koffercontainer wird mit Fracht seines Aufbaus beladen, ein Spezialcontainer (body_type = Frachtname, siehe Abschnitt 2) nur mit dieser Fracht</li>
+<li>die Zielfirma gibt nie die Fracht zurück, die sie gerade bekommen hat</li>
+<li>die ganze Fahrt ist ein Auftrag: eine Lieferzeit beim Absender, bezahlt beim Absender: Hinfracht + Rückfracht; eine Leerfahrt (Ziel - ladende Firma, oder leer zurück) wird wie ein Leercontainer bezahlt: 10 % der Einheiten der Hinfracht je km</li>
+</ul>
+<p>Die Auftragsliste zeigt die Fahrt als Start &gt; Ziel &gt; (2. Firma &gt;) Start, die Rückfracht blau nach der Hinfracht, dazu Gesamtstrecke, -zeit und -lohn. Eine Stadt-Datei kann dieselben Zeilen für eine Stadt enthalten (ein Block in der Stadt-Datei geht für seine Aufbauten vor).</p>
+<h2 id="1e-wartezeiten">1e. Wartezeiten<a class="headerlink" href="#1e-wartezeiten" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>wait_time :
+{
+load: 30-180
+unload: 30-180
+pickup: 5-20
+drop: 5-15
+}
+wait_factors :
+{
+1.5 : (06.00, 08.00);(12.00, 13.00)
+0.7 : (22.00, 06.00)
+}
+</code></pre></div>
+<ul>
+<li>load = Beladen, unload = Entladen, pickup = Übernahme eines vorbereiteten, beladenen Aufliegers, drop = Abstellen des Aufliegers an einem reinen Abstellplatz (T)</li>
+<li>Minuten von-bis; bei jeder Anmeldung wird eine Zeit dazwischen gewürfelt</li>
+<li>wait_factors: Faktor = Zeitspannen (hh.mm oder hh:mm), mehrere Spannen mit demselben Faktor getrennt durch ;  ein Ende vor oder gleich dem Anfang läuft über Mitternacht; ausserhalb aller Spannen ist der Faktor 1.0</li>
+<li>fehlende Zeile oder fehlender Block: Stadt-Datei, dann Firmen-Datei, dann Standard: load/unload 30-180, pickup 5-20, drop 5-15, Faktoren 06-10 x1.5, 16-22 x0.7, 22-06 x0.5</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Die Wartezeit liegt zwischen dem Bestätigen (Wahl der Parkschwierigkeit beim
+Abliefern, Enter an der Lade-/Abladespur mit eigenem Auflieger oder die
+Lade-Kachel) und der Freigabe von Spur bzw. Auflieger. Bei der Anmeldung zeigt
+eine Meldung die erwartete Zeit. Verlassen des Firmengeländes hebt die
+Anmeldung auf. Während des Wartens auf dem Gelände anhalten und den Motor
+abstellen: ein Hinweis bietet eine Pause bis zum Ende der Wartezeit an. Bei der
+Freigabe geht alles von selbst weiter.
+</code></pre></div>
+<h2 id="1f-spuren-je-aufbau-parkschwierigkeit">1f. Spuren je Aufbau (Parkschwierigkeit)<a class="headerlink" href="#1f-spuren-je-aufbau-parkschwierigkeit" title="Permanent link">&para;</a></h2>
+<p>Eine Firma kann Spuren einer Schwierigkeit für bestimmte Aufbauten sperren, z. B. keine Tieflader an den Laderampen (schwere Spuren):</p>
+<div class="highlight"><pre><span></span><code>lanes_hard_ignore :          Aufbauten (body_type des Aufliegers, ohne
+{                            Präfix), die nie auf einer schweren Spur
+lowbed                       laden oder entladen
+lowboy
+}
+lanes_medium_ignore : { ... }   dasselbe für mittlere Spuren
+lanes_easy_ignore : { ... }     dasselbe für leichte Spuren
+</code></pre></div>
+<ul>
+<li>gilt für jede Auftragsart bei dieser Firma: Frachtmarkt, Fahreraufträge, Auflieger-Aufträge und Rückfracht</li>
+<li>Beladen: liegt die Ladespur des Auftrags auf einer gesperrten Schwierigkeit, bekommt der Auftrag eine freie erlaubte Ladespur der Firma (passende Länge, nicht belegt); gibt es keine, bleibt die Spur des Spiels</li>
+<li>Entladen: gesperrte Schwierigkeiten sind nicht wählbar</li>
+<li>Frachtmarkt: hat die ladende Firma keine erlaubte Ladespur oder das Ziel keine erlaubte Abladespur für den Auflieger, gibt es kein Angebot dafür</li>
+<li>es zählt der Aufbau des angekuppelten Aufliegers</li>
+<li>fest in der DLL, bei allen Firmen: Tieflader (lowbed, lowboy) nur an leichten Spuren; mittlere, schwere und Ladestellen ohne Schwierigkeit (z. B. Rampen) sind für sie immer gesperrt; ausgenommen Umschlagplätze (trailer_hub: true), dort wird nur abgestellt</li>
+<li>eine Stadt-Datei kann dieselben Blöcke enthalten; sie addieren sich zur Firmen-Datei</li>
+</ul>
+<h2 id="1g-teilladungen-und-tourplanung-frachtmarkt-eigener-auflieger">1g. Teilladungen und Tourplanung (Frachtmarkt, eigener Auflieger)<a class="headerlink" href="#1g-teilladungen-und-tourplanung-frachtmarkt-eigener-auflieger" title="Permanent link">&para;</a></h2>
+<p>Eine Firma kann im Frachtmarkt Teilladungen anbieten und annehmen:</p>
+<div class="highlight"><pre><span></span><code>units_out :                  Einheiten, die diese Firma je Fracht VERSCHICKT
+{
+default: 1-max               jede Menge bis zur vollen Ladung
+cargo.furniture: 1-6         diese Fracht nur 1 bis 6 Einheiten
+cargo.cement: max            diese Fracht nur als volle Ladung
+}
+units_in : { ... }           dasselbe für das, was diese Firma ANNIMMT
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>load_mix_out :               wie oft eine volle bzw. eine Teilladung
+{                            angeboten wird (Gewichtung, beliebige Zahlen)
+default :
+{
+full: 60
+partial: 40
+}
+cargo.furniture :
+{
+full: 20
+partial: 80
+}
+}
+load_mix_in : { ... }        dasselbe auf der Empfängerseite
+</code></pre></div>
+<ul>
+<li>Werte: eine Zahl, von-bis (z. B. 1-6) oder max (= volle Ladung)</li>
+<li>eine cargo.&lt;name&gt;-Zeile geht vor, sonst gilt default</li>
+<li>eine Stadt-Datei ersetzt in dieser Stadt den ganzen Block der Firmen-Datei</li>
+<li>kein units-Block bei Absender und Empfänger = nur volle Ladungen wie im Spiel; ein Block nur auf einer Seite = die andere Seite nimmt nur volle Ladungen</li>
+<li>kein load_mix-Block = volle und Teilladungen halb und halb</li>
+<li>tour und mixed in load_mix sind für eine spätere Version reserviert</li>
+<li>eine Teilladung ist weniger als die Mindestfüllung des Aufliegers (cargo_min_fill des Aufbaus in /def/economy_trailers_data/, im Spiel meist 0.8); die Menge ist auf das begrenzt, was noch auf den Auflieger passt</li>
+<li>Fracht mit load_unit: whole (siehe README der Frachtdaten) gibt es nie als Teilladung</li>
+</ul>
+<p>Zuladen und Tourplanung mit Teilladungen:</p>
+<ul>
+<li>"Als Navi-Ziel einstellen" bei einem Frachtmarkt-Angebot merkt es vor (auch bevor etwas geladen ist); Annehmen auf dem Firmenhof nimmt es in die Fahrt; höchstens 8 Aufträge und Vormerkungen zusammen</li>
+<li>jeder Auftrag und jede Vormerkung belegt ihren Anteil an Platz und Gewicht; der Frachtmarkt zeigt dann nur noch Angebote, die zusätzlich passen: Platz, Gewicht, Temperatur / Lebensmittel / Gefahrgut, Lieferzeiten und das Gebiet: ab der zweiten Fracht müssen Absender UND Empfänger eines neuen Angebots je höchstens 100 km (Strasse) von einem Absender oder Empfänger der Fahrt entfernt liegen (auch im Ausland); die erste Fracht ist frei</li>
+<li>ein voll verplanter Auflieger sperrt den Frachtmarkt, bis ein Teil abgeliefert oder eine Vormerkung storniert ist</li>
+<li>der aktive Auftrag (Navi) ist die Wahl des Spielers (Rechtsklick auf eine Auftragskachel im Hauptmenü oder "Als Nächstes anfahren" in "Aktueller Auftrag"), sonst das nächste Ziel zuerst, ausser ein anderer Auftrag würde dadurch seine Lieferzeit verpassen</li>
+<li>Fahrt und Vormerkungen werden mit dem Spielstand gespeichert</li>
+</ul>
+<h2 id="2-containerfracht">2. Containerfracht<a class="headerlink" href="#2-containerfracht" title="Permanent link">&para;</a></h2>
+<p>Gleicher Ordner und gleicher Name wie die model_area-Datei der Containerfracht, nur mit .v3def, eine Datei je Containergrösse:</p>
+<div class="highlight"><pre><span></span><code>/def/vehicle/cargo/your_cargo_c/model_area_20.sii
+-&gt; /def/vehicle/cargo/your_cargo_c/model_area_20.v3def
+/def/vehicle/cargo/your_cargo_c/model_area_40.sii
+-&gt; /def/vehicle/cargo/your_cargo_c/model_area_40.v3def
+</code></pre></div>
+<table class="kv">
+<tr><td><code>body_type: dryvan</code></td><td>Container für jede Fracht dieses Aufliegertyps, solange er auf dem Chassis bleibt (dryvan, refrigerated, insulated, oder foodtank für einen Lebensmittel-Tankcontainer)</td></tr>
+<tr><td><code>body_type: &lt;Frachtname&gt;</code></td><td>Spezialcontainer für genau eine Fracht (z. B. Gefahrgut-Tankcontainer - Kraftstoff, Chemikalien, Gas - deren Tafeln zur Fracht gehören): der Aufbau heisst GENAU wie die Fracht (ihre Fracht-.sui und dieser Ordner). Er wird nur wieder mit dieser Fracht beladen, nie von der Firma, die ihn gerade bekommen hat (eine andere Firma belädt ihn, sonst geht er leer zurück). Jeder andere Name steht im Log.</td></tr>
+<tr><td><code>body_type: none</code></td><td>gar keine Folgefracht: der Container kann nur leer zurückgebracht werden</td></tr>
+<tr><td><code>body_mass: 2200</code></td><td>Leergewicht des Containers in kg</td></tr>
+<tr><td><code>volume: 33</code></td><td>Innenvolumen in m3</td></tr>
+</table>
+
+<div class="highlight"><pre><span></span><code>Fehlende Datei oder fehlende Zeile - Standardwerte:
+  body_type  dryvan
+  body_mass  20 ft 2200 kg, 40 ft 3750 kg  (Kühl: 3000 / 4800 kg)
+  volume     20 ft 33 m3,   40 ft 67 m3    (Kühl: 28 / 59 m3)
+20 ft oder 40 ft ergibt sich aus der Modellgrösse (länger als 9 m = 40 ft).
+</code></pre></div>
+<h2 id="symbol-fur-leercontainer-zuruck">Symbol für "Leercontainer zurück"<a class="headerlink" href="#symbol-fur-leercontainer-zuruck" title="Permanent link">&para;</a></h2>
+<p>Datei: def/vehicle/cargo/&lt;your_cargo_c&gt;/accessory_container_&lt;grösse&gt;_&lt;farbe&gt;.v3def (gleicher Name wie die Accessory-.sii, Endung .v3def)</p>
+<div class="highlight"><pre><span></span><code>empty_icon: "/material/ui/cargo_icons/&lt;your_icon&gt;.mat"
+</code></pre></div>
+<p>Die .mat muss in /material/ui/cargo_icons/ liegen (wie jedes Frachtsymbol, 122 x 96 px, transparent). Sie erscheint im Frachtmarkt und in der Auftragsinfo beim Angebot "Leercontainer zurück" dieses Containers. Fehlende Datei - das Symbol der Mod für einen 20 ft / 40 ft Koffer- oder Tankcontainer wird verwendet.</p>
+<h2 id="3-land-datei-fahrerlohn">3. Land-Datei (Fahrerlohn)<a class="headerlink" href="#3-land-datei-fahrerlohn" title="Permanent link">&para;</a></h2>
+<p>Gleicher Ordner und gleicher Name wie die Land-Datei des Spiels, nur mit .v3def:</p>
+<div class="highlight"><pre><span></span><code>/def/country/your_country.sui
+-&gt; /def/country/your_country.v3def
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>driver_wage :
+{
+hourly_net_wage: 11.13
+daily_allowance: 28
+bonus_max: 25
+allowance_tier[]: 8 0.5
+allowance_travel[]: 0 0.5
+}
+</code></pre></div>
+<ul>
+<li>hourly_net_wage: Nettolohn je Arbeitsstunde; eine Fahrer-Tour zahlt höchstens 10 Arbeitsstunden je Kalendertag und 48 Stunden je Tour (eine Tour dauert höchstens 4 Tage + 8 Stunden)</li>
+<li>daily_allowance: Spesen für einen vollen Tag Abwesenheit</li>
+<li>die Tour beginnt mit der Annahme und endet mit dem Lieferbericht; Kalendertage in Spielzeit. Volle Tage zwischen dem ersten und dem letzten Tag zählen immer voll. Wie viel der erste/letzte Tag und eine eintägige Tour bekommen, hängt vom Land ab:</li>
+<li>allowance_tier[]: Stunden Anteil - eintägige Tour (Start und Ende am selben Kalendertag): der Anteil gilt für MEHR als diese Stunden, die höchste passende Zeile zählt; 0 = jede Dauer. Keine Zeile = nichts. allowance_tier[]: 8 0.5      (mehr als 8 h: halber Tag)</li>
+<li>allowance_travel[]: Stunden Anteil - erster und letzter Tag einer mehrtägigen Tour, Stunden an diesem Tag; fehlt = wie allowance_tier. allowance_travel[]: 0 0.5    (immer halber Tag)</li>
+<li>allowance_meal[]: hh:mm Anteil / night Anteil - statt Stunden: der Anteil zählt, wenn die Essenszeit an diesem Tag in der Tour liegt, night = eine auswärts verbrachte Nacht (nicht am letzten Tag); höchstens 1 je Tag. Zeilen von allowance_meal ersetzen die Stunden-Zeilen. allowance_meal[]: 13:00 0.333 allowance_meal[]: night 0.334</li>
+<li>allowance_same_day: 0 = eine eintägige Tour bekommt keine Spesen</li>
+<li>die Zeilen einer Liste ersetzen die Zeilen der Mod für dieses Land (alle Zeilen dieser Liste, nicht einzelne). Anteile 0 ... 1.</li>
+<li>keine Spesen = keine Spesen-Zeile im Lieferbericht</li>
+<li>bonus_max: höchster Lohn über dem Satz in Prozent; jede Startfirma würfelt je Spielwoche ihren eigenen Bonus (die meisten zahlen den Satz), 0 = nie</li>
+<li>es entscheidet das Land der Firma, bei der die Tour beginnt</li>
+<li>fehlende Datei oder Zeile: der Wert der Mod für dieses Land gilt (lphd_land_v3def.zip enthält sie für alle Länder)</li>
+</ul>
+<p>Fahrer-Touren (Schnellaufträge) zahlen Lohn und Spesen statt des Frachtlohns. Kraftstoff zahlt der Arbeitgeber (Spiel), Abzüge für Frachtschaden oder Verspätung übernimmt der Arbeitgeber.</p>
+<h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
+<p>schlüssel: wert</p>
+<ul>
+<li>ein Eintrag je Zeile, Leerzeichen oder Tabs um den Doppelpunkt erlaubt</li>
+<li>Zeilen mit # oder // am Anfang sind Kommentare, ein # nach dem Wert auch</li>
+<li>Zahlen mit Dezimalpunkt, keine Einheiten in der Zeile</li>
+<li>eine Zeile mit falschem Wert steht im game.log und wird ignoriert</li>
+</ul>
+<h2 id="beispieldateien">Beispieldateien<a class="headerlink" href="#beispieldateien" title="Permanent link">&para;</a></h2>
+<p>Alle Beispiele zum Herunterladen: <a href="../../downloads/resources_company_data.zip">resources_company_data.zip</a></p>
+<details class="example">
+<summary>def/company/your_company.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Firmendaten (Standard fuer alle Staedte dieser Firma) / company data (default for all cities of this company)
+# Datei / file: /def/company/your_company.v3def  (neben / next to /def/company/your_company.sui)
+# Ueber jedem Eintrag steht die Beschreibung (# ...), der Eintrag selbst steht ohne #.
+# Above each entry is its description (# ...), the entry itself has no #.
+# Alle Moeglichkeiten: README_company_data.txt / all options: README_company_data.txt
+
+# Reachstacker vorhanden? true = Container auf-/absetzen, false = Container bleibt auf dem Chassis
+# Reach stacker on site? true = containers are lifted on and off, false = the container stays on the chassis
+container_load: false
+
+# Oeffnungszeiten (Spielzeit), fehlender Tag = ganzen Tag offen, closed = geschlossen
+# Working hours (game time), missing day = open all day, closed = closed all day
+working_time :
+{
+monday: (06.00, 22.00)
+tuesday: (06.00, 22.00)
+wednesday: (06.00, 22.00)
+thursday: (06.00, 22.00)
+friday: (06.00, 22.00)
+saturday: (06.00, 12.00)
+sunday: closed
+}
+
+# Fracht, die diese Firma nie annimmt (cargo.&lt;name&gt; aus der Fracht-.sui, eine je Zeile)
+# Cargo this company never receives (cargo.&lt;name&gt; from the cargo .sui, one per line)
+ignore_in :
+{
+cargo.air_mails
+}
+
+# Auflieger-Auftraege mit dieser Firma als Ziel: je Aufbau Rueckfracht hier laden (full) oder woanders / leer (empty)
+# Trailer jobs with this company as destination: per body type load return cargo here (full) or elsewhere / empty (empty)
+semi_trailerjob_return_full :
+{
+curtainside
+dryvan
+}
+semi_trailerjob_return_empty :
+{
+fueltank
+lowbed
+}
+
+# Aufbauten, die nie auf schweren / mittleren Spuren laden oder entladen
+# Body types that never load or unload on hard / medium bays
+lanes_hard_ignore :
+{
+lowbed
+lowboy
+}
+lanes_medium_ignore :
+{
+lowbed
+lowboy
+}
+
+# Wartezeiten in Minuten von-bis (zufaellig dazwischen)
+# Waiting times in minutes from-to (random in between)
+wait_time :
+{
+load: 30-180
+unload: 30-180
+pickup: 5-20
+drop: 5-15
+}
+
+# Faktor auf die Wartezeit je Tageszeit (ausserhalb der Spannen 1.0)
+# Factor on the waiting time per time of day (outside the spans 1.0)
+wait_factors :
+{
+1.5 : (06.00, 08.00);(12.00, 13.00)
+1.3 : (14.00, 15.00)
+0.7 : (22.00, 06.00)
+}
+
+# Teilladungen: Einheiten, die diese Firma verschickt (Zahl, von-bis oder max = volle Ladung; cargo.&lt;name&gt; vor default)
+# Partial loads: units this company sends (number, from-to or max = full load; cargo.&lt;name&gt; before default)
+units_out :
+{
+default: 1-max
+cargo.furniture: 1-6
+}
+
+# Teilladungen: Einheiten, die diese Firma annimmt
+# Partial loads: units this company receives
+units_in :
+{
+default: 1-max
+}
+
+# Wie oft volle Ladung, Teilladung, Tour (mehrere Empfaenger) bzw. Mischladung (mehrere Frachten
+# zu einem Empfaenger) angeboten wird (Gewichtung); ohne Block = halb und halb, ohne tour/mixed keine
+# How often a full load, partial load, tour (several receivers) or mixed load (several cargos to one
+# receiver) is offered (weights); no block = half and half, without tour/mixed none
+load_mix_out :
+{
+default :
+{
+full: 50
+partial: 30
+tour: 10
+mixed: 10
+}
+}
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/company/your_company/editor/your_city.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - your_company nur in einer Stadt (ersetzt dort your_company.v3def) / your_company in one city only (overrides your_company.v3def there)
+# Datei / file: /def/company/your_company/editor/your_city.v3def  (neben / next to /def/company/your_company/editor/your_city.sii)
+# Ueber jedem Eintrag steht die Beschreibung (# ...), der Eintrag selbst steht ohne #.
+# Above each entry is its description (# ...), the entry itself has no #.
+
+# Dieser Standort hat einen Reachstacker, die anderen Staedte der Firma nicht
+# This site has a reach stacker, the other cities of the company not
+container_load: true
+
+# Oeffnungszeiten an diesem Standort
+# Working hours at this site
+working_time :
+{
+monday: (00.00, 24.00)
+tuesday: (00.00, 24.00)
+wednesday: (00.00, 24.00)
+thursday: (00.00, 24.00)
+friday: (00.00, 24.00)
+saturday: (07.00, 12.00);(13.00, 16.00)
+sunday: (22.00, 06.00)
+}
+
+# Viel Betrieb: laengeres Entladen hier, die Faktoren der Firmen-Datei bleiben (kein wait_factors-Block)
+# Busy site: longer unloading here, factors of the company file stay (no wait_factors block)
+wait_time :
+{
+unload: 60-300
+}
+
+# Zement verschickt dieser Standort nur als volle Ladung (ersetzt hier den units_out-Block der Firmen-Datei)
+# This site sends cement only as a full load (replaces the units_out block of the company file here)
+units_out :
+{
+default: 1-max
+cargo.cement: max
+}
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
+        
+          
+          <a href="../frachtdaten/" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Frachtdaten">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              <div class="md-ellipsis">
+                Frachtdaten
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../fahrverbote/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Lkw-Fahrverbote">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              <div class="md-ellipsis">
+                Lkw-Fahrverbote
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Ventyres 3D
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/ventyres3d" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

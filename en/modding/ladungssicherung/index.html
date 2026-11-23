@@ -1,0 +1,1350 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ventyres3d.github.io/fleet-road-realism/en/modding/ladungssicherung/">
+      
+      
+        <link rel="prev" href="../fahrverbote/">
+      
+      
+      
+        
+          <link rel="alternate" href="/fleet-road-realism/de/" hreflang="de">
+        
+          <link rel="alternate" href="/fleet-road-realism/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Cargo securing - Fleet & Road Realism Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cargo-securing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fleet &amp; Road Realism Wiki" class="md-header__button md-logo" aria-label="Fleet & Road Realism Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fleet & Road Realism Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cargo securing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/fleet-road-realism/de/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/fleet-road-realism/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fleet &amp; Road Realism Wiki" class="md-nav__button md-logo" aria-label="Fleet & Road Realism Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5z"/></svg>
+
+    </a>
+    Fleet & Road Realism Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Players
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spieler/funktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spieler/einstellungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fahrzeugdaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vehicle data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frachtdaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargo data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firmendaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Company and container data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fahrverbote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Truck driving bans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargo securing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargo securing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-cargo-model-cargo_model_match" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Cargo model (cargo_model_match)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1a-edge-guards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1a. Edge guards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1b-wear-at-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1b. Wear at edges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1c-tipping-of-loose-cargo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1c. Tipping of loose cargo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lashing-gear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lashing gear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-anti-slip-mats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Anti-slip mats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deck-trailer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Deck (trailer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-models-of-the-lashing-gear-hook-ratchet-tensioner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Models of the lashing gear (hook, ratchet, tensioner)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example files
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-cargo-model-cargo_model_match" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Cargo model (cargo_model_match)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1a-edge-guards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1a. Edge guards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1b-wear-at-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1b. Wear at edges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1c-tipping-of-loose-cargo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1c. Tipping of loose cargo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lashing-gear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lashing gear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-anti-slip-mats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Anti-slip mats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deck-trailer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Deck (trailer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-models-of-the-lashing-gear-hook-ratchet-tensioner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Models of the lashing gear (hook, ratchet, tensioner)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example files
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cargo-securing">Cargo securing<a class="headerlink" href="#cargo-securing" title="Permanent link">&para;</a></h1>
+<p>Small optional files tell the mod how a cargo is secured and how it behaves: edge guards, wear at edges, tipping and sliding, anti-slip mats, deck and your own lashing gear. They work for every cargo mod: the files sit next to the files the game already loads. The examples in the def/ folder of this package show the format. Everything works with the option "secure cargo yourself"; anti-slip mats are laid by the mod itself without the option.</p>
+<h2 id="1-cargo-model-cargo_model_match">1. Cargo model (cargo_model_match)<a class="headerlink" href="#1-cargo-model-cargo_model_match" title="Permanent link">&para;</a></h2>
+<p>Same folder and same name as the cargo_model_match file of the cargo, only with .v3def:</p>
+<div class="highlight"><pre><span></span><code>/def/vehicle/cargo/your_cargo/model_area.sii
+-&gt; /def/vehicle/cargo/your_cargo/model_area.v3def
+</code></pre></div>
+<p>If there are several match files (e.g. model_area.sii and model_area_1.sii), each one gets its own .v3def. All entries are optional; without the file the defaults apply. An entry with a wrong format is listed as an error in the log (file and value read), that line is then not used.</p>
+<h2 id="1a-edge-guards">1a. Edge guards<a class="headerlink" href="#1a-edge-guards" title="Permanent link">&para;</a></h2>
+<table class="kv">
+<tr><td><code>edge_guard: true</code></td><td>guards can be placed when securing by hand (default: false)</td></tr>
+<tr><td><code>edge_guard_width: 0.20</code></td><td>width of the guard in m, 0.01 - 2 (default: strap = strap width + 0.20, threaded + 0.04; chain 0.20)</td></tr>
+<tr><td><code>edge_guard_leg: 0.10</code></td><td>leg length on each side of the edge in m, 0.005 - 1 (default: strap 0.10, threaded 0.05; chain 0.15)</td></tr>
+</table>
+
+<h2 id="1b-wear-at-edges">1b. Wear at edges<a class="headerlink" href="#1b-wear-at-edges" title="Permanent link">&para;</a></h2>
+<table class="kv">
+<tr><td><code>edge_wear: 0.4</code></td><td>wear of the strap at an edge without guard, 0.0 - 1.0 (default 0.5). With a guard only a fifth counts. Together with the give of the ratchet the strap becomes loose (from 75 %).</td></tr>
+<tr><td><code>edge_crush: 0.5</code></td><td>crushing of the cargo at an edge without guard, 0.0 - 1.0 (default 0.5) - for a later version, no effect yet.</td></tr>
+</table>
+
+<h2 id="1c-tipping-of-loose-cargo">1c. Tipping of loose cargo<a class="headerlink" href="#1c-tipping-of-loose-cargo" title="Permanent link">&para;</a></h2>
+<p>If a lashing on a cargo piece is loose, the piece can tip in corners and when braking - as far as the loose lashing lets it - and drops back with an impact. A tight lashing on the piece holds it. All values in model coordinates (m): x across, y up, z along.</p>
+<table class="kv">
+<tr><td><code>tilt[]: false</code></td><td>this cargo model never tips (e.g. very flat or firmly chocked cargo). Default: true.</td></tr>
+</table>
+
+<div class="highlight"><pre><span></span><code>tilt_base[]: "single|(x, z)|radius"
+    One support point (wheel, foot, prop). Radius = half tyre or foot
+    width, the contact reaches that far outwards (optional, default 0).
+tilt_base[]: "area|(x, z)|(x, z)"
+    A support area: outer dimensions as two opposite corners
+    (crate, pallet, frame, chocks).
+tilt_base[]: "ring|(x, z)|outer radius|inner radius|angle from|angle to"
+    A ring or ring segment (upright pipe section, formwork, arch):
+    circle centre, outer and inner radius, arc from - to in degrees
+    (0 = towards +x, 90 = towards +z). Without angles: full ring.
+    Example half ring over -x: "ring|(1.53, 0.0)|3.05|2.40|90|270"
+</code></pre></div>
+<p>Several lines and all types can be mixed; the support area is the outline around all points. The piece tips about its edge. Without tilt_base[] the mod uses the lowest points of the model (mesh).</p>
+<div class="highlight"><pre><span></span><code>Material or friction value (optional, first field of each tilt_base line):
+what the support area is made of. This gives the static friction on the
+deck (for sliding) and whether an anti-slip mat is needed there
+(section 3). Default 0.45.
+    "material|single|(x, z)|radius"
+    "material|area|(x, z)|(x, z)"
+    "material|ring|(x, z)|outer radius|inner radius|angle from|angle to"
+Materials (value on a wooden deck):
+    wood 0.50       sawn wood (beams, crates, skids)
+    plastic 0.20    plastic
+    metal 0.45      steel / metal
+    concrete 0.55   concrete
+    rubber 0.60     rubber (tyres, rubber tracks)
+    straw 0.40      straw
+Instead of a material a number 0.01 - 1.5 works too (friction on a wooden
+deck). Guide values per EN 12195-1: planed wood 0.3, rough concrete 0.7.
+The value is combined with the deck of the trailer (section 4).
+Example wheel: tilt_base[]: "rubber|single|(-0.75, -0.40)|0.08"
+Example skid: tilt_base[]: "wood|area|(-1.15, -0.70)|(1.15, -0.60)"
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>coll_base[]: "single|(x, y, z)|radius"
+coll_base[]: "area|(x, y, z)|(x, y, z)"
+coll_base[]: "cylinder|(x, y, z)|(x, y, z)|radius"
+    parts that touch the deck when tipping (forks, bucket, attachment,
+    overhang). Tipping stops there. single = point with radius,
+    area = surface from two opposite corners (x, y, z). Height and width
+    change evenly along the length (z): different heights = sloped. If the
+    corners are left and right of the centre, the surface is a trapezoid
+    symmetric to the centre (+-x at each end, e.g. wide and low at the
+    fender, narrow and higher at the end of the box). If both are on the
+    same side, it is a rectangle between them (e.g. mast beside the centre).
+    cylinder = cylinder (boiler, pipe): centre of both end faces (start and
+    end point) and radius. A second radius after it applies at the end point
+    (cone, transition): "cylinder|(x, y, z)|(x, y, z)|1.70|0.80"
+    Without entry the mod uses all model points up to 0.6 m height.
+</code></pre></div>
+<table class="kv">
+<tr><td><code>tilt_cog[]: (x, y, z)</code></td><td>centre of gravity. Without entry: centre of the model. Low and far inside = stable, high and close to an edge = tips early.</td></tr>
+</table>
+
+<div class="highlight"><pre><span></span><code>sounds[]: "drop|/sound/your_mod/your.bank#your_event"
+    sound when dropping back (FMOD event, one-shot, parameters impact 0-1 =
+    hardness of the impact, mass 0-1 = weight / 20 t, aero_wnd 0-2 = cabin
+    closed/open). "drop|-" = no sound. Without entry:
+    /sound/lphd/lashing.bank#cargo_drop. .soundref is possible too.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Several models in one match (several data_path[]):
+Without a number, tilt[], tilt_base[], coll_base[], tilt_cog[] and sounds[] apply to
+models of the match. With a number only to the model at that position in
+data_path[] (first = 0):
+  tilt_base[0]: "area|(-1.08, -1.50)|(1.08, 5.80)"
+  tilt_cog[0]: (0.00, 1.35, 1.80)
+  sounds[0]: "drop|/sound/lphd/lashing.bank#cargo_drop"
+  tilt[1]: false
+tilt[], tilt_cog[] and sounds[] with a number replace the value without.
+tilt_base and coll_base with a number are added: all lines without a
+number and all with the model's number apply together.
+</code></pre></div>
+<h2 id="2-lashing-gear">2. Lashing gear<a class="headerlink" href="#2-lashing-gear" title="Permanent link">&para;</a></h2>
+<p>Own file in the folder /def/vehicle, name starts with lashing_gear_data:</p>
+<div class="highlight"><pre><span></span><code>/def/vehicle/lashing_gear_data.your_mod.v3def
+</code></pre></div>
+<p>In square brackets the name of the cargo_lashing_gear unit from the lashing_gear_data file of the game or the mod (e.g. .strap, .chain).</p>
+<div class="highlight"><pre><span></span><code>loosen_minutes[.your_strap]: 10
+    minutes of hard driving (summed, e.g. corners with about 4 m/s2
+    lateral) until the lashing loosens. Without entry: strap 10, chain 20.
+    Added per lashing: a spread, the position on the cargo piece, the
+    weight per lashing, the free length and the angle.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>lashing_capacity[.your_strap]: 2.5
+    lashing capacity LC in t (label in daN / 1000, e.g. LC 2500 daN
+    = 2.5). The more the lashing is loaded (weight per lashing / LC),
+    the faster it loosens. Without entry: strap 2.5, chain 6.3.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sounds[.your_strap]: "loose|/sound/your_mod/your.bank#your_event"
+    sound of the loose lashing (middle of the strap), loop with the
+    parameters aero_speed 0-200, aero_wnd 0-2, slack 0-1.
+sounds[.your_strap]: "rattle|/sound/your_mod/your.bank#your_event"
+    rattling ratchet or tensioner, same parameters.
+</code></pre></div>
+<p>"-" instead of a path = no sound. Several equal names: the straps take turns. Without entry: strap strap_noise + ratchet_rattle, chain chain_noise (no separate rattle), all from /sound/lphd/lashing.bank.</p>
+<h2 id="3-anti-slip-mats">3. Anti-slip mats<a class="headerlink" href="#3-anti-slip-mats" title="Permanent link">&para;</a></h2>
+<p>For each support area from tilt_base[] the mod calculates: value of the material x factor of the deck at that spot (section 4). Below 0.60 the area gets an anti-slip mat. Without tilt_base[] there are no mats.</p>
+<ul>
+<li>With "secure cargo yourself" the player lays the mats before loading in a separate scene (marker at each area). Without the option, on pre-loaded job trailers and on parked trailers the mod lays them itself.</li>
+<li>Mat: 8 mm thick, friction 0.60 regardless of cargo and deck. The cargo stands with its underside on the mat; if only some areas have mats, it rests tilted on the mat edge.</li>
+<li>Size: small area (both sides up to 0.5 m) completely; larger area pieces of 0.3 m at the corners and every 1.2 m along the edges; single as a square (radius up to 0.25 m) or pieces on the circle; ring pieces on the middle radius every 1.2 m.</li>
+<li>Mats are cut off at the edge of the deck. Pieces under 2 cm are left out - single needs a radius of at least 0.01 for that.</li>
+</ul>
+<p>Tip: tyres and rubber tracks (rubber) need no mat, wooden skids and steel on wood do, on a metal deck almost everything does.</p>
+<h2 id="4-deck-trailer">4. Deck (trailer)<a class="headerlink" href="#4-deck-trailer" title="Permanent link">&para;</a></h2>
+<p>Own file next to the body file of the trailer, same name with .v3def (without a body next to the chassis file):</p>
+<div class="highlight"><pre><span></span><code>/def/vehicle/trailer_owned/your_trailer/body/your_body.sii
+-&gt; /def/vehicle/trailer_owned/your_trailer/body/your_body.v3def
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>floor: wood               deck: wood (factor 1.00), metal (0.70) or film
+                          (film-faced plywood, 0.60). Default: wood.
+floor[]: "metal|x1|x2"    strip with a different deck over the full length,
+                          from x1 to x2 across in m (trailer coordinates,
+                          0 = centre). Several lines possible, e.g. steel
+                          frame outside and wood in between.
+</code></pre></div>
+<p>The factor is multiplied with the value of the material of the support area (sliding and anti-slip mats).</p>
+<h2 id="5-models-of-the-lashing-gear-hook-ratchet-tensioner">5. Models of the lashing gear (hook, ratchet, tensioner)<a class="headerlink" href="#5-models-of-the-lashing-gear-hook-ratchet-tensioner" title="Permanent link">&para;</a></h2>
+<p>So that hook and ratchet sit correctly when securing, the model gets a file next to its .pmd, same name with .v3def. These are the models named in the lashing_gear_data (hook at the start, hook at the end, ratchet or tensioner):</p>
+<div class="highlight"><pre><span></span><code>/vehicle/your_mod/lashing/your_hook.pmd
+-&gt; /vehicle/your_mod/lashing/your_hook.v3def
+</code></pre></div>
+<p>Hook:</p>
+<div class="highlight"><pre><span></span><code>lphd_lash_model : .hook {
+    pivot: (0.0, 0.0, -0.025)     pivot: the point with which the hook hangs
+                                  in the eye or at the lashing point
+    tip: (0.0, -0.04, -0.03)      tip (read, currently without effect)
+    sounds[]: "hook|/sound/your_mod/your.bank#hook"
+}
+</code></pre></div>
+<p>Ratchet / tensioner:</p>
+<div class="highlight"><pre><span></span><code>lphd_lash_model : .binder {
+    in: (0.0, 0.0, 0.085)         shaft the strap or chain runs onto
+    fixed: (0.0, 0.0, 0.0)        bolt the ratchet hangs on
+    contact: (0.0, -0.018, 0.042) contact: this side rests against the
+                                  vehicle or the cargo (without entry:
+                                  the same all round, e.g. chain tensioner)
+    lever: (0.0, 0.045, -0.092)   end of the lever (tensioning)
+    sounds[]: "ratchet_up|/sound/your_mod/your.bank#ratchet_up"
+}
+</code></pre></div>
+<ul>
+<li>points in metres in the space of the model, written as (x, y, z)</li>
+<li>without a file or without points the model lies as the game sets it</li>
+<li>a ratchet needs in and fixed, otherwise it counts as without points</li>
+</ul>
+<p>Sounds (sounds[]: "name|path", path to a .soundref or bank#event, "-" = no sound, several equal names: one of them at random). Without entry it is silent.</p>
+<table class="kv">
+<tr><td><code>hook</code></td><td>hook_in    hooking in          (otherwise hook) hook_out   unhooking           (otherwise hook) strap_throw / chain_throw   throwing the strap or chain over, at the end hook (otherwise throw)</td></tr>
+<tr><td><code>ratchet</code></td><td>ratchet_up    lever up ratchet_down  lever down, tensioning (otherwise tension) ratchet_open  opening (otherwise ratchet_up)</td></tr>
+</table>
+
+<h2 id="example-files">Example files<a class="headerlink" href="#example-files" title="Permanent link">&para;</a></h2>
+<p>All examples for download: <a href="../../downloads/resources_lashing_data.zip">resources_lashing_data.zip</a></p>
+<details class="example">
+<summary>def/vehicle/cargo/your_cargo/model_area.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: Ladungssicherung fuer your_cargo (neben model_area.sii)
+# Fleet &amp; Road Realism - example: cargo securing for your_cargo (next to model_area.sii)
+# Datei / file: /def/vehicle/cargo/your_cargo/model_area.v3def
+# Alle Eintraege optional / all entries optional - siehe / see README_lashing_data.txt
+
+# ---- Kantenschoner / edge guards ----
+
+# Schoner beim Sichern von Hand setzbar (true/false)
+# Guards can be placed when securing by hand (true/false)
+edge_guard: true
+
+# Breite des Schoners in m (0.01 - 2)
+# Width of the guard in m (0.01 - 2)
+edge_guard_width: 0.20
+
+# Schenkellaenge je Seite der Kante in m (0.005 - 1)
+# Leg length on each side of the edge in m (0.005 - 1)
+edge_guard_leg: 0.10
+
+# Scheuern des Gurts ohne Schoner 0.0 - 1.0
+# Strap wear without guard 0.0 - 1.0
+edge_wear: 0.4
+
+# Quetschen der Ladung ohne Schoner 0.0 - 1.0 (spaetere Version)
+# Cargo crushing without guard 0.0 - 1.0 (later version)
+edge_crush: 0.5
+
+# ---- Kippen, Rutschen und Antirutschmatten / tipping, sliding and anti-slip mats ----
+# Modellkoordinaten in m: x quer, y hoch, z laengs
+# Model coordinates in m: x across, y up, z along
+
+# Kippen fuer dieses Modell ausschalten (true/false, Standard true)
+# Switch tipping off for this model (true/false, default true)
+# tilt[]: false
+
+# Aufstandspunkte: "Material|single|(x, z)|Radius" - hier 2 Gummiraeder und ein Stuetzfuss aus Kunststoff
+# Support points: "material|single|(x, z)|radius" - here 2 rubber wheels and a plastic support foot
+# Material: wood, plastic, metal, concrete, rubber, straw (oder Reibwert 0.01 - 1.5 / or friction 0.01 - 1.5)
+# Liegt Material x Ladeboden unter 0.60, bekommt die Flaeche eine Antirutschmatte
+# If material x deck is below 0.60, the area gets an anti-slip mat
+tilt_base[]: "rubber|single|(-0.75, -0.40)|0.08"
+tilt_base[]: "rubber|single|(0.75, -0.40)|0.08"
+tilt_base[]: "plastic|single|(0.00, 1.00)|0.05"
+
+# Oder Standflaechen: Aussenmasse als zwei Ecken (x, z) - hier zwei Holzkufen
+# Or support areas: outer dimensions as two corners (x, z) - here two wooden skids
+# tilt_base[]: "wood|area|(-1.15, -0.70)|(1.15, -0.60)"
+# tilt_base[]: "wood|area|(-1.15, 0.60)|(1.15, 0.70)"
+
+# Teile, die beim Kippen auf der Ladeflaeche aufsetzen (Gabel, Schaufel) - Kippbegrenzung
+# Parts that touch the deck when tipping (forks, bucket) - tipping limit
+coll_base[]: "area|(-0.40, 0.05, 1.20)|(0.40, 0.15, 1.60)"
+
+# Schwerpunkt (x, y, z)
+# Centre of gravity (x, y, z)
+tilt_cog[]: (0.00, 0.80, -0.30)
+
+# Ton beim Rueckfall auf die Ladeflaeche ("drop|-" = kein Ton)
+# Sound when dropping back onto the deck ("drop|-" = no sound)
+sounds[]: "drop|/sound/your_mod/your.bank#cargo_drop"
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/lashing_gear_data.your_mod.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: eigenes Zurrmittel
+# Fleet &amp; Road Realism - example: own lashing gear
+# Datei / file: /def/vehicle/lashing_gear_data.your_mod.v3def
+# [.your_strap] = Name der Einheit cargo_lashing_gear aus lashing_gear_data (z. B. .strap, .chain)
+# [.your_strap] = name of the cargo_lashing_gear unit from lashing_gear_data (e.g. .strap, .chain)
+# Siehe / see README_lashing_data.txt
+
+# Minuten harter Fahrt (summiert), bis sich das Zurrmittel lockert (ohne Eintrag: Gurt 10, Kette 20)
+# Minutes of hard driving (summed) until the lashing loosens (without entry: strap 10, chain 20)
+loosen_minutes[.your_strap]: 10
+
+# Zulaessige Zugkraft LC in t (Etikett: daN / 1000; ohne Eintrag: Gurt 2.5, Kette 6.3)
+# Lashing capacity LC in t (label: daN / 1000; without entry: strap 2.5, chain 6.3)
+lashing_capacity[.your_strap]: 2.5
+
+# Ton des lockeren Zurrmittels (Schleife: aero_speed 0-200, aero_wnd 0-2, slack 0-1)
+# Sound of the loose lashing (loop: aero_speed 0-200, aero_wnd 0-2, slack 0-1)
+sounds[.your_strap]: "loose|/sound/your_mod/your.bank#strap_noise"
+
+# Klappernde Ratsche ("-" = kein Ton)
+# Rattling ratchet ("-" = no sound)
+sounds[.your_strap]: "rattle|/sound/your_mod/your.bank#ratchet_rattle"
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer_owned/your_trailer/body/your_body.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: Ladeboden des Aufliegers (neben your_body.sii, ohne Body neben der Chassis-Datei)
+# Fleet &amp; Road Realism - example: deck of the trailer (next to your_body.sii, without a body next to the chassis file)
+# Datei / file: /def/vehicle/trailer_owned/your_trailer/body/your_body.v3def
+# Siehe / see README_lashing_data.txt (Abschnitt 4 / section 4)
+
+# Ladeboden: wood (Faktor 1.00), metal (0.70), film (Siebdruck 0.60) - Standard wood
+# Deck: wood (factor 1.00), metal (0.70), film (film-faced plywood 0.60) - default wood
+floor: wood
+
+# Streifen mit anderem Boden ueber die ganze Laenge: Material|x von|x bis (m quer, 0 = Mitte)
+# Strips with a different deck over the full length: material|x from|x to (m across, 0 = centre)
+floor[]: "metal|-1.27|-1.07"
+floor[]: "metal|1.07|1.27"
+</code></pre></div>
+</details>
+<details class="example">
+<summary>vehicle/your_mod/lashing/your_hook.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: Punkte und Toene eines Hakens
+# Fleet &amp; Road Realism - example: points and sounds of a hook
+# Datei / file: neben der .pmd des Hakens / next to the .pmd of the hook
+#   /vehicle/your_mod/lashing/your_hook.pmd -&gt; /vehicle/your_mod/lashing/your_hook.v3def
+# Punkte in Metern im Raum des Modells / points in metres in model space
+# Siehe / see README_lashing_data.txt
+
+lphd_lash_model : .hook {
+# Drehpunkt: hier haengt der Haken in der Oese / pivot: the hook hangs in the eye here
+    pivot: (0.0, 0.0, -0.025)
+# Spitze (wird gelesen, wirkt derzeit nicht) / tip (read, currently without effect)
+    tip: (0.0, -0.04, -0.03)
+# Einhaken und Aushaken / hooking in and unhooking
+    sounds[]: "hook|/sound/your_mod/your.bank#hook"
+}
+</code></pre></div>
+</details>
+<details class="example">
+<summary>vehicle/your_mod/lashing/your_ratchet.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: Punkte und Toene einer Ratsche
+# Fleet &amp; Road Realism - example: points and sounds of a ratchet
+# Datei / file: neben der .pmd der Ratsche / next to the .pmd of the ratchet
+#   /vehicle/your_mod/lashing/your_ratchet.pmd -&gt; /vehicle/your_mod/lashing/your_ratchet.v3def
+# Punkte in Metern im Raum des Modells / points in metres in model space
+# Siehe / see README_lashing_data.txt
+
+lphd_lash_model : .binder {
+# Welle, auf die der Gurt laeuft / shaft the strap runs onto
+    in: (0.0, 0.0, 0.085)
+# Bolzen, an dem die Ratsche haengt / bolt the ratchet hangs on
+    fixed: (0.0, 0.0, 0.0)
+# Anlage am Fahrzeug bzw. an der Ladung / side resting against the vehicle or cargo
+    contact: (0.0, -0.018, 0.042)
+# Ende des Hebels / end of the lever
+    lever: (0.0, 0.045, -0.092)
+# Hebel hoch und runter / lever up and down
+    sounds[]: "ratchet_up|/sound/your_mod/your.bank#ratchet_up"
+    sounds[]: "ratchet_down|/sound/your_mod/your.bank#ratchet_down"
+}
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../fahrverbote/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Truck driving bans">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Truck driving bans
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Ventyres 3D
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/ventyres3d" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

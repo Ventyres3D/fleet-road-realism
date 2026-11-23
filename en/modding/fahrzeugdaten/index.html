@@ -1,0 +1,4792 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ventyres3d.github.io/fleet-road-realism/en/modding/fahrzeugdaten/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../frachtdaten/">
+      
+      
+        
+          <link rel="alternate" href="/fleet-road-realism/de/" hreflang="de">
+        
+          <link rel="alternate" href="/fleet-road-realism/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Vehicle data - Fleet & Road Realism Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vehicle-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fleet &amp; Road Realism Wiki" class="md-header__button md-logo" aria-label="Fleet & Road Realism Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fleet & Road Realism Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vehicle data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/fleet-road-realism/de/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/fleet-road-realism/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fleet &amp; Road Realism Wiki" class="md-nav__button md-logo" aria-label="Fleet & Road Realism Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5z"/></svg>
+
+    </a>
+    Fleet & Road Realism Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Players
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Players
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spieler/funktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spieler/einstellungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vehicle data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vehicle data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-files-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the files go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ENGINE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ENGINE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emission-0-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        emission: 0 - 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cylinders-1-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cylinders: &lt;1 - 16&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock_strength-0-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        knock_strength: &lt;0 - 3&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock_tone-04-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        knock_tone: &lt;0.4 - 2&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truck-chassis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRUCK CHASSIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TRUCK CHASSIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-tractor-rigid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type: tractor | rigid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_plate-country-countrycode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fixed_plate: "&lt;country&gt;" | "&lt;country&gt;|&lt;code&gt;"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gross_combination_weight-tonnes-or-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gross_combination_weight: &lt;tonnes or kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plate_depth_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plate_depth_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plate_rotate_front-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plate_rotate_front: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_shift_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_shift_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_depth_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_depth_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_shift_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_shift_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_depth_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_depth_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_shift_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_shift_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_depth_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_depth_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_rotate_front-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_rotate_front: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_modeln-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_model[n]: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_tilt_frontn-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_tilt_front[n]: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_tilt_rearn-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_tilt_rear[n]: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_tilt_restn-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_tilt_rest[n]: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_contact_soundn-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_contact_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_rest_soundn-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_rest_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer-chassis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRAILER CHASSIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TRAILER CHASSIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#king_pin_load-tonnes-or-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        king_pin_load: &lt;tonnes or kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-own-next-prev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        registration: own | next | prev
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_plate-country-countrycode_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fixed_plate: "&lt;country&gt;" | "&lt;country&gt;|&lt;code&gt;"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-own-next-prev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loading: own | next | prev
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_split-true-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load_split: true | false
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-prev-next-both-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cable: prev | next | both | none
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable_rest_prev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cable_rest_prev {
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook_attach-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hook_attach: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook_detach-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hook_detach: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_cables-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_cables: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twistlock_lock-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        twistlock_lock: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twistlock_unlock-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        twistlock_unlock: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_up_sound-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_up_sound: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_down_sound-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_down_sound: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbl_coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dbl_coupling {
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_override-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision_override-pathpmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        collision_override: "&lt;path&gt;.pmc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_modeln-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_model[n]: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_animn-pathpma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_anim[n]: "&lt;path&gt;.pma"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_usen-always-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_use[n]: always | loading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_use_minn-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_use_min[n]: &lt;kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-chassis-truck-and-trailer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALL CHASSIS (truck and trailer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ALL CHASSIS (truck and trailer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gross_vehicle_weight-tonnes-or-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gross_vehicle_weight: &lt;tonnes or kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suspension-air-leaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        suspension: air | leaf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plate_depth_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plate_depth_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plate_rotate_rear-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plate_rotate_rear: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_shift_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_shift_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_depth_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_depth_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_tilt_rear-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_tilt_rear: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_shift_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_shift_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_depth_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_depth_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_tilt_rear-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_tilt_rear: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_shift_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_shift_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_depth_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_depth_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_rotate_rear-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_rotate_rear: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessory-rear-bumper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACCESSORY REAR BUMPER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ACCESSORY REAR BUMPER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model_override-pathpmd_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_override_uk-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_override_uk: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision_override-pathpmc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        collision_override: "&lt;path&gt;.pmc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_anim-pathpma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_anim: "&lt;path&gt;.pma"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anim_type-attach_next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        anim_type: attach_next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anim_start-attached-detached" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        anim_start: attached | detached
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anim_distance-metres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        anim_distance: &lt;metres&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessory-mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACCESSORY MIRROR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ACCESSORY MIRROR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interior_model_override-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interior_model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interior_model_override_uk-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interior_model_override_uk: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exterior_model_override-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        exterior_model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exterior_model_override_uk-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        exterior_model_override_uk: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_glass-slot-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_glass[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_glass_ext-slot-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_glass_ext[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_adjust-electric-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_adjust: electric | manual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_axes-horizontal-vertical-both" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_axes: horizontal | vertical | both
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_glass_uk-slot-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_glass_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_glass_ext_uk-slot-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_glass_ext_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_rain-slot-pathmat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_rain[]: &lt;slot&gt; "&lt;path&gt;.mat"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_rain_uk-slot-pathmat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_rain_uk[]: &lt;slot&gt; "&lt;path&gt;.mat"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_rain_size-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_rain_size: &lt;factor&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessory-interior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACCESSORY INTERIOR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ACCESSORY INTERIOR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sleeper-true-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sleeper: true | false
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bed_area-locator-a-locator-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bed_area: "&lt;locator a&gt;" "&lt;locator b&gt;"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bed_head-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bed_head: a | b
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windshield_material-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        windshield_material[]: "&lt;material&gt;"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer-nozzles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WASHER NOZZLES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WASHER NOZZLES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#washer-fixed-wiper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer: fixed | wiper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer_jets-single-double" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer_jets: single | double
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer_jets_angle-degrees-5-170" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer_jets_angle: &lt;degrees 5 - 170&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer_spot-xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer_spot[]: x;y;z
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washern-xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer[n]: x;y;z
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer_spotn-xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer_spot[n]: x;y;z
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BODY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BODY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#floor-wood-metal-film" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        floor: wood | metal | film
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floor-woodx1x2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        floor[]: "wood|x1|x2"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#company-trailer-driver-tours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COMPANY TRAILER DRIVER TOURS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COMPANY TRAILER DRIVER TOURS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalency-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        equivalency: &lt;token&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-values-are-used-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the values are used for
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example files
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frachtdaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargo data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firmendaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Company and container data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fahrverbote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Truck driving bans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ladungssicherung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargo securing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-files-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the files go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ENGINE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ENGINE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emission-0-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        emission: 0 - 7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cylinders-1-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cylinders: &lt;1 - 16&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock_strength-0-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        knock_strength: &lt;0 - 3&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock_tone-04-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        knock_tone: &lt;0.4 - 2&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truck-chassis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRUCK CHASSIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TRUCK CHASSIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-tractor-rigid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type: tractor | rigid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_plate-country-countrycode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fixed_plate: "&lt;country&gt;" | "&lt;country&gt;|&lt;code&gt;"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gross_combination_weight-tonnes-or-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gross_combination_weight: &lt;tonnes or kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plate_depth_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plate_depth_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plate_rotate_front-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plate_rotate_front: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_shift_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_shift_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_depth_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_depth_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_shift_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_shift_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_depth_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_depth_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_shift_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_shift_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_depth_front-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_depth_front: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_rotate_front-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_rotate_front: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_modeln-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_model[n]: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_tilt_frontn-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_tilt_front[n]: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_tilt_rearn-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_tilt_rear[n]: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_tilt_restn-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_tilt_rest[n]: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_contact_soundn-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_contact_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couple_rest_soundn-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        couple_rest_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer-chassis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TRAILER CHASSIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TRAILER CHASSIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#king_pin_load-tonnes-or-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        king_pin_load: &lt;tonnes or kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-own-next-prev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        registration: own | next | prev
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_plate-country-countrycode_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fixed_plate: "&lt;country&gt;" | "&lt;country&gt;|&lt;code&gt;"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-own-next-prev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loading: own | next | prev
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_split-true-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load_split: true | false
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-prev-next-both-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cable: prev | next | both | none
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable_rest_prev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cable_rest_prev {
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook_attach-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hook_attach: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook_detach-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        hook_detach: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_cables-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_cables: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twistlock_lock-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        twistlock_lock: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twistlock_unlock-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        twistlock_unlock: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_up_sound-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_up_sound: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_down_sound-soundref-or-bankevent-no-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_down_sound: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbl_coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dbl_coupling {
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_override-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision_override-pathpmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        collision_override: "&lt;path&gt;.pmc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_modeln-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_model[n]: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_animn-pathpma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_anim[n]: "&lt;path&gt;.pma"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_usen-always-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_use[n]: always | loading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailer_brace_use_minn-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trailer_brace_use_min[n]: &lt;kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-chassis-truck-and-trailer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALL CHASSIS (truck and trailer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ALL CHASSIS (truck and trailer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gross_vehicle_weight-tonnes-or-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gross_vehicle_weight: &lt;tonnes or kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suspension-air-leaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        suspension: air | leaf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plate_depth_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plate_depth_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plate_rotate_rear-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        plate_rotate_rear: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_shift_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_shift_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_depth_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_depth_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#italy_card_tilt_rear-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        italy_card_tilt_rear: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_shift_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_shift_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_depth_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_depth_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serbia_card_tilt_rear-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serbia_card_tilt_rear: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_shift_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_shift_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_depth_rear-mm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_depth_rear: &lt;mm&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greece_export_rotate_rear-degrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        greece_export_rotate_rear: &lt;degrees&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessory-rear-bumper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACCESSORY REAR BUMPER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ACCESSORY REAR BUMPER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model_override-pathpmd_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_override_uk-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_override_uk: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision_override-pathpmc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        collision_override: "&lt;path&gt;.pmc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model_anim-pathpma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_anim: "&lt;path&gt;.pma"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anim_type-attach_next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        anim_type: attach_next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anim_start-attached-detached" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        anim_start: attached | detached
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anim_distance-metres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        anim_distance: &lt;metres&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessory-mirror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACCESSORY MIRROR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ACCESSORY MIRROR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interior_model_override-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interior_model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interior_model_override_uk-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interior_model_override_uk: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exterior_model_override-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        exterior_model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exterior_model_override_uk-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        exterior_model_override_uk: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_glass-slot-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_glass[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_glass_ext-slot-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_glass_ext[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_adjust-electric-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_adjust: electric | manual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_axes-horizontal-vertical-both" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_axes: horizontal | vertical | both
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_glass_uk-slot-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_glass_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_glass_ext_uk-slot-pathpmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_glass_ext_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_rain-slot-pathmat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_rain[]: &lt;slot&gt; "&lt;path&gt;.mat"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_rain_uk-slot-pathmat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_rain_uk[]: &lt;slot&gt; "&lt;path&gt;.mat"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror_rain_size-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mirror_rain_size: &lt;factor&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessory-interior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ACCESSORY INTERIOR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ACCESSORY INTERIOR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sleeper-true-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sleeper: true | false
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bed_area-locator-a-locator-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bed_area: "&lt;locator a&gt;" "&lt;locator b&gt;"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bed_head-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bed_head: a | b
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windshield_material-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        windshield_material[]: "&lt;material&gt;"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer-nozzles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WASHER NOZZLES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WASHER NOZZLES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#washer-fixed-wiper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer: fixed | wiper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer_jets-single-double" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer_jets: single | double
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer_jets_angle-degrees-5-170" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer_jets_angle: &lt;degrees 5 - 170&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer_spot-xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer_spot[]: x;y;z
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washern-xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer[n]: x;y;z
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer_spotn-xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        washer_spot[n]: x;y;z
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BODY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BODY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#floor-wood-metal-film" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        floor: wood | metal | film
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floor-woodx1x2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        floor[]: "wood|x1|x2"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#company-trailer-driver-tours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COMPANY TRAILER DRIVER TOURS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COMPANY TRAILER DRIVER TOURS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalency-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        equivalency: &lt;token&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-values-are-used-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the values are used for
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example files
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="vehicle-data">Vehicle data<a class="headerlink" href="#vehicle-data" title="Permanent link">&para;</a></h1>
+<p>Taxes and road charges of the own registration (vehicle tax in Germany, Austria, Switzerland, France, Italy, Poland, Czechia, Slovakia, Hungary, Greece, Romania, Bulgaria, Slovenia, Croatia, Serbia, Montenegro, North Macedonia, Bosnia and Herzegovina, Albania, Turkey, Russia, Lithuania, Latvia, Estonia and Kosovo, Swiss LSVA) need data about a vehicle. Most of it is read from the vehicle's own .sii files:</p>
+<table class="kv">
+<tr><td>engine .sii</td><td>power (info[] &quot;... (270@@kw@@)&quot;, otherwise from torque and torque_curve[]), displacement (volume), electric (type: electric)</td></tr>
+<tr><td>chassis .sii</td><td>number of axles (residual_travel[]), empty weight (truck: sum of kerb_weight[], trailer: trailer_mass)</td></tr>
+<tr><td>body .sii</td><td>mass (added to trailer_mass)</td></tr>
+</table>
+
+<p>What the game files do not contain (Euro class, permissible weights, tractor or rigid truck, kind of suspension) comes from small optional files that a truck or trailer mod can ship next to its own definitions. The same files also set the position of plates and signs, doubles (registration, splitting when loading, cables, coupling sounds, coupling guide, support legs), animated accessories, the deck and the trailer lengths of driver tours.</p>
+<p>All files are optional. A missing file or a missing line is not an error, the default value given for each entry under "Keys" is used.</p>
+<h2 id="where-the-files-go">Where the files go<a class="headerlink" href="#where-the-files-go" title="Permanent link">&para;</a></h2>
+<p>Same folder and same name as the .sii the vehicle uses, only with .v3def:</p>
+<div class="highlight"><pre><span></span><code>engine         /def/vehicle/truck/your_truck/engine/your_engine.sii
+            -&gt; /def/vehicle/truck/your_truck/engine/your_engine.v3def
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>truck chassis  /def/vehicle/truck/your_truck/chassis/your_chassis.sii
+            -&gt; /def/vehicle/truck/your_truck/chassis/your_chassis.v3def
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>trailer        /def/vehicle/trailer_owned/your_trailer/chassis/your_chassis.sii
+            -&gt; /def/vehicle/trailer_owned/your_trailer/chassis/your_chassis.v3def
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>company trailer (job trailer, no chassis/ folder: the chassis is the .sii
+whose name starts with "chassis")
+               /def/vehicle/trailer/your_company_trailer/chassis_hook.sii
+            -&gt; /def/vehicle/trailer/your_company_trailer/chassis_hook.v3def
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>accessory      /def/vehicle/trailer_owned/your_trailer/accessory/r_bumper/your_bumper.sii
+            -&gt; /def/vehicle/trailer_owned/your_trailer/accessory/r_bumper/your_bumper.v3def
+               (rear bumpers, see "ACCESSORY REAR BUMPER" under "Keys")
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>mirror         /def/vehicle/truck/your_truck/accessory/mirror/your_mirror.sii
+            -&gt; /def/vehicle/truck/your_truck/accessory/mirror/your_mirror.v3def
+               (also s_mirror, f_mirror etc., see "ACCESSORY MIRROR" under "Keys")
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>interior       /def/vehicle/truck/your_truck/interior/your_interior.sii
+            -&gt; /def/vehicle/truck/your_truck/interior/your_interior.v3def
+               (sleeping, windshield curvature, see "ACCESSORY INTERIOR")
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>cabin          /def/vehicle/truck/your_truck/cabin/your_cabin.sii
+            -&gt; /def/vehicle/truck/your_truck/cabin/your_cabin.v3def
+               (washer nozzles, see "WASHER NOZZLES")
+</code></pre></div>
+<p>The examples in the def/ folder of this package show the format.</p>
+<h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>key: value
+</code></pre></div>
+<ul>
+<li>one entry per line, spaces or tabs around the colon are allowed</li>
+<li>lines starting with # or // are comments, a # after the value too</li>
+<li>weights: tonnes (values up to 100, e.g. 18.00) or kilograms (above 100, e.g. 18000)</li>
+<li>decimal point or decimal comma (18.50 or 18,50), no thousands separator</li>
+<li>emission: whole number 0-7</li>
+<li>type: tractor or rigid</li>
+<li>suspension: air or leaf</li>
+<li>registration: own, next or prev</li>
+<li>loading: own, next or prev</li>
+<li>load_split: true or false</li>
+<li>fixed_plate: game token of the country, e.g. germany, optionally |code</li>
+<li>cylinders: whole number 1-16</li>
+<li>knock_strength: number 0-3 (e.g. 0.5)</li>
+<li>knock_tone: number 0.4-2 (e.g. 0.7)</li>
+<li>mirror_axes: horizontal, vertical or both</li>
+<li>mirror_rain_size: number above 0 up to 20 (e.g. 0.5)</li>
+<li>sleeper: true or false</li>
+<li>bed_head: a or b</li>
+<li>washer: fixed or wiper</li>
+<li>washer_jets: single or double</li>
+<li>washer_jets_angle: degrees 5-170</li>
+<li>coordinates (bed_area, washer_spot[], washer[n]): x;y;z as ZModeler shows them</li>
+<li>italy_/serbia_card_shift_front / _rear: millimetres, positive = up, negative = down, -200 to 200 (e.g. 15 or -7.5)</li>
+<li>italy_/serbia_card_depth_front / _rear: millimetres, positive = away from the vehicle, negative = towards the vehicle, -200 to 200</li>
+<li>italy_/serbia_card_tilt_rear: degrees, positive = top edge towards the vehicle, negative = top edge away from the vehicle, -45 to 45 (e.g. 12.5)</li>
+<li>greece_export_shift_front / _rear: millimetres, positive = up, negative = down, -200 to 200</li>
+<li>greece_export_depth_front / _rear: millimetres, positive = away from the vehicle, negative = towards the vehicle, -200 to 200</li>
+<li>greece_export_rotate_front / _rear: degrees, positive = top edge towards the vehicle, negative = top edge away from the vehicle, -45 to 45</li>
+<li>plate_depth_front / _rear: millimetres, positive = away from the vehicle, negative = towards the vehicle, -200 to 200</li>
+<li>plate_rotate_front / _rear: degrees, positive = top edge towards the vehicle, negative = top edge away from the vehicle, -45 to 45</li>
+<li>nothing else on the line (no units like "t" or "kg")</li>
+</ul>
+<h2 id="keys">Keys<a class="headerlink" href="#keys" title="Permanent link">&para;</a></h2>
+<p>Every entry starts with &gt;&gt;&gt; and shows the line as it goes into the v3def (&lt;...&gt; = your value, | = one of them). Everything below it is description.</p>
+<h3 id="engine">ENGINE<a class="headerlink" href="#engine" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/engine/xxxx.v3def
+</code></pre></div>
+<h4 id="emission-0-7"><code>emission: 0 - 7</code><a class="headerlink" href="#emission-0-7" title="Permanent link">&para;</a></h4>
+<p>Euro class 0-7</p>
+<p><em>Default: Euro 6</em></p>
+<p><strong>COLD START KNOCK</strong></p>
+<p>A cold diesel knocks: the mod adds a short metallic knock per ignition to the engine sound of the own truck, plus slightly uneven running and a harsher sound. How cold the engine is comes from the oil temperature exactly as the game computes it for cold_start_rpm (full up to about 19 deg C, gone from 90 deg C). Strongest at idle and when pulling away under load at low rpm, weaker with rising rpm. Electric engines do not knock. The engine sound comes from sounds[] "engine|..." of the engine .sii (also through @include), directly as "&lt;bank&gt;#&lt;event&gt;" or through a .soundref. Only this event gets the knock, not exhaust, turbo etc. Nothing has to be entered for it; the three lines below are only fine tuning.</p>
+<h4 id="cylinders-1-16"><code>cylinders: &lt;1 - 16&gt;</code><a class="headerlink" href="#cylinders-1-16" title="Permanent link">&para;</a></h4>
+<p>number of cylinders; sets the rate of the knocks (rpm / 60 x cylinders / 2 per second)</p>
+<p><em>Default: 6</em></p>
+<h4 id="knock_strength-0-3"><code>knock_strength: &lt;0 - 3&gt;</code><a class="headerlink" href="#knock_strength-0-3" title="Permanent link">&para;</a></h4>
+<p>strength of the knock (and of the uneven running) for this engine, 1 = normal, 0.5 = half as strong, 2 = double, 0 = off</p>
+<p><em>Default: 1</em></p>
+<h4 id="knock_tone-04-2"><code>knock_tone: &lt;0.4 - 2&gt;</code><a class="headerlink" href="#knock_tone-04-2" title="Permanent link">&para;</a></h4>
+<p>pitch of the knock for this engine, so it matches the engine sound; lower = deeper and duller (e.g. big V8), higher = brighter and harder</p>
+<p><em>Default: 1</em></p>
+<h3 id="truck-chassis">TRUCK CHASSIS<a class="headerlink" href="#truck-chassis" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/chassis/xxxx.v3def
+</code></pre></div>
+<h4 id="type-tractor-rigid"><code>type: tractor | rigid</code><a class="headerlink" href="#type-tractor-rigid" title="Permanent link">&para;</a></h4>
+<p>tractor = tractor unit for semi-trailers rigid = rigid truck (load on its own frame)</p>
+<p><em>Default: tractor</em></p>
+<h4 id="fixed_plate-country-countrycode"><code>fixed_plate: "&lt;country&gt;" | "&lt;country&gt;|&lt;code&gt;"</code><a class="headerlink" href="#fixed_plate-country-countrycode" title="Permanent link">&para;</a></h4>
+<p>plates fixed in the model (without the game's plate locator), e.g. for packs with real, fixed plates on the vehicle</p>
+<div class="highlight"><pre><span></span><code>fixed_plate: "germany"
+fixed_plate: "germany|HN"
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>The vehicle is permanently registered in this country from the purchase:
+no temporary plate, no registration duty. Vehicle tax by the rules of
+this country (weight, axles, Euro class etc. from the other entries, as
+for any vehicle). Insurance is the statutory liability insurance,
+changeable in the insurance menu (F7). The registration service is locked
+for the vehicle: no registration tile in the service shop, no click on
+the plate in the manager.
+&lt;country&gt; = game token of the country (germany, austria, netherlands ...).
+&lt;code&gt; = registration district as shown in the registration window;
+without code the default district of the country. Matters where the tax
+depends on the district (e.g. Poland, Romania, France).
+Vehicles already owned (temporary, deregistered or registered in another
+country) are re-registered to the country once; the old tax ends, no-claims
+class and insurance stay.
+Default:  no entry = normal registration
+</code></pre></div>
+<h4 id="gross_combination_weight-tonnes-or-kg"><code>gross_combination_weight: &lt;tonnes or kg&gt;</code><a class="headerlink" href="#gross_combination_weight-tonnes-or-kg" title="Permanent link">&para;</a></h4>
+<p>permissible gross combination weight</p>
+<p><em>Default: 40 t</em></p>
+<h4 id="plate_depth_front-mm"><code>plate_depth_front: &lt;mm&gt;</code><a class="headerlink" href="#plate_depth_front-mm" title="Permanent link">&para;</a></h4>
+<p>front plate forward/back, mm</p>
+<div class="highlight"><pre><span></span><code>Works like the cardboard keys, but for all normal plates of the chassis
+(permanent and temporary plates; the cardboard signs and papers keep their own
+keys). plate_depth_front / plate_depth_rear move the plate forward or back in
+millimetres: positive values away from the vehicle (e.g. out of a recess or a
+bumper), negative values towards the vehicle. plate_rotate_front /
+plate_rotate_rear tilt the plate around its horizontal centre line (seen from
+the side), in degrees: positive values move the top edge towards the vehicle
+and the bottom edge away from it, negative values the other way round. A
+trailer only has the rear plate. Only the vehicles of your company are moved.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>  plate_depth_rear: 12        # rear plate 12 mm further out
+  plate_rotate_front: -8      # front plate, top edge tilted 8 degrees away
+Default:  0
+</code></pre></div>
+<h4 id="plate_rotate_front-degrees"><code>plate_rotate_front: &lt;degrees&gt;</code><a class="headerlink" href="#plate_rotate_front-degrees" title="Permanent link">&para;</a></h4>
+<p>front plate tilt, degrees</p>
+<p><em>Default: 0</em></p>
+<h4 id="italy_card_shift_front-mm"><code>italy_card_shift_front: &lt;mm&gt;</code><a class="headerlink" href="#italy_card_shift_front-mm" title="Permanent link">&para;</a></h4>
+<p>Italian cardboard plate (foglio di via) front up/down, mm</p>
+<p>The Italian temporary registration (foglio di via, cardboard 275 x 200 mm) and the Serbian test plate (PROBA, cardboard 340 x 180 mm) are cardboard signs that are much larger than a plate. Depending on the model they can reach up to a rear light, be hidden behind an underrun guard or disappear into the plate recess. Italy uses the italy_card_<em> keys, Serbia the serbia_card_</em> keys. The Montenegrin test plate (PROBA) has the same size as the Serbian one and also uses the serbia_card_* keys, so one setting fits both.</p>
+<p>The default height already fits the vehicles of the game:</p>
+<table class="kv">
+<tr><td>truck front</td><td>centred on the plate</td></tr>
+<tr><td>truck rear</td><td>30 mm lower than the plate</td></tr>
+<tr><td><code>trailer</code></td><td>10 mm lower than the plate</td></tr>
+</table>
+
+<p>..._card_shift_front / ..._card_shift_rear move the sign up or down from this default for one chassis, in millimetres: positive values up, negative values down. ..._card_depth_front / ..._card_depth_rear move it forward or back: positive values away from the vehicle (out of the plate recess), negative values towards the vehicle. ..._card_tilt_rear tilts the rear sign around its horizontal centre line (seen from the side), in degrees: positive values move the top edge towards the vehicle and the bottom edge away from it (e.g. to follow an inclined plate holder), negative values the other way round. A trailer only has the rear sign.</p>
+<div class="highlight"><pre><span></span><code>  italy_card_shift_rear: 15      # 15 mm higher than the default
+  italy_card_shift_front: -10    # 10 mm lower than the default
+  serbia_card_depth_rear: 20     # 20 mm further out of the plate recess
+  serbia_card_tilt_rear: 10      # top edge tilted 10 degrees towards the vehicle
+Default:  0
+</code></pre></div>
+<h4 id="italy_card_depth_front-mm"><code>italy_card_depth_front: &lt;mm&gt;</code><a class="headerlink" href="#italy_card_depth_front-mm" title="Permanent link">&para;</a></h4>
+<p>Italian cardboard plate front forward/back, mm</p>
+<p><em>Default: 0</em></p>
+<h4 id="serbia_card_shift_front-mm"><code>serbia_card_shift_front: &lt;mm&gt;</code><a class="headerlink" href="#serbia_card_shift_front-mm" title="Permanent link">&para;</a></h4>
+<p>Serbian/Montenegrin cardboard plate (PROBA) front up/down, mm</p>
+<p><em>Default: 0</em></p>
+<h4 id="serbia_card_depth_front-mm"><code>serbia_card_depth_front: &lt;mm&gt;</code><a class="headerlink" href="#serbia_card_depth_front-mm" title="Permanent link">&para;</a></h4>
+<p>PROBA plate front forward/back, mm</p>
+<p><em>Default: 0</em></p>
+<h4 id="greece_export_shift_front-mm"><code>greece_export_shift_front: &lt;mm&gt;</code><a class="headerlink" href="#greece_export_shift_front-mm" title="Permanent link">&para;</a></h4>
+<p>Greek export plate front up/down, mm</p>
+<p>The Greek export plate is smaller and higher than a normal plate (370 x 120 mm instead of 520 x 110 mm) and is drawn as a plate of its own, centred on the normal plate. greece_export_shift_front / _rear move it up or down in millimetres (positive up), greece_export_depth_front / _rear forward or back (positive away from the vehicle), greece_export_rotate_front / _rear tilt it around its horizontal centre line in degrees (positive = top edge towards the vehicle). Without an entry all values are 0. A trailer only has the rear plate.</p>
+<div class="highlight"><pre><span></span><code>  greece_export_shift_rear: 12     # 12 mm higher
+  greece_export_rotate_front: -5   # top edge tilted 5 degrees away
+Default:  0
+</code></pre></div>
+<h4 id="greece_export_depth_front-mm"><code>greece_export_depth_front: &lt;mm&gt;</code><a class="headerlink" href="#greece_export_depth_front-mm" title="Permanent link">&para;</a></h4>
+<p>Greek export plate front forward/back, mm</p>
+<p><em>Default: 0</em></p>
+<h4 id="greece_export_rotate_front-degrees"><code>greece_export_rotate_front: &lt;degrees&gt;</code><a class="headerlink" href="#greece_export_rotate_front-degrees" title="Permanent link">&para;</a></h4>
+<p>Greek export plate front tilt, degrees</p>
+<p><em>Default: 0</em></p>
+<p><strong>TILTING FIFTH WHEEL</strong></p>
+<p>The fifth wheel plate can tilt around its bearing. When coupled it follows the longitudinal tilt of the trailer relative to the truck, also while driving under a trailer front, otherwise it falls back to its rest position. A sound plays when it hits the trailer and when it falls back, louder or quieter depending on the force. The plate is a model of its own at a locator of the chassis model:</p>
+<div class="highlight"><pre><span></span><code>couple_model: "/vehicle/truck/your_truck/fifthwheel.pmd"
+couple_tilt_front: 10
+couple_tilt_rear: 15
+couple_tilt_rest: 5
+</code></pre></div>
+<ul>
+<li>locator couple_0 in the chassis model = bearing of the plate (with several fifth wheels couple_1, couple_2 ... with [1], [2] ... on the keys)</li>
+<li>the plate (.pmd): only the tilting part, origin in the bearing, orientation as in the truck. The chassis model itself no longer contains the plate (in the coarser LODs it may stay fixed)</li>
+</ul>
+<h4 id="couple_modeln-pathpmd"><code>couple_model[n]: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#couple_modeln-pathpmd" title="Permanent link">&para;</a></h4>
+<p>model of the tilting plate at locator couple_n; without [n] = [0]</p>
+<h4 id="couple_tilt_frontn-degrees"><code>couple_tilt_front[n]: &lt;degrees&gt;</code><a class="headerlink" href="#couple_tilt_frontn-degrees" title="Permanent link">&para;</a></h4>
+<p>how far the plate can tilt forward, degrees (0 to 45)</p>
+<p><em>Default: rigid (no forward tilt)</em></p>
+<h4 id="couple_tilt_rearn-degrees"><code>couple_tilt_rear[n]: &lt;degrees&gt;</code><a class="headerlink" href="#couple_tilt_rearn-degrees" title="Permanent link">&para;</a></h4>
+<p>how far the plate can tilt backward, degrees (0 to 45)</p>
+<p><em>Default: rigid (no backward tilt)</em></p>
+<h4 id="couple_tilt_restn-degrees"><code>couple_tilt_rest[n]: &lt;degrees&gt;</code><a class="headerlink" href="#couple_tilt_restn-degrees" title="Permanent link">&para;</a></h4>
+<p>rest position without trailer, degrees (-45 to 45), positive = rear lower</p>
+<p><em>Default: from the centre of mass of the plate</em></p>
+<h4 id="couple_contact_soundn-soundref-or-bankevent-no-sound"><code>couple_contact_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#couple_contact_soundn-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound when the plate hits the trailer</p>
+<p><em>Default: sound of the mod (/sound/lphd/fifthwheel.bank#contact)</em></p>
+<h4 id="couple_rest_soundn-soundref-or-bankevent-no-sound"><code>couple_rest_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#couple_rest_soundn-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound when the plate falls back to its rest position</p>
+<p><em>Default: sound of the mod (/sound/lphd/fifthwheel.bank#rest)</em></p>
+<h3 id="trailer-chassis">TRAILER CHASSIS<a class="headerlink" href="#trailer-chassis" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/trailer_owned/xxxx/chassis/xxxx.v3def
+company trailer: /def/vehicle/trailer/xxxx/chassis_xxxx.v3def
+</code></pre></div>
+<h4 id="king_pin_load-tonnes-or-kg"><code>king_pin_load: &lt;tonnes or kg&gt;</code><a class="headerlink" href="#king_pin_load-tonnes-or-kg" title="Permanent link">&para;</a></h4>
+<p>load on the king pin (semi-trailers only; without it the trailer counts as a drawbar trailer)</p>
+<p><em>Default: by number of axles: 1 -&gt; 10 t, otherwise 12 t (only together with the default gross weight)</em></p>
+<h4 id="registration-own-next-prev"><code>registration: own | next | prev</code><a class="headerlink" href="#registration-own-next-prev" title="Permanent link">&para;</a></h4>
+<p>own = own registration next = belongs to the part behind it prev = belongs to the part in front of it</p>
+<p>Owned trailers with more than one chassis (B-double, HCT, semi-trailer on a converter dolly, full trailer with turntable) are a chain of parts in the game. Without a "registration" line every part is a vehicle of its own: own entry in the registration office, own plate, own tax and insurance. That is correct for semi-trailers and for converter dollies, which are registered vehicles of their own in reality.</p>
+<p>"registration: next" or "registration: prev" joins a chassis with its neighbour. Use it only for parts that are not a vehicle of their own in reality, e.g. the turntable axle (front part) of a full trailer with turntable steering. Joined parts are one vehicle:</p>
+<ul>
+<li>one entry in the registration office, registered under the plate of the rearmost part (the one seen at the rear)</li>
+<li>tax and insurance once, for the whole vehicle</li>
+<li>no temporary plate of its own when bought; the joined part keeps the plate the game gives it</li>
+</ul>
+<p>"next" and "prev" are relative to the position, so the same chassis works in every configuration it is used in. Joins can be chained.</p>
+<div class="highlight"><pre><span></span><code>Values of a joined vehicle
+  axles          sum of the parts
+  empty weight   sum of the parts
+  gross weight   sum of gross_vehicle_weight of all parts
+                 minus king_pin_load of every part behind the first one
+                 (that load rests on the part in front of it and is already
+                 counted there)
+  king pin load  the one of the front part (load on the truck)
+</code></pre></div>
+<p>Give every part the values it has on its own - nothing has to be split.</p>
+<p>Example 1: full trailer with turntable, 2 axles, 18 t (one vehicle)</p>
+<div class="highlight"><pre><span></span><code>turntable axle (front)   registration: next
+                         gross_vehicle_weight: 9.00
+                         (no king_pin_load = drawbar, nothing on the truck)
+rear part                gross_vehicle_weight: 9.00
+                         (no king_pin_load)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>-&gt; 1 vehicle, 2 axles, 9 + 9 = 18 t, no king pin load on the truck
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>The same result with the rear part carried by the turntable:
+rear part gross_vehicle_weight: 18.00 and king_pin_load: 9.00
+-&gt; 9 + 18 - 9 = 18 t
+</code></pre></div>
+<p>Example 2: semi-trailer on a converter dolly (two vehicles, no "registration" line)</p>
+<div class="highlight"><pre><span></span><code>converter dolly          gross_vehicle_weight: 18.00
+                         (no king_pin_load = drawbar)
+semi-trailer             gross_vehicle_weight: 39.00
+                         king_pin_load: 12.00
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>-&gt; 2 vehicles with 2 registrations, each taxed with its own values
+   (dolly 18 t, semi-trailer 39 t with 12 t on the dolly)
+</code></pre></div>
+<p>Example 3: HCT semi-trailer + converter dolly + semi-trailer</p>
+<p>no "registration" lines  -&gt; 3 vehicles (semi-trailer, dolly, semi-trailer)</p>
+<p>"prev" on the first part or "next" on the last part of a trailer is an error (see below), the part then counts as "own". Default:  own</p>
+<h4 id="fixed_plate-country-countrycode_1"><code>fixed_plate: "&lt;country&gt;" | "&lt;country&gt;|&lt;code&gt;"</code><a class="headerlink" href="#fixed_plate-country-countrycode_1" title="Permanent link">&para;</a></h4>
+<p>plates fixed in the model (without the game's plate locator), e.g. for packs with real, fixed plates on the vehicle</p>
+<div class="highlight"><pre><span></span><code>fixed_plate: "germany"
+fixed_plate: "germany|HN"
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>The vehicle is permanently registered in this country from the purchase:
+no temporary plate, no registration duty. Vehicle tax by the rules of
+this country (weight, axles, Euro class etc. from the other entries, as
+for any vehicle). Insurance is the statutory liability insurance,
+changeable in the insurance menu (F7). The registration service is locked
+for the vehicle: no registration tile in the service shop, no click on
+the plate in the manager.
+&lt;country&gt; = game token of the country (germany, austria, netherlands ...).
+&lt;code&gt; = registration district as shown in the registration window;
+without code the default district of the country. Matters where the tax
+depends on the district (e.g. Poland, Romania, France).
+Vehicles already owned (temporary, deregistered or registered in another
+country) are re-registered to the country once; the old tax ends, no-claims
+class and insurance stay.
+Multi-part trailers: the entry may be in any part of the group and counts
+for the registration of the group.
+Default:  no entry = normal registration
+</code></pre></div>
+<h4 id="loading-own-next-prev"><code>loading: own | next | prev</code><a class="headerlink" href="#loading-own-next-prev" title="Permanent link">&para;</a></h4>
+<p>With the option "Split own doubles when loading" the chain of a trailer is spread over several loading lanes of the company: from the rear, every part gets a lane of its own and is detached there (key for detaching), the front part stays on the truck and is loaded on the lane of the game. After loading, the parts are coupled back together; the tour starts when the chain is complete. When unloading, the chain is only split if the hardest choice (most XP) is taken in the trailer delivery window.</p>
+<p>This works for own trailers and for company (job) trailers alike. It is only done when cargo is loaded or unloaded: simply dropping the trailer with the key for detaching (e.g. at a workshop or a trailer hub) always keeps the chain together.</p>
+<div class="highlight"><pre><span></span><code>Which links belong together is set with "loading" in the v3def of every chassis
+of the chain:
+  own   the link is a loading unit of its own
+  next  the link stays with the link behind it (e.g. a converter dolly stays
+        under the rear semi-trailer)
+  prev  the link stays with the link in front of it
+</code></pre></div>
+<p>If one link of the chain has no "loading" line, or a line that cannot be read, the chain is never split.</p>
+<p>The line is only read for the chain the trailer is in at the moment. A trailer with "loading: own" that runs as a single trailer is loaded as usual; the same trailer can be the front part of a double or stand behind a dolly with "next" in another chain.</p>
+<p>Example: HCT semi-trailer + converter dolly + semi-trailer (files in def/vehicle/trailer_owned/your_hct/chassis/)</p>
+<table class="kv">
+<tr><td>front semi-trailer</td><td>front_trailer.v3def   loading: own</td></tr>
+<tr><td>converter dolly</td><td>dolly.v3def           loading: next</td></tr>
+<tr><td>rear semi-trailer</td><td>rear_trailer.v3def    loading: own</td></tr>
+</table>
+
+<div class="highlight"><pre><span></span><code>-&gt; 2 parts: front semi-trailer / dolly + rear semi-trailer
+</code></pre></div>
+<p>Example: company (job) double, semi-trailer + centre-axle trailer (files in def/vehicle/trailer/your_company_trailer/)</p>
+<table class="kv">
+<tr><td>front semi-trailer</td><td>chassis_hook.v3def    loading: own</td></tr>
+<tr><td>centre-axle trailer</td><td>chassis_ca.v3def      loading: own</td></tr>
+</table>
+
+<div class="highlight"><pre><span></span><code>  -&gt; 2 parts: semi-trailer / centre-axle trailer
+Default:  none (the chain is never split)
+</code></pre></div>
+<h4 id="load_split-true-false"><code>load_split: true | false</code><a class="headerlink" href="#load_split-true-false" title="Permanent link">&para;</a></h4>
+<p>false = the chain is never split for loading and unloading (e.g. timber trailers loaded from above by crane); "loading" still sets which parts can be split on the road</p>
+<p><em>Default: true</em></p>
+<h4 id="cable-prev-next-both-none"><code>cable: prev | next | both | none</code><a class="headerlink" href="#cable-prev-next-both-none" title="Permanent link">&para;</a></h4>
+<p>who keeps the cable strand when split: prev, next, both or none</p>
+<p>When the chain of an own double is split (option "Split own doubles when loading", or a part detached with the key for detaching), the game itself has no rule for the cable strand between the two parts. The chassis .v3def decides:</p>
+<table class="kv">
+<tr><td><code>cable: prev</code></td><td>this part keeps the strand to the part in front of it</td></tr>
+<tr><td><code>cable: next</code></td><td>this part keeps the strand to the part behind it</td></tr>
+<tr><td><code>cable: both</code></td><td>prev and next</td></tr>
+<tr><td><code>cable: none</code></td><td>this part never keeps a strand</td></tr>
+</table>
+
+<p>Several "cable" lines are allowed. Between the front part A and the rear part B:</p>
+<table class="kv">
+<tr><td>1. B has prev or both</td><td>-&gt; the strand stays at B (rest position at B)</td></tr>
+<tr><td>2. otherwise A has next or both</td><td>-&gt; the strand stays at A (rest position as in the game)</td></tr>
+<tr><td>3. otherwise A has none</td><td>-&gt; the strand stays at B</td></tr>
+<tr><td>4. otherwise</td><td>-&gt; the strand is removed</td></tr>
+</table>
+
+<p>A strand that stays at the rear part keeps its trailer plug in the socket (e.g. of the dolly); the free end goes to a rest point of the chassis model:</p>
+<div class="highlight"><pre><span></span><code>cable_rest_prev {
+    rst_cable_y : 0.45; 1.20; 5.80 : 0; 0; 0
+    rst_cable_w : 0.55; 1.20; 5.80 : 0; 0; 0
+}
+</code></pre></div>
+<table class="kv">
+<tr><td><code>name : x; y; z : heading; pitch; roll</code></td><td>(metres, degrees, chassis model)</td></tr>
+</table>
+
+<p>The entry is chosen by the rest name of the cable accessory (upper / lower case does not matter); if the accessory has no rest name, by the ending of the socket locator (ele_cable_w -&gt; ..._w), otherwise by the order of the strands. Missing rest points are listed in fleet_road_realism.log. When the parts are coupled again, the game cables the chain as usual and the rest strands disappear.</p>
+<p>How the DLL lays a rest strand:</p>
+<ul>
+<li>The Z axis of the rest point (and of the socket locator) points to the end of the cable, i.e. to the plug head. The cable leaves on the opposite side: if the rest point points down, the cable goes up out of the plug.</li>
+<li>Length: for straight cables straight_cable_length of the cable accessory, otherwise the rope length of the game.</li>
+<li>At both ends the cable makes a bend (stiffness, the longer the cable, the wider); the extra length sags down in the middle.</li>
+<li>The cable lies on the boxes of the chassis collision (.pmc, or collision_override): on a drawbar it lies on top. Boxes above both cable ends (frame, body) push the cable to the side or down, never over them.</li>
+<li>If the cable is shorter than the way from the socket to the rest point, it is drawn taut - then move the rest point closer to the socket.</li>
+</ul>
+<p>Default:  none (when split, the cable strand between the parts is removed)</p>
+<h4 id="cable_rest_prev"><code>cable_rest_prev {</code><a class="headerlink" href="#cable_rest_prev" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>    ...
+</code></pre></div>
+<p>} rest points for the free plug ends</p>
+<h4 id="hook_attach-soundref-or-bankevent-no-sound"><code>hook_attach: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#hook_attach-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound: part behind couples on</p>
+<p>Coupling sounds between the parts, as the truck has them in its sound.sui. The sounds of the part in front are played at the coupling point:</p>
+<div class="highlight"><pre><span></span><code>hook_attach: /sound/your_trailer/hook.soundref
+hook_detach: /sound/your_trailer.bank#hook_detach
+trailer_cables: /sound/your_trailer.bank#cables
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>or in the form of the truck's sound.sui:
+sounds[]: "hook_attach|/sound/your_trailer/hook.soundref"
+</code></pre></div>
+<ul>
+<li>path to a .soundref or bank#event, "-" = no sound</li>
+<li>several lines with the same name: one of them at random</li>
+<li>other sound names (air_brake ...) are ignored</li>
+<li>'#' starts a comment only at the beginning of the line or after a space (paths like "bank#event" stay intact)</li>
+</ul>
+<p>Default:  no sound</p>
+<h4 id="hook_detach-soundref-or-bankevent-no-sound"><code>hook_detach: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#hook_detach-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound: part behind uncouples</p>
+<p><em>Default: no sound</em></p>
+<h4 id="trailer_cables-soundref-or-bankevent-no-sound"><code>trailer_cables: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#trailer_cables-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound: cables plugged in</p>
+<p><em>Default: no sound</em></p>
+<h4 id="twistlock_lock-soundref-or-bankevent-no-sound"><code>twistlock_lock: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#twistlock_lock-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound: twistlock locked</p>
+<p>Twistlock sounds of container chassis (lock and open by hand), at the twistlock:</p>
+<div class="highlight"><pre><span></span><code>twistlock_lock: /sound/your_trailer.bank#lock
+twistlock_unlock: /sound/your_trailer.bank#open
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>  or: sounds[]: "twistlock_lock|/sound/your_trailer.bank#lock"
+  (twistlock_open is the same as twistlock_unlock; same rules as above)
+Default:  /sound/trailer/container.bank#lock
+</code></pre></div>
+<h4 id="twistlock_unlock-soundref-or-bankevent-no-sound"><code>twistlock_unlock: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#twistlock_unlock-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound: twistlock opened (twistlock_open = the same) sound values: .soundref or .bank#event, or sounds[]: "name|path" (see "hook_attach" and "twistlock_lock")</p>
+<p><em>Default: /sound/trailer/container.bank#open</em></p>
+<h4 id="trailer_brace_up_sound-soundref-or-bankevent-no-sound"><code>trailer_brace_up_sound: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#trailer_brace_up_sound-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound when the support legs go up as the DLL couples a part of a double (e.g. "-" in dolly.v3def, a dolly has no legs)</p>
+<p>A sound of its own per leg with [n] (number as in trailer_brace_model[n]):</p>
+<div class="highlight"><pre><span></span><code>trailer_brace_up_sound[0]: "/sound/your_trailer.bank#legs/up"
+trailer_brace_down_sound[0]: "/sound/your_trailer.bank#legs/down"
+</code></pre></div>
+<ul>
+<li>[n] applies to leg n only, [] = next free number, "-" = no sound</li>
+<li>without [] the sound applies to all legs without an entry of their own</li>
+<li>a leg without an entry of its own and without an entry without [] = game sound (in the example: leg 1 has the game sound)</li>
+</ul>
+<p>Default:  game sound</p>
+<h4 id="trailer_brace_down_sound-soundref-or-bankevent-no-sound"><code>trailer_brace_down_sound: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#trailer_brace_down_sound-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h4>
+<p>sound when the support legs go down as the DLL parks a part of a double; per leg with [n] (see "trailer_brace_up_sound")</p>
+<p><em>Default: game sound</em></p>
+<h4 id="dbl_coupling"><code>dbl_coupling {</code><a class="headerlink" href="#dbl_coupling" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>    ...
+</code></pre></div>
+<p>} coupling guide when re-coupling</p>
+<p>Shapes that guide the parts into each other when a detached part of an own double is coupled again (coupling jaw at the rear of the front part, drawbar eye or king pin at the front of the detached part). They work like the game's own guides (pmc parts "adv_cpling"): soft, without impact, and only while that part is being coupled; otherwise they are off.</p>
+<div class="highlight"><pre><span></span><code>dbl_coupling {
+    box : 0;0.543118;5.146128 : 0;0;0 : 0.099903;0.063770;0.153327
+    cylinder : 0;0.539275;-5.769051 : 90.036583;0;0 : 0.053878;0.033937
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>box : x;y;z : rotX;rotY;rotZ : sizeX;sizeY;sizeZ
+capsule | cylinder : x;y;z : rotX;rotY;rotZ : scaleX;scaleZ
+</code></pre></div>
+<ul>
+<li>position in metres, rotation in degrees, sizes - all as ZModeler shows them for the chassis model</li>
+<li>several lines, one shape each</li>
+<li>instead of the block, the pmc of the chassis may hold parts named "dbl_cpling"</li>
+</ul>
+<h4 id="model_override-pathpmd"><code>model_override: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#model_override-pathpmd" title="Permanent link">&para;</a></h4>
+<p>own chassis model (.pmd)</p>
+<p>Replaces the chassis model of the game and adds support legs, e.g. for a part of a double that can stand on its own:</p>
+<div class="highlight"><pre><span></span><code>model_override: "/vehicle/trailer_owned/your_trailer/chassis.pmd"
+collision_override: "/vehicle/trailer_owned/your_trailer/chassis.pmc"
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>trailer_brace_model[0]: "/vehicle/trailer_owned/your_trailer/brace_front.pmd"
+trailer_brace_anim[0]: "/vehicle/trailer_owned/your_trailer/brace_front.pma"
+trailer_brace_use[0]: always
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>trailer_brace_model[1]: "/vehicle/trailer_owned/your_trailer/brace_rear.pmd"
+trailer_brace_anim[1]: "/vehicle/trailer_owned/your_trailer/brace_rear.pma"
+trailer_brace_use_min[1]: 5500
+trailer_brace_use[1]: loading
+</code></pre></div>
+<ul>
+<li>model_override (.pmd) / collision_override (.pmc): model and collision instead of those of the chassis .sii</li>
+<li>if a given file is missing (for .pmd also the .pmg), an error is written to fleet_road_realism.log and the game model stays (no crash)</li>
+<li>trailer_brace_model / trailer_brace_anim: model (.pmd) and animation (.pma) of a support leg, as in the chassis .sii of the game. Without [] = leg 0, with [n] = leg n (several legs)</li>
+<li>trailer_brace_use / trailer_brace_use_min always with [n] (or []), model_override / collision_override always without []; n at most 15</li>
+<li>trailer_brace_use[n]: always = the leg always goes down when the part is set down; loading = only when splitting for loading / unloading at the company, otherwise by weight (trailer_brace_use_min)</li>
+<li>trailer_brace_use_min[n]: kg - the leg also goes down when the cargo of the part is at least this heavy</li>
+<li>without trailer_brace_use: always, or only by weight if trailer_brace_use_min is set</li>
+<li>legs go down in the order of the entries and up in reverse order; the model parts of leg 0 are brace_on / brace_off (or brace_on_0 / brace_off_0), those of leg n are brace_on_n / brace_off_n</li>
+</ul>
+<h4 id="collision_override-pathpmc"><code>collision_override: "&lt;path&gt;.pmc"</code><a class="headerlink" href="#collision_override-pathpmc" title="Permanent link">&para;</a></h4>
+<p>own chassis collision (.pmc)</p>
+<h4 id="trailer_brace_modeln-pathpmd"><code>trailer_brace_model[n]: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#trailer_brace_modeln-pathpmd" title="Permanent link">&para;</a></h4>
+<p>model of support leg n (.pmd)</p>
+<h4 id="trailer_brace_animn-pathpma"><code>trailer_brace_anim[n]: "&lt;path&gt;.pma"</code><a class="headerlink" href="#trailer_brace_animn-pathpma" title="Permanent link">&para;</a></h4>
+<p>animation of support leg n (.pma)</p>
+<h4 id="trailer_brace_usen-always-loading"><code>trailer_brace_use[n]: always | loading</code><a class="headerlink" href="#trailer_brace_usen-always-loading" title="Permanent link">&para;</a></h4>
+<p>always = always loading = when split at the company, otherwise by weight</p>
+<h4 id="trailer_brace_use_minn-kg"><code>trailer_brace_use_min[n]: &lt;kg&gt;</code><a class="headerlink" href="#trailer_brace_use_minn-kg" title="Permanent link">&para;</a></h4>
+<p>kg - support leg also goes down from this cargo weight (see "model_override")</p>
+<h3 id="all-chassis-truck-and-trailer">ALL CHASSIS (truck and trailer)<a class="headerlink" href="#all-chassis-truck-and-trailer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/chassis/xxxx.v3def
+/def/vehicle/trailer_owned/xxxx/chassis/xxxx.v3def
+</code></pre></div>
+<h4 id="gross_vehicle_weight-tonnes-or-kg"><code>gross_vehicle_weight: &lt;tonnes or kg&gt;</code><a class="headerlink" href="#gross_vehicle_weight-tonnes-or-kg" title="Permanent link">&para;</a></h4>
+<p>permissible gross weight</p>
+<p><em>Default: truck by number of axles: 2 -&gt; 18 t, 3 -&gt; 26 t, 4 or more -&gt; 32 t</em></p>
+<div class="highlight"><pre><span></span><code>          trailer by number of axles: 1 -&gt; 20 t, 2 -&gt; 30 t, 3 or more -&gt; 39 t
+</code></pre></div>
+<h4 id="suspension-air-leaf"><code>suspension: air | leaf</code><a class="headerlink" href="#suspension-air-leaf" title="Permanent link">&para;</a></h4>
+<p>air = air suspension (or equivalent) of the driven axle(s) / trailer axles leaf = any other suspension</p>
+<p><em>Default: air</em></p>
+<h4 id="plate_depth_rear-mm"><code>plate_depth_rear: &lt;mm&gt;</code><a class="headerlink" href="#plate_depth_rear-mm" title="Permanent link">&para;</a></h4>
+<p>rear plate forward/back, mm (see "plate_depth_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="plate_rotate_rear-degrees"><code>plate_rotate_rear: &lt;degrees&gt;</code><a class="headerlink" href="#plate_rotate_rear-degrees" title="Permanent link">&para;</a></h4>
+<p>rear plate tilt, degrees (see "plate_depth_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="italy_card_shift_rear-mm"><code>italy_card_shift_rear: &lt;mm&gt;</code><a class="headerlink" href="#italy_card_shift_rear-mm" title="Permanent link">&para;</a></h4>
+<p>Italian cardboard plate rear up/down, mm (see "italy_card_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="italy_card_depth_rear-mm"><code>italy_card_depth_rear: &lt;mm&gt;</code><a class="headerlink" href="#italy_card_depth_rear-mm" title="Permanent link">&para;</a></h4>
+<p>Italian cardboard plate rear forward/back, mm (see "italy_card_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="italy_card_tilt_rear-degrees"><code>italy_card_tilt_rear: &lt;degrees&gt;</code><a class="headerlink" href="#italy_card_tilt_rear-degrees" title="Permanent link">&para;</a></h4>
+<p>Italian cardboard plate rear tilt, degrees (see "italy_card_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="serbia_card_shift_rear-mm"><code>serbia_card_shift_rear: &lt;mm&gt;</code><a class="headerlink" href="#serbia_card_shift_rear-mm" title="Permanent link">&para;</a></h4>
+<p>PROBA plate rear up/down, mm (see "italy_card_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="serbia_card_depth_rear-mm"><code>serbia_card_depth_rear: &lt;mm&gt;</code><a class="headerlink" href="#serbia_card_depth_rear-mm" title="Permanent link">&para;</a></h4>
+<p>PROBA plate rear forward/back, mm (see "italy_card_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="serbia_card_tilt_rear-degrees"><code>serbia_card_tilt_rear: &lt;degrees&gt;</code><a class="headerlink" href="#serbia_card_tilt_rear-degrees" title="Permanent link">&para;</a></h4>
+<p>PROBA plate rear tilt, degrees (see "italy_card_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="greece_export_shift_rear-mm"><code>greece_export_shift_rear: &lt;mm&gt;</code><a class="headerlink" href="#greece_export_shift_rear-mm" title="Permanent link">&para;</a></h4>
+<p>Greek export plate rear up/down, mm (see "greece_export_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="greece_export_depth_rear-mm"><code>greece_export_depth_rear: &lt;mm&gt;</code><a class="headerlink" href="#greece_export_depth_rear-mm" title="Permanent link">&para;</a></h4>
+<p>Greek export plate rear forward/back, mm (see "greece_export_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h4 id="greece_export_rotate_rear-degrees"><code>greece_export_rotate_rear: &lt;degrees&gt;</code><a class="headerlink" href="#greece_export_rotate_rear-degrees" title="Permanent link">&para;</a></h4>
+<p>Greek export plate rear tilt, degrees (see "greece_export_shift_front" under TRUCK CHASSIS)</p>
+<p><em>Default: 0</em></p>
+<h3 id="accessory-rear-bumper">ACCESSORY REAR BUMPER<a class="headerlink" href="#accessory-rear-bumper" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/trailer_owned/xxxx/accessory/r_bumper/xxxx.v3def
+</code></pre></div>
+<p>An accessory can get its own model and an animation that runs depending on the part behind it, e.g. a rear bumper that folds up when the next part of a double is coupled. Currently for rear bumpers (accessory/r_bumper/) of the accessory type accessory_addon_data.</p>
+<div class="highlight"><pre><span></span><code>model_override: "/vehicle/trailer_owned/upgrade/r_bumper/your_bumper.pmd"
+model_override_uk: "/vehicle/trailer_owned/upgrade/r_bumper/your_bumper_uk.pmd"
+collision_override: "/vehicle/trailer_owned/upgrade/r_bumper/your_bumper.pmc"
+model_anim: "/vehicle/trailer_owned/upgrade/r_bumper/your_bumper.pma"
+anim_type: attach_next
+anim_start: attached
+anim_distance: 2
+</code></pre></div>
+<p>Locators of the model that have a bone of the same name move with the animation (lights, plate). truckpaint materials are painted as on the rest of the trailer.</p>
+<p>On animated accessories, make truckpaint meshes separate objects under bones of their own, do not attach them to other parts. Otherwise all other parts look wrong after painting (lights black, textures missing).</p>
+<h4 id="model_override-pathpmd_1"><code>model_override: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#model_override-pathpmd_1" title="Permanent link">&para;</a></h4>
+<p>own model (.pmd), instead of exterior_model of the accessory .sii</p>
+<h4 id="model_override_uk-pathpmd"><code>model_override_uk: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#model_override_uk-pathpmd" title="Permanent link">&para;</a></h4>
+<p>own UK model (.pmd), instead of exterior_model_uk of the accessory .sii</p>
+<p><em>Default: model_override</em></p>
+<h4 id="collision_override-pathpmc_1"><code>collision_override: "&lt;path&gt;.pmc"</code><a class="headerlink" href="#collision_override-pathpmc_1" title="Permanent link">&para;</a></h4>
+<p>own collision (.pmc), instead of coll of the accessory .sii</p>
+<h4 id="model_anim-pathpma"><code>model_anim: "&lt;path&gt;.pma"</code><a class="headerlink" href="#model_anim-pathpma" title="Permanent link">&para;</a></h4>
+<p>animation (.pma) for the model</p>
+<h4 id="anim_type-attach_next"><code>anim_type: attach_next</code><a class="headerlink" href="#anim_type-attach_next" title="Permanent link">&para;</a></h4>
+<p>attach_next = depends on the part behind (the only type)</p>
+<h4 id="anim_start-attached-detached"><code>anim_start: attached | detached</code><a class="headerlink" href="#anim_start-attached-detached" title="Permanent link">&para;</a></h4>
+<p>which state the first frame of the .pma shows: attached (part behind coupled) or detached</p>
+<h4 id="anim_distance-metres"><code>anim_distance: &lt;metres&gt;</code><a class="headerlink" href="#anim_distance-metres" title="Permanent link">&para;</a></h4>
+<p>metres. "detached" only when nothing is coupled behind and no part of the own double is closer than this (end to end), so the bumper does not block the doors when the parts stand close together for loading</p>
+<p><em>Default: 2</em></p>
+<h3 id="accessory-mirror">ACCESSORY MIRROR<a class="headerlink" href="#accessory-mirror" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/accessory/mirror/xxxx.v3def
+(likewise s_mirror, f_mirror and other mirror folders whose name ends with
+"mirror"; accessory type accessory_addon_data)
+</code></pre></div>
+<p>Turning mirror glasses: when the mirrors are adjusted in the game ("Adjust mirrors") the glass turns with them, by exactly the angle the game turns the mirror image. For this the mirror gets replacement models without glass, with locators, and every glass is a model of its own at its locator. Plus an adjustment sound (motor or by hand).</p>
+<div class="highlight"><pre><span></span><code>interior_model_override: "/vehicle/truck/upgrade/mirror/your_truck/mirror_01_interior_mg.pmd"
+interior_model_override_uk: "/vehicle/truck/upgrade/mirror/your_truck/mirror_01_interior_uk_mg.pmd"
+exterior_model_override: "/vehicle/truck/upgrade/mirror/your_truck/mirror_01_mg.pmd"
+exterior_model_override_uk: "/vehicle/truck/upgrade/mirror/your_truck/mirror_01_uk_mg.pmd"
+mirror_glass[]: d "/vehicle/truck/upgrade/mirror/your_truck/glass_d.pmd"
+mirror_glass[]: ds "/vehicle/truck/upgrade/mirror/your_truck/glass_ds.pmd"
+mirror_glass_ext[]: d "/vehicle/truck/upgrade/mirror/your_truck/glass_d_ext.pmd"
+mirror_glass_ext[]: ds "/vehicle/truck/upgrade/mirror/your_truck/glass_ds_ext.pmd"
+mirror_adjust: electric
+</code></pre></div>
+<p>Mirror slots (like the game's camera locators in the mirror model):</p>
+<div class="highlight"><pre><span></span><code>d    driver side (cam_d)                  p    passenger side (cam_p)
+ds   driver side wide angle (cam_ds)      ps   passenger side wide angle (cam_ps)
+s    ramp / side mirror (cam_s)           f    front mirror (cam_f)
+h    hood / fender mirror (cam_h)
+</code></pre></div>
+<p>Driver and passenger side also apply to right-hand drive (UK models).</p>
+<p>Models:</p>
+<ul>
+<li>replacement models (interior and exterior): the previous mirror model without the glasses, with locators mglass_d, mglass_ds, mglass_p, mglass_ps, mglass_s, mglass_f, mglass_h instead (only the existing ones). Interior and exterior model use the same locator names. The locators get no hookup.</li>
+<li>locator = pivot of the glass, rotation 0. On modern mirrors the adjustment motor or ball joint behind the glass, on mirrors whose whole head swings on the arm, the joint on the arm.</li>
+<li>glass model (.pmd): origin in the pivot, the glass as it sits in the mirror model (only moved, not rotated). This position is the neutral position ("Reset" in the game). Interior and exterior have glass models of their own (different materials).</li>
+<li>It turns by the angle of the game setting (sideways up to 10 degrees, up/down up to 7.5 degrees), in the axes of the camera locators. How far the glass moves follows from its distance to the pivot.</li>
+<li>Exterior glasses are drawn on every vehicle with this mirror; only the own truck is adjusted, all others stay neutral.</li>
+</ul>
+<h4 id="interior_model_override-pathpmd"><code>interior_model_override: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#interior_model_override-pathpmd" title="Permanent link">&para;</a></h4>
+<p>interior model without glasses, instead of interior_model of the accessory .sii</p>
+<h4 id="interior_model_override_uk-pathpmd"><code>interior_model_override_uk: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#interior_model_override_uk-pathpmd" title="Permanent link">&para;</a></h4>
+<p>like interior_model_override for interior_model_uk (right-hand drive)</p>
+<h4 id="exterior_model_override-pathpmd"><code>exterior_model_override: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#exterior_model_override-pathpmd" title="Permanent link">&para;</a></h4>
+<p>exterior model without glasses, instead of exterior_model of the accessory .sii (mirrors only)</p>
+<h4 id="exterior_model_override_uk-pathpmd"><code>exterior_model_override_uk: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#exterior_model_override_uk-pathpmd" title="Permanent link">&para;</a></h4>
+<p>like exterior_model_override for exterior_model_uk (right-hand drive)</p>
+<h4 id="mirror_glass-slot-pathpmd"><code>mirror_glass[]: &lt;slot&gt; "&lt;path&gt;.pmd"</code><a class="headerlink" href="#mirror_glass-slot-pathpmd" title="Permanent link">&para;</a></h4>
+<p>glass in the interior model at locator mglass_&lt;slot&gt;, one line per glass (needs interior_model_override)</p>
+<h4 id="mirror_glass_ext-slot-pathpmd"><code>mirror_glass_ext[]: &lt;slot&gt; "&lt;path&gt;.pmd"</code><a class="headerlink" href="#mirror_glass_ext-slot-pathpmd" title="Permanent link">&para;</a></h4>
+<p>glass in the exterior model at locator mglass_&lt;slot&gt;, one line per glass (needs exterior_model_override)</p>
+<h4 id="mirror_adjust-electric-manual"><code>mirror_adjust: electric | manual</code><a class="headerlink" href="#mirror_adjust-electric-manual" title="Permanent link">&para;</a></h4>
+<p>sound when adjusting: electric = adjustment motor (start-up, motor as long as the glass moves, strained motor at the end stop while the key is held, run-down), manual = short creak per step. The mod brings the sounds (/sound/lphd/mirror.bank). Applies to the mirrors with mirror_glass[] or mirror_glass_ext[] lines, otherwise by folder (mirror = d, ds, p, ps; s_mirror = s; f_mirror = f; others = f, h).</p>
+<p><em>Default: no sound</em></p>
+<h4 id="mirror_axes-horizontal-vertical-both"><code>mirror_axes: horizontal | vertical | both</code><a class="headerlink" href="#mirror_axes-horizontal-vertical-both" title="Permanent link">&para;</a></h4>
+<p>in which direction the mirrors of this accessory can be adjusted in the game: horizontal = only left/right, vertical = only up/down, both = both. The arrows of the other direction are hidden in the adjustment window.</p>
+<p><em>Default: both</em></p>
+<h4 id="mirror_glass_uk-slot-pathpmd"><code>mirror_glass_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"</code><a class="headerlink" href="#mirror_glass_uk-slot-pathpmd" title="Permanent link">&para;</a></h4>
+<p>like mirror_glass[] for the interior model of right-hand drive (needs interior_model_override_uk)</p>
+<h4 id="mirror_glass_ext_uk-slot-pathpmd"><code>mirror_glass_ext_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"</code><a class="headerlink" href="#mirror_glass_ext_uk-slot-pathpmd" title="Permanent link">&para;</a></h4>
+<p>like mirror_glass_ext[] for the exterior model of right-hand drive (needs exterior_model_override_uk)</p>
+<h4 id="mirror_rain-slot-pathmat"><code>mirror_rain[]: &lt;slot&gt; "&lt;path&gt;.mat"</code><a class="headerlink" href="#mirror_rain-slot-pathmat" title="Permanent link">&para;</a></h4>
+<p>rain drops on the mirror glass (option for rain drops on the mirrors): material of the glass in the mirror model or in the glass model from mirror_glass[]. Every glass needs a material of its own; all faces with this material get drops like the windshield, a turning glass takes them along.</p>
+<div class="highlight"><pre><span></span><code>mirror_rain[]: d "/vehicle/truck/upgrade/mirror/your_truck/glass_d.mat"
+</code></pre></div>
+<h4 id="mirror_rain_uk-slot-pathmat"><code>mirror_rain_uk[]: &lt;slot&gt; "&lt;path&gt;.mat"</code><a class="headerlink" href="#mirror_rain_uk-slot-pathmat" title="Permanent link">&para;</a></h4>
+<p>like mirror_rain[] for the right-hand drive models</p>
+<h4 id="mirror_rain_size-factor"><code>mirror_rain_size: &lt;factor&gt;</code><a class="headerlink" href="#mirror_rain_size-factor" title="Permanent link">&para;</a></h4>
+<p>size of the drops on all glasses of this accessory relative to the windshield (e.g. 0.5 = half the size)</p>
+<p><em>Default: 1</em></p>
+<h3 id="accessory-interior">ACCESSORY INTERIOR<a class="headerlink" href="#accessory-interior" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/interior/xxxx.v3def (interior accessory,
+accessory_interior_data)
+</code></pre></div>
+<p>Sleeping: with "rest" of 1 hour or more the driver gets up, walks between the seats to the bed and lies down (interior camera), after sleeping the same way back. Without a bed (or below 1 hour) he rests in the seat.</p>
+<h4 id="sleeper-true-false"><code>sleeper: true | false</code><a class="headerlink" href="#sleeper-true-false" title="Permanent link">&para;</a></h4>
+<p>true = this interior accessory has a bed</p>
+<p><em>Default: false</em></p>
+<h4 id="bed_area-locator-a-locator-b"><code>bed_area: "&lt;locator a&gt;" "&lt;locator b&gt;"</code><a class="headerlink" href="#bed_area-locator-a-locator-b" title="Permanent link">&para;</a></h4>
+<p>two locators in the interior model at two opposite corners of the mattress; or the corners directly as coordinates of the interior model, as ZModeler shows them:</p>
+<div class="highlight"><pre><span></span><code>bed_area: "bed_a" "bed_b"
+bed_area: 0.55;0.92;-0.61 : -0.55;0.92;-1.30
+</code></pre></div>
+<p>Without bed_area there is no sleep sequence despite sleeper: true.</p>
+<h4 id="bed_head-a-b"><code>bed_head: a | b</code><a class="headerlink" href="#bed_head-a-b" title="Permanent link">&para;</a></h4>
+<p>head end at the end of corner a or b</p>
+<p><em>Default: random</em></p>
+<h4 id="windshield_material-material"><code>windshield_material[]: "&lt;material&gt;"</code><a class="headerlink" href="#windshield_material-material" title="Permanent link">&para;</a></h4>
+<p>material of the windshield in the interior model (or of its replacement), one line per material. The faces of these materials give the curvature of the windshield for dirt and drops on the glass.</p>
+<p><em>Default: no entry = flat glass</em></p>
+<h3 id="washer-nozzles">WASHER NOZZLES<a class="headerlink" href="#washer-nozzles" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/cabin/xxxx.v3def (cabin accessory; every accessory of
+the truck that has the lines is read)
+</code></pre></div>
+<p>The windshield washer sprays onto the windshield where the nozzles aim. Coordinates are those of the cabin model, as ZModeler shows them; the mod converts them into the interior through the locator "interior" of the cabin model (without this locator they count as interior model coordinates).</p>
+<h4 id="washer-fixed-wiper"><code>washer: fixed | wiper</code><a class="headerlink" href="#washer-fixed-wiper" title="Permanent link">&para;</a></h4>
+<p>fixed = fixed nozzles (bonnet/cowl), wiper = nozzles in the wiper blade (jet turns with the arm)</p>
+<p><em>Default: fixed</em></p>
+<h4 id="washer_jets-single-double"><code>washer_jets: single | double</code><a class="headerlink" href="#washer_jets-single-double" title="Permanent link">&para;</a></h4>
+<p>single = one jet per nozzle, double = two jets per nozzle in a V shape</p>
+<p><em>Default: single</em></p>
+<h4 id="washer_jets_angle-degrees-5-170"><code>washer_jets_angle: &lt;degrees 5 - 170&gt;</code><a class="headerlink" href="#washer_jets_angle-degrees-5-170" title="Permanent link">&para;</a></h4>
+<p>opening of the V with washer_jets: double</p>
+<p><em>Default: two spots 15 cm left/right each</em></p>
+<h4 id="washer_spot-xyz"><code>washer_spot[]: x;y;z</code><a class="headerlink" href="#washer_spot-xyz" title="Permanent link">&para;</a></h4>
+<p>spot where a fixed nozzle hits the glass, one line per nozzle</p>
+<p><em>Default: per wiper a spot of about 15 cm above the resting blade</em></p>
+<h4 id="washern-xyz"><code>washer[n]: x;y;z</code><a class="headerlink" href="#washern-xyz" title="Permanent link">&para;</a></h4>
+<p>position of the fixed nozzle n (n = 0, 1, 2 ...)</p>
+<h4 id="washer_spotn-xyz"><code>washer_spot[n]: x;y;z</code><a class="headerlink" href="#washer_spotn-xyz" title="Permanent link">&para;</a></h4>
+<p>spot where nozzle n hits the glass (needs washer[n])</p>
+<h3 id="body">BODY<a class="headerlink" href="#body" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/trailer_owned/xxxx/body/xxxx.v3def
+</code></pre></div>
+<h4 id="floor-wood-metal-film"><code>floor: wood | metal | film</code><a class="headerlink" href="#floor-wood-metal-film" title="Permanent link">&para;</a></h4>
+<p>wood, metal or film = deck</p>
+<p><em>Default: wood</em></p>
+<h4 id="floor-woodx1x2"><code>floor[]: "wood|x1|x2"</code><a class="headerlink" href="#floor-woodx1x2" title="Permanent link">&para;</a></h4>
+<p>"metal|x1|x2" = strip with a different deck (see README_lashing_data)</p>
+<h3 id="company-trailer-driver-tours">COMPANY TRAILER DRIVER TOURS<a class="headerlink" href="#company-trailer-driver-tours" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/def/vehicle/trailer/xxxx.v3def (next to the .sui)
+</code></pre></div>
+<h4 id="equivalency-token"><code>equivalency: &lt;token&gt;</code><a class="headerlink" href="#equivalency-token" title="Permanent link">&para;</a></h4>
+<p>same token = the same trailer in another length</p>
+<p>Trailers of /def/vehicle/trailer (the trailers of driver tours and quick jobs) that exist in two lengths (retracted / extended) get a .v3def next to their .sui, same name:</p>
+<div class="highlight"><pre><span></span><code>/def/vehicle/trailer/scs_lowloader_2ax.sui
+-&gt; /def/vehicle/trailer/scs_lowloader_2ax.v3def
+/def/vehicle/trailer/scs_lowloader_2ax_ext.sui
+-&gt; /def/vehicle/trailer/scs_lowloader_2ax_ext.v3def
+</code></pre></div>
+<table class="kv">
+<tr><td><code>equivalency: lowldr_2ax</code></td><td>same token = same trailer in another length</td></tr>
+</table>
+
+<p>Only trailers with such a file and a partner with the same token can be switched; all other trailers need no file. On a driver tour with an empty trailer and the truck standing still, the game action "adjust trailer" switches to the other length (chassis, body and trailer definition of the partner .sui). Cargo for both lengths can be offered; at the loading company the cargo is only loaded with the right length, the HUD asks to extend or retract the trailer (also possible during the waiting time). lphd_tieflader_v3def.zip holds the files for the SCS low loaders.</p>
+<h3 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h3>
+<p>A line that is present but cannot be read (e.g. "gross_vehicle_weight: 18 t", "emission: six", "emission: 9", "type: semi", "suspension: steel", "registration: dolly", "italy_card_shift_rear: 1,5 cm", "serbia_card_depth_rear: 2 cm", "italy_card_tilt_rear: 60", "plate_rotate_rear: 50") is reported as an error in game.log</p>
+<div class="highlight"><pre><span></span><code>&lt;ERROR&gt; [fleet_road_realism] /def/.../your_chassis.v3def: invalid value for
+        gross_vehicle_weight (expected e.g. "gross_vehicle_weight: 18.00"),
+        using default 18 t
+</code></pre></div>
+<p>and in fleet_road_realism.log. The default value is used for that line.</p>
+<h3 id="what-the-values-are-used-for">What the values are used for<a class="headerlink" href="#what-the-values-are-used-for" title="Permanent link">&para;</a></h3>
+<table class="kv">
+<tr><td>Germany (own registration)</td><td>vehicle tax by emission class</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Austria (own registration)</td><td>vehicle tax per started tonne and month: up to 12 t 1.55 EUR (min. 15), 12-18 t 1.70 EUR, above 18 t 1.90 EUR; max. 80 EUR truck, 66 EUR trailer trailer weight = gross_vehicle_weight - king_pin_load</td></tr>
+</table>
+
+<p>Switzerland (own registration)  cantonal vehicle tax, tariff of the canton on the plate, per calendar year in advance (pro rata in the year of registration, rest refunded when the vehicle is sold, deregistered or moved to another canton). Depending on the canton by gross weight, payload (gross weight - empty weight), gross combination weight (tractor units), displacement or power; some cantons use the Euro class or reduce the tax for electric trucks. The number stays reserved for the company for one year after a sale.</p>
+<table class="kv">
+<tr><td>Switzerland (all trucks)</td><td>LSVA = km in Switzerland x weight x tariff weight = truck + coupled trailer - king_pin_load, max. 40 t; tariff by emission (Rappen per tkm): Euro 0-3 3.26, Euro 4-5 2.82, Euro 6-7 2.39 electric trucks (engine &quot;type: electric&quot;) are exempt</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>France (own registration)</td><td>TSVR (heavy vehicle tax), settled in arrears per calendar year from a logbook (day by day): rigid trucks from 12 t by axles and gross weight, tractor units by gross combination weight and the axles of the trailer pulled that day (no trailer: nothing); air / other suspension</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Italy (own registration)</td><td>IPT at registration: tractor units by power (kW), rigid trucks and trailers by payload (gross weight - empty weight); bollo per year: rigid trucks by axles, gross weight and suspension, tractor units by region and axles (2 / 3 or more)</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Poland (own registration)</td><td>tax on means of transport (two instalments a year): rigid trucks by axles and gross weight, tractor units by axles and gross combination weight, trailers by axles; air / other suspension; rates of the municipality (minimum rates otherwise)</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Czechia (own registration)</td><td>road tax for trucks from 12 t, in arrears per calendar year (1/12 per started month): rigid trucks by axles and gross weight, tractor units by axles and gross combination weight (trailers are covered by the tractor); air / other suspension</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Slovakia (own registration)</td><td>motor vehicle tax, in arrears per calendar year (1/12 per month, return by 31 January, prepayments quarterly above 700 EUR / monthly above 8,300 EUR of the previous year&#x27;s tax): rigid trucks by axles and gross weight, tractor units by axles and gross combination weight, air / other suspension; trailers (O4) a flat 150 EUR; trucks pay an age surcharge (+10 % after 3 years, rising every 3 years, +50 % from the 181st month) counted from the first registration in the game</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Hungary (own registration)</td><td>motor vehicle tax per started 100 kg, paid by 15 April for the months up to the end of the year (from the month after registration to the month of deregistration): rigid trucks and trailers empty weight + 50 % of the payload, tractor units 2 x empty weight + 1/2 x (gross combination weight - 2 x empty weight); air / other suspension; reductions for Euro III (-20 %, tractor units -30 %) and Euro IV-V (-30 % / -50 %), none for Euro I-II and Euro VI; electric trucks (class 5E, emission entry ignored) -20 % / -30 %. Acquisition duty at the first registration in Hungary: trucks per kW by power and age (from the first registration in the game), trailers flat 24,000 Ft</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Greece (own registration)</td><td>road tax per calendar year in advance (full year with the registration, then on 1 November for the following year): rigid trucks by gross weight (up to 10 t 300 EUR, 20 t 600, 30 t 940, 40 t 1,320, above 1,490), tractor units 300 EUR, trailers free. Used trucks below Euro V (emission 0-4) cannot be registered in Greece; electric trucks are exempt from this rule.</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Romania (own registration)</td><td>tax on means of transport per calendar year: rigid trucks by axles and gross weight, tractor units by their axles + the axles of the semi-trailer chosen at registration (none coupled: 3) and gross combination weight; air / other suspension. The tractor pays for the combination, the semi-trailer pays nothing. Electric trucks use the same table. The owner on 31 December pays for the next year: registered during the year -&gt; from 1 January of the following year; whole year on 31 March with a bonus (10 %, Bacau 5 %); surcharge of the town of the garage (Brasov +35 %, Craiova +13 %, Timisoara +50 %); no refund on sale/deregistration</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Bulgaria (own registration)</td><td>vehicle tax per year: rigid trucks by axles and gross weight, tractor units by axles and gross combination weight; air / other suspension; multiple of the minimum rate set by the town of the garage (otherwise by the plate code): Sofia 1.25, Plovdiv 1.43, Varna 2.25, Burgas 1.5, Veliko Tarnovo 1.3, Stara Zagora 1.5, others 1.0; Euro 4 -20 %, Euro 5-6 -50 % (not in Stara Zagora, electric trucks full rate); trailers no own tax. Whole year by 30 April with 5 % discount; in the year of registration 1/12 per month from the month of registration (due in two months); sale or deregistration: tax up to the end of the month, overpaid tax refunded</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Slovenia (own registration)</td><td>annual vehicle charge = days x daily rate, one year in advance with the registration, then yearly: rigid trucks per started tonne of gross weight, tractor units per kW up to 190 kW (above a flat daily rate), separate rates up to / above 20 t gross weight; trailers per tonne of gross weight, semi-trailers free. Euro VI -35 %, V -25 %, IV 0, III +10 %, II +20 %, I +30 %, 0 +40 %; electric trucks -90 %; air suspension (rigid trucks only) a further -15 %. Minimum 5 EUR; rest refunded on sale/deregistration (amounts up to 5 EUR not)</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Croatia (own registration)</td><td>road charge 40 EUR x coefficient, one year in advance with the registration: trucks by gross weight and axles, trailers by gross weight and axles, semi-trailers by the sum of the axle loads (gross_vehicle_weight - king_pin_load). Environment charge (trucks only): 60.52 EUR x displacement factor x age factor (age from the first registration in the game); electric trucks 0. No refund on sale/deregistration</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Serbia (own registration)</td><td>municipal fee per year (due at registration, then yearly, maximum rates for all areas): rigid trucks and trailers by payload (gross weight - empty weight), tractor units by power (kW); no refund on sale/deregistration</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Montenegro (own registration)</td><td>road charge for 12 months in advance with the registration, then with each renewal (shorter registration pro rata by months); no refund, a new owner pays nothing until it expires. Until 30 June 2027: rigid trucks and trailers by payload (gross weight - empty weight), tractor units by power (kW); from 1 July 2027: 5 EUR x coefficient by gross weight and axles (separate tables for trailers and semi-trailers). Short-term liability insurance: rigid trucks and trailers by payload, tractor units by power (kW)</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>North Macedonia (own registration)</td><td>road fee for 12 months with the registration (shorter registration pro rata, 30 days = 1 month), no refund: tractor units by power (kW), rigid trucks and trailers by payload (gross weight - empty weight), semi-trailers flat 5,200 MKD</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Bosnia and Herzegovina (own registration)</td><td>annual charges for 12 months in advance with the registration, by the entity of the district. Federation: road charge 30 KM x coefficient, trucks and tractor units by gross weight and axles, semi-trailers by the sum of the axle loads (gross_vehicle_weight - king_pin_load), trailers by gross weight; environment charge (trucks only) by fuel (electric x 0.2), displacement and age (from the first registration in the game); water charge 0.30 KM per kW (not electric trucks); road charge refunded from the day of deregistration. Republika Srpska: road toll by gross weight, tractor units flat 120 KM; no refund</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Albania (own registration)</td><td>TVMP (trucks only): displacement x age coefficient x 12.5 ALL; free in the first 3 years, 0.20 in the 4th year, +0.02 per year up to 0.60 (age from the first registration in the game); electric trucks and trailers pay nothing. Valid 365 days from payment, no refund; after a temporary deregistration pro rata per month to 31 December</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Turkey (own registration)</td><td>MTV (trucks only, trailers free) by gross weight of the truck (not the combination) and age (1-6, 7-15, 16+ years, counted from the year of the first registration in the game); two equal instalments in January and July, with the registration the instalment of the current half-year; after sale/deregistration no further instalments</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Russia (own registration)</td><td>transport tax (trucks only, trailers free): horsepower (kW x 1.35962) x rate of the region on the plate (in some regions by age from the first registration in the game) x months / 12; paid in arrears per quarter (28 April, 28 July, 28 October, 1 March); a month counts when registered by the 15th / deregistered after the 15th; no refund, open months after deregistration are charged on the next date</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Lithuania (own registration)</td><td>annual charge from 12 t gross weight (trucks and trailers), by tonne of gross weight (semi-trailers: gross_vehicle_weight - king_pin_load), air / other suspension; 12 months with the registration, then yearly; no refund</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Latvia (own registration)</td><td>vehicle operation tax per calendar year: trucks up to 12 t by Euro class, above 12 t by axles and Euro class (own table for tractor units); electric trucks free. Trailers above 3.5 t: one axle 66 EUR, otherwise by axles, suspension of the towing vehicle and weight (semi-trailer: empty weight of the tractor + gross weight of the semi-trailer; trailer: gross weight of truck + trailer); the towing vehicle is chosen at registration (default: tractor 2 axles, 7.7 t empty, air suspension / rigid truck 3 axles, 26 t). With the registration the remaining months including the current one, then every January; deregistration: full remaining months refunded</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Estonia (own registration)</td><td>heavy vehicle tax per quarter: rigid trucks from 12 t by axles, gross weight and suspension (air / other); tractor units as a combination: own axles + axles of the semi-trailer chosen at registration (default 3), by gross combination weight; trailers free. With the registration the full remaining months of the quarter (without the registration month), then the whole quarter on 1 January / April / July / October; no refund, after deregistration nothing from the next quarter</td></tr>
+</table>
+
+<table class="kv">
+<tr><td>Kosovo (own registration)</td><td>road tax 90 EUR + eco tax 30 EUR for 365 days with the registration (trucks and trailers, flat, no vehicle values); renewal 170 EUR (incl. 50 EUR administration); no refund</td></tr>
+</table>
+
+<h2 id="example-files">Example files<a class="headerlink" href="#example-files" title="Permanent link">&para;</a></h2>
+<p>All examples for download: <a href="../../downloads/resources_vehicle_data.zip">resources_vehicle_data.zip</a></p>
+<details class="example">
+<summary>def/vehicle/trailer/your_company_trailer/chassis_ca.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: Firmen-(Auftrags-)Double, Sattelauflieger + Zentralachsanhaenger
+# Fleet &amp; Road Realism - example: company (job) double, semi-trailer + centre-axle trailer
+# Datei: gleicher Ordner und Name wie die Chassis-.sii dieses Glieds
+# File:  same folder and name as the chassis .sii of this link
+#        /def/vehicle/trailer/your_company_trailer/chassis_ca.sii  -&gt;  chassis_ca.v3def
+
+# hinterer Zentralachsanhaenger (ohne Dolly): eigene Ladeeinheit
+# rear centre-axle trailer (no dolly): loading unit of its own
+loading: own
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer/your_company_trailer/chassis_hook.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: Firmen-(Auftrags-)Double, Sattelauflieger + Zentralachsanhaenger
+# Fleet &amp; Road Realism - example: company (job) double, semi-trailer + centre-axle trailer
+# Datei: gleicher Ordner und Name wie die Chassis-.sii dieses Glieds
+# File:  same folder and name as the chassis .sii of this link
+#        /def/vehicle/trailer/your_company_trailer/chassis_hook.sii  -&gt;  chassis_hook.v3def
+# Firmenauflieger haben keinen Ordner chassis/: die Chassis-.sii ist die Datei, deren Name
+# mit "chassis" beginnt (chassis_hook.sii, chassis_ca.sii, ...).
+# Company trailers have no chassis/ folder: the chassis .sii is the file whose name
+# starts with "chassis" (chassis_hook.sii, chassis_ca.sii, ...).
+
+# vorderer Sattelauflieger: eigene Ladeeinheit
+# front semi-trailer: loading unit of its own
+loading: own
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer/your_trailer.v3def</summary>
+<div class="highlight"><pre><span></span><code># Gleicher Token = derselbe Auflieger in anderer Laenge (F7 Auflieger anpassen bei Fahrertouren)
+# same token = same trailer in another length (F7 adjust trailer on driver tours)
+equivalency: your_group
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer_owned/your_double/chassis/rear_part.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: hinterer Teil eines Doubles (Sattelauflieger, der allein stehen kann)
+# Fleet &amp; Road Realism - example: rear part of a double (semi-trailer that can stand on its own)
+# Datei: gleicher Ordner und Name wie die Chassis-.sii dieses Teils
+# File:  same folder and name as the chassis .sii of this part
+#        /def/vehicle/trailer_owned/your_double/chassis/rear_part.sii  -&gt;  rear_part.v3def
+# Siehe README, Schluessel "cable", "dbl_coupling", "model_override" und "trailer_brace_up_sound"
+# See README, keys "cable", "dbl_coupling", "model_override" and "trailer_brace_up_sound"
+
+# eigene Ladeeinheit, behaelt den Kabelstrang zum Teil davor
+# loading unit of its own, keeps the cable strand to the part in front
+loading: own
+cable: prev
+
+# Ruhepunkt fuer das freie Steckerende (Name wie der Ruhe-Name des Kabel-Zubehoers);
+# die Z-Achse zeigt zum Steckerkopf - hier nach unten, das Kabel geht nach oben heraus
+# rest point for the free plug end (name as the rest name of the cable accessory);
+# the Z axis points to the plug head - here downwards, the cable leaves upwards
+cable_rest_prev {
+    rst_cable : 0.117;0.616;-3.525 : -59.77;90;90
+}
+
+# Fanghilfe vorne (Zugoese / Koenigszapfen), Werte wie ZModeler sie anzeigt
+# coupling guide at the front (drawbar eye / king pin), values as ZModeler shows them
+dbl_coupling {
+  cylinder : 0;0.539275;-5.769051 : 90.036583;0;0 : 0.053878;0.033937
+  box : 0;0.539275;-5.651069 : 90.036583;0;0 : 0.070268;0.171322;0.027288
+}
+
+# eigenes Chassis-Modell und eigene Kollision
+# own chassis model and collision
+model_override: "/vehicle/trailer_owned/your_double/chassis_rear.pmd"
+collision_override: "/vehicle/trailer_owned/your_double/chassis_rear.pmc"
+
+# Stuetze 0 vorne: geht immer runter, wenn der Teil abgestellt wird
+# leg 0 at the front: always goes down when the part is set down
+trailer_brace_model[0]: "/vehicle/trailer_owned/your_double/brace_front.pmd"
+trailer_brace_anim[0]: "/vehicle/trailer_owned/your_double/brace_front.pma"
+trailer_brace_use[0]: always
+# eigener Ton nur fuer Stuetze 0 (Stuetze 1 hat keinen Eintrag -&gt; Ton des Spiels)
+# a sound of its own for leg 0 only (leg 1 has no entry -&gt; game sound)
+trailer_brace_up_sound[0]: "/sound/your_trailer.bank#legs/up"
+trailer_brace_down_sound[0]: "/sound/your_trailer.bank#legs/down"
+
+# Stuetze 1 hinten: beim Trennen an der Firma, sonst ab 5500 kg Ladung
+# leg 1 at the rear: when splitting at the company, otherwise from 5500 kg cargo
+trailer_brace_model[1]: "/vehicle/trailer_owned/your_double/brace_rear.pmd"
+trailer_brace_anim[1]: "/vehicle/trailer_owned/your_double/brace_rear.pma"
+trailer_brace_use_min[1]: 5500
+trailer_brace_use[1]: loading
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer_owned/your_hct/chassis/dolly.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: HCT Sattelauflieger + Dolly + Sattelauflieger
+# Fleet &amp; Road Realism - example: HCT semi-trailer + converter dolly + semi-trailer
+# Datei: gleicher Ordner und Name wie die Chassis-.sii dieses Glieds
+# File:  same folder and name as the chassis .sii of this link
+#        /def/vehicle/trailer_owned/your_hct/chassis/dolly.sii  -&gt;  dolly.v3def
+# Gezeigt sind nur die Zeilen fuer Trennen, Kabel und Toene; die anderen Zeilen
+# (gross_vehicle_weight, king_pin_load, ...) gehen wie in your_trailer/chassis.
+# Only the lines for splitting, cables and sounds are shown; the other lines
+# (gross_vehicle_weight, king_pin_load, ...) work as in your_trailer/chassis.
+
+# Dolly: bleibt unter dem hinteren Sattelauflieger
+# converter dolly: stays under the rear semi-trailer
+loading: next
+
+# Kabel beim Trennen der Kette (siehe README, Schluessel "cable"):
+# der Dolly behaelt den Strang zum vorderen Sattelauflieger, die freien Steckerenden
+# kommen an diese Ruhepunkte des Dolly-Modells (name : x; y; z : heading; pitch; roll)
+# Cables when the chain is split (see README, key "cable"):
+# the dolly keeps the strand to the front semi-trailer, its free plug ends
+# go to these rest points of the dolly model (name : x; y; z : heading; pitch; roll)
+cable: prev
+cable_rest_prev {
+    rst_cable_y : 0.45; 1.20; 1.60 : 0; 0; 0
+    rst_cable_w : 0.55; 1.20; 1.60 : 0; 0; 0
+}
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer_owned/your_hct/chassis/front_trailer.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: HCT Sattelauflieger + Dolly + Sattelauflieger
+# Fleet &amp; Road Realism - example: HCT semi-trailer + converter dolly + semi-trailer
+# Datei: gleicher Ordner und Name wie die Chassis-.sii dieses Glieds
+# File:  same folder and name as the chassis .sii of this link
+#        /def/vehicle/trailer_owned/your_hct/chassis/front_trailer.sii  -&gt;  front_trailer.v3def
+# Gezeigt sind nur die Zeilen fuer Trennen, Kabel und Toene; die anderen Zeilen
+# (gross_vehicle_weight, king_pin_load, ...) gehen wie in your_trailer/chassis.
+# Only the lines for splitting, cables and sounds are shown; the other lines
+# (gross_vehicle_weight, king_pin_load, ...) work as in your_trailer/chassis.
+
+# vorderer Sattelauflieger: eigene Ladeeinheit
+# front semi-trailer: loading unit of its own
+loading: own
+
+# Kuppeltoene, wenn der Dolly dahinter angekuppelt / abgekuppelt / eingesteckt wird
+# (siehe README, Schluessel "cable"), "-" = kein Ton
+# Coupling sounds when the dolly behind is coupled / detached / plugged in
+# (see README, key "cable"), "-" = no sound
+hook_attach: /sound/your_trailer/hook_attach.soundref
+hook_detach: /sound/your_trailer/hook_detach.soundref
+trailer_cables: /sound/your_trailer/cables.soundref
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer_owned/your_hct/chassis/rear_trailer.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: HCT Sattelauflieger + Dolly + Sattelauflieger
+# Fleet &amp; Road Realism - example: HCT semi-trailer + converter dolly + semi-trailer
+# Datei: gleicher Ordner und Name wie die Chassis-.sii dieses Glieds
+# File:  same folder and name as the chassis .sii of this link
+#        /def/vehicle/trailer_owned/your_hct/chassis/rear_trailer.sii  -&gt;  rear_trailer.v3def
+# Gezeigt ist nur die Zeile zum Trennen beim Beladen; die anderen Zeilen
+# (gross_vehicle_weight, king_pin_load, ...) gehen wie in your_trailer/chassis.
+# Only the line for splitting when loading is shown; the other lines
+# (gross_vehicle_weight, king_pin_load, ...) work as in your_trailer/chassis.
+
+# hinterer Sattelauflieger: eigene Ladeeinheit (mit dem Dolly)
+# rear semi-trailer: loading unit of its own (with the dolly)
+loading: own
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer_owned/your_trailer/accessory/r_bumper/your_bumper.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: Heckstossstange, klappt hoch, wenn der naechste Teil eines Doubles angekuppelt ist
+# Fleet &amp; Road Realism - example: rear bumper that folds up when the next part of a double is coupled
+# Datei: gleicher Ordner und Name wie die Zubehoer-.sii
+# File:  same folder and name as the accessory .sii
+#        /def/vehicle/trailer_owned/your_trailer/accessory/r_bumper/your_bumper.sii  -&gt;  your_bumper.v3def
+# Siehe README, "ZUBEHOER HECKSTOSSSTANGE" / see README, "ACCESSORY REAR BUMPER""
+
+# Modell statt exterior_model der Zubehoer-.sii
+# model instead of exterior_model of the accessory .sii
+model_override: "/vehicle/trailer_owned/upgrade/r_bumper/your_bumper.pmd"
+
+# Animation des Modells
+# animation of the model
+model_anim: "/vehicle/trailer_owned/upgrade/r_bumper/your_bumper.pma"
+
+# haengt vom Teil dahinter ab
+# depends on the part behind
+anim_type: attach_next
+
+# erstes Bild der .pma = Teil dahinter angekuppelt
+# first frame of the .pma = part behind coupled
+anim_start: attached
+
+# "detached" erst ab 2 m Luecke zum naechsten Teil des eigenen Doubles
+# "detached" only from 2 m gap to the next part of the own double
+anim_distance: 2
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/trailer_owned/your_trailer/chassis/your_chassis.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Auflieger-Chassisdaten (optional) / trailer chassis data (optional)
+#
+# Datei: gleicher Ordner und Name wie die Chassis-.sii des eigenen Aufliegers
+# File:  same folder and name as the chassis .sii of the owned trailer
+#        /def/vehicle/trailer_owned/your_trailer/chassis/your_chassis.sii
+#        -&gt;  your_chassis.v3def
+#
+# Ohne diese Datei haengen Gesamtgewicht und Sattellast von der Achszahl ab:
+# 1 -&gt; 20 t / 10 t, 2 -&gt; 30 t / 12 t, 3 und mehr -&gt; 39 t / 12 t, Federung air,
+# registration own.
+# Without this file the gross weight and the king pin load depend on the
+# number of axles: 1 -&gt; 20 t / 10 t, 2 -&gt; 30 t / 12 t, 3 or more -&gt; 39 t / 12 t,
+# suspension air, registration own.
+
+
+# ---------------------------------------------------------------------------
+# Zulaessiges Gesamtgewicht des Aufliegers laut Zulassung
+# Tonnen (Werte bis 100) oder Kilogramm (Werte ueber 100)
+# Permissible gross vehicle weight of the trailer as registered
+# Tonnes (values up to 100) or kilograms (values above 100)
+#
+# Wofuer: oesterreichische Kfz-Steuer, Schweizer LSVA, Schweizer kantonale
+#         Motorfahrzeugsteuer (Nutzlast = dieser Wert - Leergewicht),
+#         italienische IPT (Nutzlast), ungarische Kfz-Steuer (Leergewicht +
+#         50 % der Nutzlast), Slowenien (je Tonne), Kroatien, Bosnien und
+#         Herzegowina, Litauen, Lettland, Montenegro, Nutzlast in Serbien und
+#         Nordmazedonien
+# Used for:  Austrian vehicle tax, Swiss LSVA,
+#            Swiss cantonal vehicle tax (payload = this value - empty weight),
+#            Italian IPT (payload), Hungarian vehicle tax (empty weight + 50 % of
+#            the payload), Slovenia (per tonne), Croatia, Bosnia and
+#            Herzegovina, Lithuania, Latvia, Montenegro, payload in Serbia and
+#            North Macedonia
+# ---------------------------------------------------------------------------
+
+gross_vehicle_weight: 39.00
+
+
+# ---------------------------------------------------------------------------
+# Last auf dem Koenigszapfen (traegt die Sattelzugmaschine) - optional, gleiche
+# Einheiten. Sie wird vom Auflieger-Gewicht abgezogen, weil die Zugmaschine sie
+# schon traegt:
+# Load on the king pin (carried by the tractor unit) - optional, same units
+# It is subtracted from the trailer weight, because the tractor already carries it:
+#
+#   Steuer Oesterreich / Austrian tax:   Auflieger / trailer 39 - 12 = 27 t
+#   Schweizer LSVA / Swiss LSVA:         Lkw / truck 18 + Auflieger / trailer
+#                                        39 - 12 = 45 t  -&gt;  begrenzt / limited to 40 t
+#
+# Ausserdem: Kroatien, Bosnien und Herzegowina und Litauen (Sattelauflieger nach
+# gross_vehicle_weight - king_pin_load), Sattelauflieger sind in Slowenien frei,
+# eigene Tarife fuer Sattelauflieger in Montenegro, Nordmazedonien und Lettland.
+# Bei Deichselanhaengern weglassen (kein Koenigszapfen).
+# Also: Croatia, Bosnia and Herzegovina and Lithuania (semi-trailers by
+# gross_vehicle_weight - king_pin_load), semi-trailers are free in Slovenia,
+# own tariffs for semi-trailers in Montenegro, North Macedonia and Latvia.
+# Leave it out for drawbar trailers (no king pin).
+# ---------------------------------------------------------------------------
+
+king_pin_load: 12.00
+
+
+# ---------------------------------------------------------------------------
+# Federung der Aufliegerachsen: air (Luftfederung oder gleichwertig)
+# oder leaf (jede andere Federung)
+# Suspension of the trailer axles: air (air suspension or equivalent)
+# or leaf (any other suspension)
+#
+# Wofuer: polnische, ungarische und litauische Kfz-Steuer der Auflieger
+#         ("Luft" / "andere Federung")
+# Used for:  Polish, Hungarian and Lithuanian vehicle tax of trailers
+#            ("air" / "other suspension")
+# ---------------------------------------------------------------------------
+
+suspension: air
+
+
+# ---------------------------------------------------------------------------
+# Mehrteilige Auflieger (B-Double, HCT, Drehschemelanhaenger):
+#   own  = dieses Chassis ist ein eigenes Fahrzeug (Standard; auch
+#          Sattelauflieger und Dollys, sie werden eigens zugelassen)
+#   next = gehoert zum Teil dahinter (z. B. die Drehschemelachse eines
+#          Drehschemelanhaengers)
+#   prev = gehoert zum Teil davor
+# Verbundene Teile sind ein Fahrzeug: eine Zulassung (Kennzeichen des hintersten
+# Teils), Steuer und Versicherung einmal fuer alle. Siehe README,
+# Schluessel "registration".
+# Trailers made of several parts (B-double, HCT, full trailer with turntable):
+#   own  = this chassis is a vehicle of its own (default; also semi-trailers
+#          and converter dollies, they are registered on their own)
+#   next = belongs to the part behind it (e.g. the turntable axle of a
+#          full trailer)
+#   prev = belongs to the part in front of it
+# Joined parts are one vehicle: one registration (plate of the rearmost part),
+# tax and insurance once for all of them. See README,
+# key "registration".
+# ---------------------------------------------------------------------------
+
+registration: own
+
+
+# ---------------------------------------------------------------------------
+# Eigene Doubles beim Beladen trennen (Option "Eigene Doubles beim Beladen
+# trennen"): welche Glieder der Kette zusammengehoeren
+#   own  = dieses Glied ist eine eigene Ladeeinheit (bekommt eine eigene Spur)
+#   next = bleibt beim Glied dahinter (z. B. bleibt ein Dolly unter dem
+#          hinteren Sattelauflieger)
+#   prev = bleibt beim Glied davor
+# Jedes Chassis der Kette braucht diese Zeile; fehlt eine, wird die Kette nie
+# getrennt. Ein einzelner Auflieger mit dieser Zeile wird normal beladen. Siehe
+# README, Schluessel "loading".
+# Splitting own doubles when loading (option "Split own doubles when loading"): which links of the chain belong together
+#   own  = this link is a loading unit of its own (gets a lane of its own)
+#   next = stays with the link behind it (e.g. a converter dolly stays under
+#          the rear semi-trailer)
+#   prev = stays with the link in front of it
+# Every chassis of the chain needs this line; if one is missing, the chain is
+# never split. A single trailer with this line is loaded as usual. See README,
+# key "loading".
+# ---------------------------------------------------------------------------
+
+loading: own
+
+
+# ---------------------------------------------------------------------------
+# Pappschilder hinten, Italien (foglio di via) und Serbien/Montenegro (PROBA):
+# shift = Hoehe in mm vom Standard aus (10 mm unter dem Kennzeichen),
+#         positiv = hoch, negativ = runter
+# depth = vor/zurueck in mm, positiv = weg vom Fahrzeug, negativ = zum Fahrzeug
+# tilt  = Grad, positiv = Oberkante zum Fahrzeug hin
+# Cardboard plates at the rear, Italy (foglio di via) and Serbia/Montenegro (PROBA):
+# shift = height change in mm from the default (10 mm below the plate),
+#         positive = up, negative = down
+# depth = forward/back in mm, positive = away from the vehicle, negative = towards
+# tilt  = degrees, positive = top edge towards the vehicle
+# ---------------------------------------------------------------------------
+
+italy_card_shift_rear: 0
+italy_card_depth_rear: 0
+italy_card_tilt_rear: 0
+serbia_card_shift_rear: 0
+serbia_card_depth_rear: 0
+serbia_card_tilt_rear: 0
+
+
+# ---------------------------------------------------------------------------
+# Griechisches Exportschild (370 x 120 mm, eigenes Schild mittig auf dem Kennzeichen):
+# shift  = Hoehe in mm, positiv = hoch, negativ = runter
+# depth  = vor/zurueck in mm, positiv = weg vom Fahrzeug, negativ = zum Fahrzeug
+# rotate = Neigung in Grad, positiv = Oberkante zum Fahrzeug hin
+# Greek export plate (370 x 120 mm, a plate of its own centred on the normal plate):
+# shift  = height change in mm, positive = up, negative = down
+# depth  = forward/back in mm, positive = away from the vehicle, negative = towards
+# rotate = tilt in degrees, positive = top edge towards the vehicle
+# ---------------------------------------------------------------------------
+
+greece_export_shift_rear: 0
+greece_export_depth_rear: 0
+greece_export_rotate_rear: 0
+
+
+# ---------------------------------------------------------------------------
+# Lage der normalen Kennzeichen hinten (feste und Kurzzeitkennzeichen):
+# depth  = vor/zurueck in mm, positiv = weg vom Fahrzeug, negativ = zum Fahrzeug
+# rotate = Neigung in Grad, positiv = Oberkante zum Fahrzeug hin
+# Position of the normal plates (permanent and temporary plates) at the rear:
+# depth  = forward/back in mm, positive = away from the vehicle, negative = towards
+# rotate = tilt in degrees, positive = top edge towards the vehicle
+# ---------------------------------------------------------------------------
+
+plate_depth_rear: 0
+plate_rotate_rear: 0
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/truck/your_fixed_plate_truck/chassis/your_chassis.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Lkw mit festem Kennzeichen im Modell (optional)
+# Fleet &amp; Road Realism - truck with a fixed plate in the model (optional)
+# Datei: gleicher Ordner und Name wie die Chassis-.sii
+# File:  same folder and name as the chassis .sii
+# Siehe README, "CHASSIS LKW" -&gt; fixed_plate / see README, "TRUCK CHASSIS" -&gt; fixed_plate
+
+# fest in Deutschland zugelassen, Zulassungsbezirk HN
+# permanently registered in Germany, registration district HN
+fixed_plate: "germany|HN"
+
+# Steuerangaben wie bei jedem Lkw / tax data as for any truck
+type: tractor
+gross_vehicle_weight: 18.00
+gross_combination_weight: 40.00
+suspension: air
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/truck/your_truck/accessory/mirror/your_mirror.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Beispiel: Hauptspiegel mit drehbaren Glaesern und Stellmotor-Ton
+# Fleet &amp; Road Realism - example: main mirror with turning glasses and adjustment motor sound
+# Datei: gleicher Ordner und Name wie die Zubehoer-.sii
+# File:  same folder and name as the accessory .sii
+#        /def/vehicle/truck/your_truck/accessory/mirror/your_mirror.sii  -&gt;  your_mirror.v3def
+# Siehe README, "ZUBEHOER SPIEGEL" / see README, "ACCESSORY MIRROR"
+
+# Innenmodell ohne Glaeser, mit Locatoren mglass_d, mglass_ds, mglass_p, mglass_ps (statt interior_model der .sii)
+# interior model without glasses, with locators mglass_d, mglass_ds, mglass_p, mglass_ps (instead of interior_model of the .sii)
+interior_model_override: "/vehicle/truck/upgrade/mirror/your_truck/mirror_01_interior_mg.pmd"
+
+# dasselbe fuer Rechtslenker (statt interior_model_uk)
+# the same for right-hand drive (instead of interior_model_uk)
+interior_model_override_uk: "/vehicle/truck/upgrade/mirror/your_truck/mirror_01_interior_uk_mg.pmd"
+
+# Aussenmodell ohne Glaeser, gleiche Locator-Namen (statt exterior_model der .sii)
+# exterior model without glasses, same locator names (instead of exterior_model of the .sii)
+exterior_model_override: "/vehicle/truck/upgrade/mirror/your_truck/mirror_01_mg.pmd"
+
+# dasselbe fuer Rechtslenker (statt exterior_model_uk)
+# the same for right-hand drive (instead of exterior_model_uk)
+exterior_model_override_uk: "/vehicle/truck/upgrade/mirror/your_truck/mirror_01_uk_mg.pmd"
+
+# Glaeser im Innenmodell: Kuerzel, Glasmodell (Ursprung im Drehpunkt)
+# glasses in the interior model: slot, glass model (origin in the pivot)
+mirror_glass[]: d "/vehicle/truck/upgrade/mirror/your_truck/glass_d.pmd"
+mirror_glass[]: ds "/vehicle/truck/upgrade/mirror/your_truck/glass_ds.pmd"
+mirror_glass[]: p "/vehicle/truck/upgrade/mirror/your_truck/glass_p.pmd"
+mirror_glass[]: ps "/vehicle/truck/upgrade/mirror/your_truck/glass_ps.pmd"
+
+# Glaeser im Aussenmodell (eigene Modelle, anderes Material)
+# glasses in the exterior model (models of their own, different material)
+mirror_glass_ext[]: d "/vehicle/truck/upgrade/mirror/your_truck/glass_d_ext.pmd"
+mirror_glass_ext[]: ds "/vehicle/truck/upgrade/mirror/your_truck/glass_ds_ext.pmd"
+mirror_glass_ext[]: p "/vehicle/truck/upgrade/mirror/your_truck/glass_p_ext.pmd"
+mirror_glass_ext[]: ps "/vehicle/truck/upgrade/mirror/your_truck/glass_ps_ext.pmd"
+
+# Verstell-Ton: electric (Stellmotor) oder manual (von Hand)
+# adjustment sound: electric (adjustment motor) or manual (by hand)
+mirror_adjust: electric
+
+# Verstellrichtung: horizontal (nur links/rechts), vertical (nur hoch/runter) oder both
+# adjustment direction: horizontal (left/right only), vertical (up/down only) or both
+mirror_axes: both
+
+# Regentropfen: Material jedes Glases (eigenes Material je Glas)
+# rain drops: material of each glass (a material of its own per glass)
+mirror_rain[]: d "/vehicle/truck/upgrade/mirror/your_truck/glass_d.mat"
+mirror_rain[]: ds "/vehicle/truck/upgrade/mirror/your_truck/glass_ds.mat"
+mirror_rain[]: p "/vehicle/truck/upgrade/mirror/your_truck/glass_p.mat"
+mirror_rain[]: ps "/vehicle/truck/upgrade/mirror/your_truck/glass_ps.mat"
+
+# Tropfengroesse im Verhaeltnis zur Frontscheibe
+# drop size relative to the windshield
+mirror_rain_size: 0.5
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/truck/your_truck/cabin/your_cabin.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Waschduesen (optional) / washer nozzles (optional)
+# Datei: gleicher Ordner und Name wie die Kabinen-.sii
+# File:  same folder and name as the cabin .sii
+#        /def/vehicle/truck/your_truck/cabin/your_cabin.sii  -&gt;  your_cabin.v3def
+# Siehe README, "WASCHDUESEN" / see README, "WASHER NOZZLES"
+
+# feste Duesen auf der Motorhaube / fixed nozzles on the bonnet
+washer: fixed
+
+# zwei Strahlen je Duese in V-Form, 30 Grad geoeffnet
+# two jets per nozzle in a V shape, 30 degrees open
+washer_jets: double
+washer_jets_angle: 30
+
+# Duese 0 und 1: Lage und Auftreffpunkt (Koordinaten des Kabinenmodells wie in ZModeler)
+# nozzle 0 and 1: position and spot (cabin model coordinates as in ZModeler)
+washer[0]: 0.45;1.62;1.05
+washer_spot[0]: 0.50;2.10;0.95
+washer[1]: -0.45;1.62;1.05
+washer_spot[1]: -0.50;2.10;0.95
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/truck/your_truck/chassis/your_chassis.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Lkw-Chassisdaten (optional) / truck chassis data (optional)
+#
+# Datei: gleicher Ordner und Name wie die Chassis-.sii
+# File:  same folder and name as the chassis .sii
+#        /def/vehicle/truck/your_truck/chassis/your_chassis.sii
+#        -&gt;  your_chassis.v3def
+#
+# Ohne diese Datei gilt der Lkw als Sattelzugmaschine, sein Gesamtgewicht haengt
+# von der Achszahl ab (2 -&gt; 18 t, 3 -&gt; 26 t, 4 und mehr -&gt; 32 t), das
+# Zuggesamtgewicht ist 40 t, Federung air.
+# Without this file the truck counts as a tractor unit, its gross weight
+# depends on the number of axles (2 -&gt; 18 t, 3 -&gt; 26 t, 4 or more -&gt; 32 t)
+# and the gross combination weight is 40 t, suspension air.
+
+
+# ---------------------------------------------------------------------------
+# Art des Lkw: tractor (Sattelzugmaschine) oder rigid (Solo-Lkw)
+# Kind of truck: tractor (tractor unit for semi-trailers) or rigid (rigid truck)
+#
+# Wofuer: eigene Tarife fuer Sattelzugmaschinen und Solo-Lkw: Schweizer
+#         kantonale Motorfahrzeugsteuer, franzoesische TSVR, italienische IPT
+#         und Bollo, Kfz-Steuer in Polen, Tschechien, der Slowakei, Ungarn,
+#         Griechenland, Rumaenien, Bulgarien, Slowenien, Serbien, Montenegro,
+#         Nordmazedonien, Bosnien und Herzegowina, Lettland und Estland
+# Used for:  different tariffs for tractor units and rigid trucks: Swiss
+#            cantonal vehicle tax, French TSVR, Italian IPT and bollo, vehicle
+#            tax in Poland, Czechia, Slovakia, Hungary, Greece, Romania,
+#            Bulgaria, Slovenia, Serbia, Montenegro, North Macedonia, Bosnia
+#            and Herzegovina, Latvia and Estonia
+# ---------------------------------------------------------------------------
+
+type: tractor
+
+
+# ---------------------------------------------------------------------------
+# Zulaessiges Gesamtgewicht des Lkw / der Sattelzugmaschine
+# Tonnen (Werte bis 100) oder Kilogramm (Werte ueber 100), z. B. 18.00 oder 18000
+# Permissible gross vehicle weight of the truck / tractor unit
+# Tonnes (values up to 100) or kilograms (values above 100), e.g. 18.00 or 18000
+#
+# Wofuer: oesterreichische Kfz-Steuer (je angefangene Tonne), Schweizer LSVA,
+#         Schweizer kantonale Motorfahrzeugsteuer (Nutzlast = dieser Wert -
+#         Leergewicht), Kroatien, Bosnien und Herzegowina, Tuerkei, Litauen,
+#         Lettland, Slowenien (Sattelzugmaschinen: bis / ueber 20 t),
+#         Solo-Lkw: franzoesische TSVR, italienischer Bollo und IPT (Nutzlast),
+#         Kfz-Steuer in Polen, Tschechien, der Slowakei, Ungarn (Nutzlast),
+#         Griechenland, Rumaenien, Bulgarien, Slowenien, Estland, Serbien,
+#         Montenegro und Nordmazedonien (Nutzlast = dieser Wert - Leergewicht)
+# Used for:  Austrian vehicle tax (per started tonne), Swiss LSVA,
+#            Swiss cantonal vehicle tax (payload = this value - empty weight),
+#            Croatia, Bosnia and Herzegovina, Turkey, Lithuania, Latvia,
+#            Slovenia (tractor units: up to / above 20 t),
+#            rigid trucks: French TSVR, Italian bollo and IPT (payload),
+#            vehicle tax in Poland, Czechia, Slovakia, Hungary (payload),
+#            Greece, Romania, Bulgaria, Slovenia, Estonia, Serbia, Montenegro
+#            and North Macedonia (payload = this value - empty weight)
+# ---------------------------------------------------------------------------
+
+gross_vehicle_weight: 18.00
+
+
+# ---------------------------------------------------------------------------
+# Zulaessiges Zuggesamtgewicht (Lkw + Auflieger), gleiche Einheiten
+# Permissible gross combination weight (truck + trailer), same units
+#
+# Wofuer: Sattelzugmaschinen: Schweizer kantonale Motorfahrzeugsteuer (manche
+#         Kantone), franzoesische TSVR, Kfz-Steuer in Polen, Tschechien, der
+#         Slowakei, Ungarn, Rumaenien, Bulgarien und Estland
+# Used for:  tractor units: Swiss cantonal vehicle tax (some cantons),
+#            French TSVR, vehicle tax in Poland, Czechia, Slovakia, Hungary,
+#            Romania, Bulgaria and Estonia
+# ---------------------------------------------------------------------------
+
+gross_combination_weight: 40.00
+
+
+# ---------------------------------------------------------------------------
+# Federung der Antriebsachse(n): air (Luftfederung oder gleichwertig)
+# oder leaf (jede andere Federung, z. B. Stahl-/Blattfedern)
+# Suspension of the driven axle(s): air (air suspension or equivalent)
+# or leaf (any other suspension, e.g. steel/leaf springs)
+#
+# Wofuer: eigene Spalten / Saetze "Luft" / "andere Federung": franzoesische
+#         TSVR, italienischer Bollo (Solo-Lkw), Kfz-Steuer in Polen,
+#         Tschechien, der Slowakei, Ungarn, Rumaenien, Bulgarien, Litauen und
+#         Estland, Slowenien (Solo-Lkw: Luft -15 %), Lettland (Anhaengersteuer
+#         nach der Federung des Zugfahrzeugs)
+# Used for:  separate columns / rates "air" / "other suspension": French
+#            TSVR, Italian bollo (rigid trucks), vehicle tax in Poland, Czechia,
+#            Slovakia, Hungary, Romania, Bulgaria, Lithuania and Estonia,
+#            Slovenia (rigid trucks: air -15 %), Latvia (trailer tax by the
+#            suspension of the towing vehicle)
+# ---------------------------------------------------------------------------
+
+suspension: air
+
+
+# ---------------------------------------------------------------------------
+# Pappschilder, Italien (foglio di via) und Serbien/Montenegro (PROBA):
+# shift = Hoehe in mm vom Standard aus (vorne: mittig, hinten: 30 mm unter dem
+#         Kennzeichen), positiv = hoch, negativ = runter
+# depth = vor/zurueck in mm, positiv = weg vom Fahrzeug, negativ = zum Fahrzeug
+# tilt  = nur hinten, Grad, positiv = Oberkante zum Fahrzeug hin
+# Cardboard plates, Italy (foglio di via) and Serbia/Montenegro (PROBA):
+# shift = height change in mm from the default (front: centred, rear: 30 mm
+#         below the plate), positive = up, negative = down
+# depth = forward/back in mm, positive = away from the vehicle, negative = towards
+# tilt  = rear only, degrees, positive = top edge towards the vehicle
+# ---------------------------------------------------------------------------
+
+italy_card_shift_front: 0
+italy_card_shift_rear: 0
+italy_card_depth_front: 0
+italy_card_depth_rear: 0
+italy_card_tilt_rear: 0
+serbia_card_shift_front: 0
+serbia_card_shift_rear: 0
+serbia_card_depth_front: 0
+serbia_card_depth_rear: 0
+serbia_card_tilt_rear: 0
+
+
+# ---------------------------------------------------------------------------
+# Griechisches Exportschild (370 x 120 mm, eigenes Schild mittig auf dem Kennzeichen):
+# shift  = Hoehe in mm, positiv = hoch, negativ = runter
+# depth  = vor/zurueck in mm, positiv = weg vom Fahrzeug, negativ = zum Fahrzeug
+# rotate = Neigung in Grad, positiv = Oberkante zum Fahrzeug hin
+# Greek export plate (370 x 120 mm, a plate of its own centred on the normal plate):
+# shift  = height change in mm, positive = up, negative = down
+# depth  = forward/back in mm, positive = away from the vehicle, negative = towards
+# rotate = tilt in degrees, positive = top edge towards the vehicle
+# ---------------------------------------------------------------------------
+
+greece_export_shift_front: 0
+greece_export_shift_rear: 0
+greece_export_depth_front: 0
+greece_export_depth_rear: 0
+greece_export_rotate_front: 0
+greece_export_rotate_rear: 0
+
+
+# ---------------------------------------------------------------------------
+# Lage der normalen Kennzeichen (feste und Kurzzeitkennzeichen):
+# depth  = vor/zurueck in mm, positiv = weg vom Fahrzeug, negativ = zum Fahrzeug
+# rotate = Neigung in Grad, positiv = Oberkante zum Fahrzeug hin
+# Position of the normal plates (permanent and temporary plates):
+# depth  = forward/back in mm, positive = away from the vehicle, negative = towards
+# rotate = tilt in degrees, positive = top edge towards the vehicle
+# ---------------------------------------------------------------------------
+
+plate_depth_front: 0
+plate_depth_rear: 0
+plate_rotate_front: 0
+plate_rotate_rear: 0
+
+
+# ---------------------------------------------------------------------------
+# Kippbare Sattelkupplung: Platte als eigenes Modell am Locator couple_0 des
+# Chassis-Modells (Ursprung im Lager), Neigung nach vorn / hinten in Grad,
+# Ruhelage in Grad (positiv = hinten tiefer). Siehe README, "KIPPBARE SATTELKUPPLUNG"
+# Tilting fifth wheel: plate as a model of its own at locator couple_0 of the
+# chassis model (origin in the bearing), tilt forward / backward in degrees,
+# rest position in degrees (positive = rear lower). See README, "TILTING FIFTH WHEEL"
+# ---------------------------------------------------------------------------
+
+couple_model: "/vehicle/truck/your_truck/fifthwheel.pmd"
+couple_tilt_front: 10
+couple_tilt_rear: 15
+couple_tilt_rest: 5
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/truck/your_truck/engine/your_engine.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Motordaten (optional) / engine data (optional)
+#
+# Datei: gleicher Ordner und Name wie die Motor-.sii
+# File:  same folder and name as the engine .sii
+#        /def/vehicle/truck/your_truck/engine/your_engine.sii
+#        -&gt;  your_engine.v3def
+#
+# Ohne diese Datei (oder ohne emission) gilt der Motor als Euro 6.
+# Without this file (or without emission) the engine counts as Euro 6.
+
+
+# ---------------------------------------------------------------------------
+# Euro-Schadstoffklasse des Motors, ganze Zahl 0-7
+# Euro emission class of the engine, whole number 0-7
+#
+# Wofuer: deutsche Kfz-Steuer, Tarif der Schweizer LSVA (0-3 = Kategorie I,
+#         4-5 = Kategorie II, 6-7 = Kategorie III), Schweizer kantonale
+#         Motorfahrzeugsteuer (manche Kantone), Ermaessigungen / Zuschlaege der
+#         ungarischen, bulgarischen, slowenischen und lettischen Kfz-Steuer,
+#         Griechenland (gebrauchte Lkw unter Euro V nicht zulassbar)
+# Used for:  German vehicle tax, Swiss LSVA tariff (0-3 = LSVA category I,
+#            4-5 = category II, 6-7 = category III), Swiss cantonal vehicle
+#            tax (some cantons), reductions / surcharges of the Hungarian,
+#            Bulgarian, Slovenian and Latvian vehicle tax, Greece (used trucks
+#            below Euro V cannot be registered)
+# ---------------------------------------------------------------------------
+
+emission: 6
+
+
+# ---------------------------------------------------------------------------
+# Zahl der Zylinder, ganze Zahl 1-16 (Takt des Kaltstart-Nagelns)
+# Number of cylinders, whole number 1-16 (rate of the cold start knock)
+#
+# Ohne Eintrag 6. / Without entry 6.
+# ---------------------------------------------------------------------------
+
+cylinders: 6
+
+
+# ---------------------------------------------------------------------------
+# Staerke des Kaltstart-Nagelns, 0-3 (1 = normal, 0.5 = halb, 0 = aus)
+# Strength of the cold start knock, 0-3 (1 = normal, 0.5 = half, 0 = off)
+#
+# Ohne Eintrag 1. / Without entry 1.
+# ---------------------------------------------------------------------------
+
+knock_strength: 1
+
+
+# ---------------------------------------------------------------------------
+# Tonhoehe des Kaltstart-Nagelns, 0.4-2 (1 = normal, kleiner = tiefer/dumpfer)
+# Pitch of the cold start knock, 0.4-2 (1 = normal, lower = deeper/duller)
+#
+# Ohne Eintrag 1. / Without entry 1.
+# ---------------------------------------------------------------------------
+
+knock_tone: 1
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/truck/your_truck/interior/your_interior.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Innenraum (optional) / interior (optional)
+# Datei: gleicher Ordner und Name wie die Innenraum-.sii
+# File:  same folder and name as the interior .sii
+#        /def/vehicle/truck/your_truck/interior/your_interior.sii  -&gt;  your_interior.v3def
+# Siehe README, "ZUBEHOER INNENRAUM" / see README, "ACCESSORY INTERIOR"
+
+# Dieser Innenraum hat ein Bett
+# this interior has a bed
+sleeper: true
+
+# Ecken der Liegeflaeche: zwei Locatoren im Innenmodell
+# corners of the mattress: two locators in the interior model
+bed_area: "bed_a" "bed_b"
+
+# Kopfende an der Ecke a
+# head end at corner a
+bed_head: a
+
+# Material der Frontscheibe im Innenmodell (Woelbung fuer Dreck und Tropfen)
+# material of the windshield in the interior model (curvature for dirt and drops)
+windshield_material[]: "/vehicle/truck/your_truck/interior/glass.mat"
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../frachtdaten/" class="md-footer__link md-footer__link--next" aria-label="Next: Cargo data">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cargo data
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Ventyres 3D
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/ventyres3d" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

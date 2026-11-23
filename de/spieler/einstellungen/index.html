@@ -1,0 +1,1966 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ventyres3d.github.io/fleet-road-realism/de/spieler/einstellungen/">
+      
+      
+        <link rel="prev" href="../funktionen/">
+      
+      
+        <link rel="next" href="../../modding/">
+      
+      
+        
+          <link rel="alternate" href="/fleet-road-realism/de/" hreflang="de">
+        
+          <link rel="alternate" href="/fleet-road-realism/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Einstellungen - Fleet & Road Realism Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#einstellungen" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Fleet &amp; Road Realism Wiki" class="md-header__button md-logo" aria-label="Fleet & Road Realism Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fleet & Road Realism Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Einstellungen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Dunkel"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkel" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Hell"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hell" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/fleet-road-realism/de/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/fleet-road-realism/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fleet &amp; Road Realism Wiki" class="md-nav__button md-logo" aria-label="Fleet & Road Realism Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5z"/></svg>
+
+    </a>
+    Fleet & Road Realism Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spieler
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Spieler
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einstellungen
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einstellungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zulassung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zulassung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zulassung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zulassung-versicherung-und-kfz-steuer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zulassung, Versicherung und Kfz-Steuer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kennzeichen-zeile-im-hud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kennzeichen-Zeile im HUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dokumente-anzeige" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dokumente – Anzeige
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dokumente-detailgrad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dokumente – Detailgrad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platz-fur-zulassungsdokumente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platz für Zulassungsdokumente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auslandische-kennzeichen-im-ki-verkehr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausländische Kennzeichen im KI-Verkehr
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ausländische Kennzeichen im KI-Verkehr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anteil-auslandischer-fahrzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anteil ausländischer Fahrzeuge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anteil-in-stadten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anteil in Städten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anhanger-aus-anderem-land" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anhänger aus anderem Land
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erweitert-anteil-je-fahrzeugart-festlegen-lkw-busse-pkw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erweitert: Anteil je Fahrzeugart festlegen (Lkw, Busse, Pkw)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuhrpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuhrpark
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fuhrpark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flottenmanagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flottenmanagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auflieger-beim-abkuppeln-abstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auflieger beim Abkuppeln abstellen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ankuppelhilfe-an-aufliegern-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ankuppelhilfe an Aufliegern anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ankuppelhilfe-am-abgestellten-auflieger-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ankuppelhilfe am abgestellten Auflieger anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigene-doubles-beim-beladen-trennen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigene Doubles beim Beladen trennen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ankuppelhilfe-an-getrennten-doubles-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ankuppelhilfe an getrennten Doubles anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alb-automatisch-lastabhangige-bremse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALB (automatisch lastabhängige Bremse)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatischer-hohenangleich-beim-ankuppeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatischer Höhenangleich beim Ankuppeln
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spiegel-scheiben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spiegel &amp; Scheiben
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spiegel &amp; Scheiben">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptspiegel-links-weitwinkelspiegel-links-hauptspiegel-rechts-weitwinkelspiegel-rechts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptspiegel links, Weitwinkelspiegel links, Hauptspiegel rechts, Weitwinkelspiegel rechts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regentropfen-auf-den-spiegeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regentropfen auf den Spiegeln
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheibenwaschanlage-und-scheibendreck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheibenwaschanlage und Scheibendreck
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regen-im-innenraum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regen im Innenraum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farbe-scheibenwasser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farbe Scheibenwasser
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tourenplanung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tourenplanung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tourenplanung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#umkreis-fur-teilladungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umkreis für Teilladungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#umkreis-fur-teilladungen-doubles-hct-2x20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umkreis für Teilladungen (Doubles, HCT, 2x20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ladungssicherung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ladungssicherung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ladungssicherung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ladung-selbst-sichern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ladung selbst sichern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groe-der-symbole-in-der-welt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Größe der Symbole in der Welt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deckkraft-der-symbole-in-der-welt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deckkraft der Symbole in der Welt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legende-der-ladungssicherung-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legende der Ladungssicherung anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benachrichtigungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benachrichtigungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leistung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leistung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leistung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kennzeichen-detailgrad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kennzeichen-Detailgrad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multicore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multicore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spielstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spielstart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spielstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sdk-hinweis-automatisch-bestatigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDK-Hinweis automatisch bestätigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/fahrzeugdaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fahrzeugdaten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/frachtdaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frachtdaten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/firmendaten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmen- und Containerdaten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/fahrverbote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lkw-Fahrverbote
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/ladungssicherung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ladungssicherung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zulassung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zulassung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zulassung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zulassung-versicherung-und-kfz-steuer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zulassung, Versicherung und Kfz-Steuer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kennzeichen-zeile-im-hud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kennzeichen-Zeile im HUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dokumente-anzeige" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dokumente – Anzeige
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dokumente-detailgrad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dokumente – Detailgrad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platz-fur-zulassungsdokumente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platz für Zulassungsdokumente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auslandische-kennzeichen-im-ki-verkehr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausländische Kennzeichen im KI-Verkehr
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ausländische Kennzeichen im KI-Verkehr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anteil-auslandischer-fahrzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anteil ausländischer Fahrzeuge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anteil-in-stadten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anteil in Städten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anhanger-aus-anderem-land" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anhänger aus anderem Land
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erweitert-anteil-je-fahrzeugart-festlegen-lkw-busse-pkw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erweitert: Anteil je Fahrzeugart festlegen (Lkw, Busse, Pkw)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuhrpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuhrpark
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fuhrpark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flottenmanagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flottenmanagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auflieger-beim-abkuppeln-abstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auflieger beim Abkuppeln abstellen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ankuppelhilfe-an-aufliegern-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ankuppelhilfe an Aufliegern anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ankuppelhilfe-am-abgestellten-auflieger-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ankuppelhilfe am abgestellten Auflieger anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigene-doubles-beim-beladen-trennen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigene Doubles beim Beladen trennen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ankuppelhilfe-an-getrennten-doubles-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ankuppelhilfe an getrennten Doubles anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alb-automatisch-lastabhangige-bremse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALB (automatisch lastabhängige Bremse)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatischer-hohenangleich-beim-ankuppeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatischer Höhenangleich beim Ankuppeln
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spiegel-scheiben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spiegel &amp; Scheiben
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spiegel &amp; Scheiben">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptspiegel-links-weitwinkelspiegel-links-hauptspiegel-rechts-weitwinkelspiegel-rechts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptspiegel links, Weitwinkelspiegel links, Hauptspiegel rechts, Weitwinkelspiegel rechts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regentropfen-auf-den-spiegeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regentropfen auf den Spiegeln
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheibenwaschanlage-und-scheibendreck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheibenwaschanlage und Scheibendreck
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regen-im-innenraum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regen im Innenraum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farbe-scheibenwasser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farbe Scheibenwasser
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tourenplanung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tourenplanung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tourenplanung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#umkreis-fur-teilladungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umkreis für Teilladungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#umkreis-fur-teilladungen-doubles-hct-2x20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umkreis für Teilladungen (Doubles, HCT, 2x20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ladungssicherung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ladungssicherung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ladungssicherung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ladung-selbst-sichern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ladung selbst sichern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groe-der-symbole-in-der-welt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Größe der Symbole in der Welt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deckkraft-der-symbole-in-der-welt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deckkraft der Symbole in der Welt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legende-der-ladungssicherung-anzeigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legende der Ladungssicherung anzeigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benachrichtigungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benachrichtigungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leistung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leistung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leistung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kennzeichen-detailgrad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kennzeichen-Detailgrad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multicore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multicore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spielstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spielstart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spielstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sdk-hinweis-automatisch-bestatigen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDK-Hinweis automatisch bestätigen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="einstellungen">Einstellungen<a class="headerlink" href="#einstellungen" title="Permanent link">&para;</a></h1>
+<p>Die Einstellungen von Fleet &amp; Road Realism findest du im Spiel unter <strong>Optionen</strong> in der eigenen Kachel der Mod. Alle Änderungen wirken sofort.</p>
+<h2 id="zulassung">Zulassung<a class="headerlink" href="#zulassung" title="Permanent link">&para;</a></h2>
+<h3 id="zulassung-versicherung-und-kfz-steuer">Zulassung, Versicherung und Kfz-Steuer<a class="headerlink" href="#zulassung-versicherung-und-kfz-steuer" title="Permanent link">&para;</a></h3>
+<p>Standard: Zufallskennzeichen, ohne Versicherung und Steuer</p>
+<p>Zulassungssystem: Kennzeichen wählen, Versicherung, Steuer</p>
+<p>Der Wechsel ist jederzeit möglich und wirkt sofort. Ausgeschaltet ruhen Versicherung und Kfz-Steuer, beim Wiedereinschalten wird für die Pause nichts nachberechnet.</p>
+<h3 id="kennzeichen-zeile-im-hud">Kennzeichen-Zeile im HUD<a class="headerlink" href="#kennzeichen-zeile-im-hud" title="Permanent link">&para;</a></h3>
+<p>Zeigt im HUD über den Finanzen eine Zeile zum Kennzeichen von Lkw und Auflieger: Kurzzeit- und Überstellungskennzeichen mit den verbleibenden Tagen und dem Ablaufdatum, abgemeldete Fahrzeuge in Rot.</p>
+<h3 id="dokumente-anzeige">Dokumente – Anzeige<a class="headerlink" href="#dokumente-anzeige" title="Permanent link">&para;</a></h3>
+<p>Wo die Fahrzeugpapiere im Fahrerhaus zu sehen sind. Nur in der Innenansicht: in der Außenansicht ausgeblendet. Innen- und Außenansicht: auch von außen durch die Scheiben sichtbar.</p>
+<p>Aus · Nur in der Innenansicht · Innen- und Außenansicht</p>
+<h3 id="dokumente-detailgrad">Dokumente – Detailgrad<a class="headerlink" href="#dokumente-detailgrad" title="Permanent link">&para;</a></h3>
+<p>Schärfe der Fahrzeugpapiere im Fahrerhaus (z. B. Überführungsdokumente). Unabhängig vom Kennzeichen-Detailgrad: Höhere Stufen nutzen mehr Plätze im Kennzeichen-Atlas, aber keinen zusätzlichen Videospeicher.</p>
+<p>Normal · Hoch · Ultra</p>
+<h3 id="platz-fur-zulassungsdokumente">Platz für Zulassungsdokumente<a class="headerlink" href="#platz-fur-zulassungsdokumente" title="Permanent link">&para;</a></h3>
+<p>Wo die Fahrzeugpapiere im Fahrerhaus liegen. Gibt es den gewählten Platz im Fahrzeug nicht (z. B. kein Bett in einer kurzen Kabine), liegen sie auf dem Motortunnel.</p>
+<p>Motortunnel · Beifahrersitz · Bett · Armaturenbrett</p>
+<h2 id="auslandische-kennzeichen-im-ki-verkehr">Ausländische Kennzeichen im KI-Verkehr<a class="headerlink" href="#auslandische-kennzeichen-im-ki-verkehr" title="Permanent link">&para;</a></h2>
+<h3 id="anteil-auslandischer-fahrzeuge">Anteil ausländischer Fahrzeuge<a class="headerlink" href="#anteil-auslandischer-fahrzeuge" title="Permanent link">&para;</a></h3>
+<p>0 % = keine, 100 % = alle Pkw, Lkw und Busse ausländisch. Polizei, Taxi usw. bleiben immer einheimisch.</p>
+<h3 id="anteil-in-stadten">Anteil in Städten<a class="headerlink" href="#anteil-in-stadten" title="Permanent link">&para;</a></h3>
+<p>Wie viel vom obigen Anteil in Städten gilt. 100 % = gleich viele wie außerhalb, 50 % = halb so viele.</p>
+<h3 id="anhanger-aus-anderem-land">Anhänger aus anderem Land<a class="headerlink" href="#anhanger-aus-anderem-land" title="Permanent link">&para;</a></h3>
+<p>Wie viele Anhänger ein anderes Land haben als ihr Lkw.</p>
+<h3 id="erweitert-anteil-je-fahrzeugart-festlegen-lkw-busse-pkw">Erweitert: Anteil je Fahrzeugart festlegen (Lkw, Busse, Pkw)<a class="headerlink" href="#erweitert-anteil-je-fahrzeugart-festlegen-lkw-busse-pkw" title="Permanent link">&para;</a></h3>
+<p>Legt den Ausländeranteil für Lkw, Busse und Pkw einzeln fest. Der erste Regler ist dann ohne Wirkung.</p>
+<h2 id="fuhrpark">Fuhrpark<a class="headerlink" href="#fuhrpark" title="Permanent link">&para;</a></h2>
+<h3 id="flottenmanagement">Flottenmanagement<a class="headerlink" href="#flottenmanagement" title="Permanent link">&para;</a></h3>
+<p>Feste Gespanne: Im Lkw-Manager bekommt jeder Lkw über das Auflieger-Feld einen festen Auflieger. Er zieht mit in die Garage des Lkw und wird beim Einsteigen angekuppelt. Beim Einsteigen stehen passende Knöpfe zur Wahl. Aus: alles wie im Spiel.</p>
+<h3 id="auflieger-beim-abkuppeln-abstellen">Auflieger beim Abkuppeln abstellen<a class="headerlink" href="#auflieger-beim-abkuppeln-abstellen" title="Permanent link">&para;</a></h3>
+<p>Kuppelst du deinen eigenen Auflieger ohne Auftrag mit der Abkuppel-Taste ab, wird er dort abgestellt – nur außerhalb von Firmengeländen. Er bleibt an dieser Stelle stehen, ist auf der Weltkarte und im Navigator mit eigenem Symbol zu sehen und kommt nicht in seine Garage. Frachtaufträge nimmst du dann solo an; steht dein Auflieger noch am Lkw, musst du ihn zuerst außerhalb des Firmengeländes abstellen.</p>
+<p>Aus: Verhalten wie im Spiel – bei der Auftragsannahme kommt der Auflieger in seine Garage.</p>
+<h3 id="ankuppelhilfe-an-aufliegern-anzeigen">Ankuppelhilfe an Aufliegern anzeigen<a class="headerlink" href="#ankuppelhilfe-an-aufliegern-anzeigen" title="Permanent link">&para;</a></h3>
+<p>Zeigt den weißen Rahmen und den drehenden Kegel an abgekuppelten Aufliegern. Ist die Option aus, werden beide an allen Aufliegern ausgeblendet; das Ankuppeln funktioniert weiterhin wie gewohnt.</p>
+<h3 id="ankuppelhilfe-am-abgestellten-auflieger-anzeigen">Ankuppelhilfe am abgestellten Auflieger anzeigen<a class="headerlink" href="#ankuppelhilfe-am-abgestellten-auflieger-anzeigen" title="Permanent link">&para;</a></h3>
+<p>Zeigt den weißen Rahmen und den drehenden Kegel an deinem abgestellten Auflieger. Ist die Option aus, werden sie nur dort ausgeblendet. Nur wählbar, wenn die Ankuppelhilfe an Aufliegern eingeschaltet ist.</p>
+<h3 id="eigene-doubles-beim-beladen-trennen">Eigene Doubles beim Beladen trennen<a class="headerlink" href="#eigene-doubles-beim-beladen-trennen" title="Permanent link">&para;</a></h3>
+<p>Beim Beladen wird dein eigenes Double auf mehrere Ladespuren verteilt: Stelle jeden Teil auf seine Spur und kupple ihn ab, belade den vorderen Teil und kupple danach alles wieder zusammen. Gilt nur für Auflieger mit dem Eintrag loading in der Chassis-v3def. Setzt g_simple_parking_doubles auf 0.</p>
+<h3 id="ankuppelhilfe-an-getrennten-doubles-anzeigen">Ankuppelhilfe an getrennten Doubles anzeigen<a class="headerlink" href="#ankuppelhilfe-an-getrennten-doubles-anzeigen" title="Permanent link">&para;</a></h3>
+<p>Zeigt Rahmen und Kegel der Ankuppelhilfe an den Aufliegern, die beim getrennten Beladen oder Entladen abgestellt wurden. Unabhängig von den anderen beiden Einstellungen der Ankuppelhilfe.</p>
+<h3 id="alb-automatisch-lastabhangige-bremse">ALB (automatisch lastabhängige Bremse)<a class="headerlink" href="#alb-automatisch-lastabhangige-bremse" title="Permanent link">&para;</a></h3>
+<p>Regelt den Bremsdruck je Achse nach der Beladung wie ein echtes ALB-Ventil: leer weniger Bremskraft, damit die Räder nicht blockieren, voll beladen volle Bremskraft. Gilt für Auflieger, Anhänger und den eigenen Lkw.</p>
+<h3 id="automatischer-hohenangleich-beim-ankuppeln">Automatischer Höhenangleich beim Ankuppeln<a class="headerlink" href="#automatischer-hohenangleich-beim-ankuppeln" title="Permanent link">&para;</a></h3>
+<p>Gleicht beim Heranfahren die Höhe automatisch an: das Lkw-Heck an den Auflieger, bei Doubles Trailer 1 an Teil 2. Aus: Höhe selbst mit der Federung einstellen. Das automatische Absenken, wenn die Stütze den Boden nicht erreicht, bleibt immer aktiv.</p>
+<h2 id="spiegel-scheiben">Spiegel &amp; Scheiben<a class="headerlink" href="#spiegel-scheiben" title="Permanent link">&para;</a></h2>
+<h3 id="hauptspiegel-links-weitwinkelspiegel-links-hauptspiegel-rechts-weitwinkelspiegel-rechts">Hauptspiegel links, Weitwinkelspiegel links, Hauptspiegel rechts, Weitwinkelspiegel rechts<a class="headerlink" href="#hauptspiegel-links-weitwinkelspiegel-links-hauptspiegel-rechts-weitwinkelspiegel-rechts" title="Permanent link">&para;</a></h3>
+<p>Schaltet diesen Spiegel beim Fahren zwischen Normal- und Rangierstellung um. Beide Stellungen stellst du im Spiegelmenü ein (Tab wechselt den Modus). Feld anklicken, dann Taste oder Knopf drücken – Tastatur, Controller, Lenkrad oder Buttonbox. Esc bricht ab, Entf löscht die Belegung. Ist die Taste im Spiel schon vergeben, wird sie dort entfernt – wie in den Tasten-Optionen des Spiels.</p>
+<h3 id="regentropfen-auf-den-spiegeln">Regentropfen auf den Spiegeln<a class="headerlink" href="#regentropfen-auf-den-spiegeln" title="Permanent link">&para;</a></h3>
+<p>Bei Regen bilden sich auf den Spiegelgläsern Tropfen wie auf den Scheiben. Wirkt bei Spiegeln, deren Mod das unterstützt.</p>
+<h3 id="scheibenwaschanlage-und-scheibendreck">Scheibenwaschanlage und Scheibendreck<a class="headerlink" href="#scheibenwaschanlage-und-scheibendreck" title="Permanent link">&para;</a></h3>
+<p>Strahl, Wasser, Ablauf und Dreck (Staub, Insekten, Schlamm) auf der Frontscheibe. Ausschalten spart Leistung.</p>
+<h3 id="regen-im-innenraum">Regen im Innenraum<a class="headerlink" href="#regen-im-innenraum" title="Permanent link">&para;</a></h3>
+<p>Bei offenem Seitenfenster regnet es herein: fliegende Tropfen und nasse Flächen im Fahrerhaus. Ausschalten spart Leistung.</p>
+<h3 id="farbe-scheibenwasser">Farbe Scheibenwasser<a class="headerlink" href="#farbe-scheibenwasser" title="Permanent link">&para;</a></h3>
+<p>Farbe des Scheibenwassers im Strahl und auf der Frontscheibe.</p>
+<p>Blau · Grün · Gelb · Rot/Rosa · Violett</p>
+<h2 id="tourenplanung">Tourenplanung<a class="headerlink" href="#tourenplanung" title="Permanent link">&para;</a></h2>
+<h3 id="umkreis-fur-teilladungen">Umkreis für Teilladungen<a class="headerlink" href="#umkreis-fur-teilladungen" title="Permanent link">&para;</a></h3>
+<p>Weitere Teilladungen einer Fahrt nur von Absendern und zu Empfängern innerhalb dieses Umkreises (Straßen-km) um die schon geplanten Teile. Gilt für normale Auflieger.</p>
+<h3 id="umkreis-fur-teilladungen-doubles-hct-2x20">Umkreis für Teilladungen (Doubles, HCT, 2x20)<a class="headerlink" href="#umkreis-fur-teilladungen-doubles-hct-2x20" title="Permanent link">&para;</a></h3>
+<p>Wie oben, für Doubles, HCT und Container-Chassis mit 2x20.</p>
+<h2 id="ladungssicherung">Ladungssicherung<a class="headerlink" href="#ladungssicherung" title="Permanent link">&para;</a></h2>
+<h3 id="ladung-selbst-sichern">Ladung selbst sichern<a class="headerlink" href="#ladung-selbst-sichern" title="Permanent link">&para;</a></h3>
+<p>Die Ladung muss vor der Abfahrt selbst gesichert werden. Ohne Haken übernimmt das wie bisher das Spiel.</p>
+<h3 id="groe-der-symbole-in-der-welt">Größe der Symbole in der Welt<a class="headerlink" href="#groe-der-symbole-in-der-welt" title="Permanent link">&para;</a></h3>
+<p>Größe der Klick-Symbole an Fahrzeug und Ladung (Twistlocks, Haken, Pfeile, Hebel, Kantenschoner). HUD, Legende und Hinweise bleiben unverändert.</p>
+<h3 id="deckkraft-der-symbole-in-der-welt">Deckkraft der Symbole in der Welt<a class="headerlink" href="#deckkraft-der-symbole-in-der-welt" title="Permanent link">&para;</a></h3>
+<p>Deckkraft der Klick-Symbole an Fahrzeug und Ladung. 100 % = voll sichtbar.</p>
+<h3 id="legende-der-ladungssicherung-anzeigen">Legende der Ladungssicherung anzeigen<a class="headerlink" href="#legende-der-ladungssicherung-anzeigen" title="Permanent link">&para;</a></h3>
+<p>Zeigt beim Sichern und Entsichern die Legende mit den Symbolen an – unabhängig vom HUD.</p>
+<h2 id="benachrichtigungen">Benachrichtigungen<a class="headerlink" href="#benachrichtigungen" title="Permanent link">&para;</a></h2>
+<p>Schaltet E-Mails und HUD-Meldungen dieser Art ein oder aus. Gebühren und Zahlungen werden auch ohne Benachrichtigung abgerechnet.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;">E-Mail</th>
+<th style="text-align: center;">HUD</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Steuern &amp; Abgaben</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td>Kfz-Steuer mit Steuerbescheid und Erstattung sowie streckenabhängige Abgaben wie Schwerverkehrsabgaben. Abgebucht wird auch ohne Benachrichtigung.</td>
+</tr>
+<tr>
+<td><strong>Versicherung</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td>Versicherungsschein und Vertragsänderungen, Beitragsabbuchungen, Schadenmeldungen, Rückstufungen sowie Kasko- und Frachtschäden. Abgebucht wird auch ohne Benachrichtigung.</td>
+</tr>
+<tr>
+<td><strong>Auftraggeber</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td>Schadensabrechnungen der Auftraggeber bei beschädigter Fracht oder beschädigtem Auftragsauflieger. Abgebucht wird auch ohne Benachrichtigung.</td>
+</tr>
+<tr>
+<td><strong>Zulassung</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td>Ablauf von Kurzzeit- und Überstellungskennzeichen, Überführung neu gekaufter Fahrzeuge und Warnung, wenn ein solches Kennzeichen im Ausland nicht gilt.</td>
+</tr>
+<tr>
+<td><strong>Nacht-Tempolimits</strong></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">✓</td>
+<td>Hinweis bei Beginn und Ende nächtlicher Lkw-Tempolimits und beim Einfahren in ein Land, in dem sie gerade gelten. Nur als HUD-Meldung.</td>
+</tr>
+<tr>
+<td><strong>Fahrzeugtransporte</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td>Rechnung des Fahrzeugtransports, wenn ein Fahrzeug bei der Verlegung in eine andere Garage nicht selbst fahren darf (abgemeldet, Kurzzeitkennzeichen abgelaufen oder dort nicht gültig). Abgebucht wird auch ohne Benachrichtigung.</td>
+</tr>
+<tr>
+<td><strong>Auflieger abstellen</strong></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">✓</td>
+<td>Meldungen beim Abstellen eigener Auflieger: abgestellt oder warum nicht (Firmengelände, laufender Auftrag, getrennter Zug). Hinweise, was zu tun ist, erscheinen immer.</td>
+</tr>
+<tr>
+<td><strong>Wartezeiten</strong></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">✓</td>
+<td>Meldungen der Wartezeiten an Firmen: Anmeldung mit Wartezeit, restliche Wartezeit und Freigabe. Hinweise, was zu tun ist, erscheinen immer.</td>
+</tr>
+<tr>
+<td><strong>Fest anfangen</strong></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">✓</td>
+<td>Meldungen zu „Fest anfangen“: Tour vorgemerkt, Vormerkung gekündigt, Start der Tour. Hinweise, was zu tun ist, erscheinen immer.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="leistung">Leistung<a class="headerlink" href="#leistung" title="Permanent link">&para;</a></h2>
+<h3 id="kennzeichen-detailgrad">Kennzeichen-Detailgrad<a class="headerlink" href="#kennzeichen-detailgrad" title="Permanent link">&para;</a></h3>
+<p>Wähle den Detailgrad der Kennzeichen. Höhere Stufen sind schärfer, belegen aber mehr Videospeicher.</p>
+<p>Normal – Standardauflösung des Spiels (ca. 11 MB)</p>
+<p>Hoch – doppelte Auflösung (ca. 43 MB, empfohlen)</p>
+<p>Ultra – vierfache Auflösung (ca. 171 MB)</p>
+<h3 id="multicore">Multicore<a class="headerlink" href="#multicore" title="Permanent link">&para;</a></h3>
+<p>Die Mod schreibt ihre Log-Datei auf einem zweiten Prozessorkern. So muss das Spiel dabei nicht warten, und kurze Ruckler beim Schreiben fallen weg. Sinnvoll bei Prozessoren mit mehreren Kernen.</p>
+<h2 id="spielstart">Spielstart<a class="headerlink" href="#spielstart" title="Permanent link">&para;</a></h2>
+<h3 id="sdk-hinweis-automatisch-bestatigen">SDK-Hinweis automatisch bestätigen<a class="headerlink" href="#sdk-hinweis-automatisch-bestatigen" title="Permanent link">&para;</a></h3>
+<p>Beim Spielstart zeigt ETS2 für Plugins einen Hinweis von SCS: keine Gewährleistung auf Funktion und Leistung; das Spiel ist nicht für professionelle Fahrsimulatoren, Fahrertraining oder Internetcafés lizenziert. Mit diesem Häkchen bestätigst du diesen Hinweis dauerhaft – er wird beim Start automatisch mit Ok geschlossen.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
+        
+          
+          <a href="../funktionen/" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Funktionen">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              <div class="md-ellipsis">
+                Funktionen
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../modding/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Übersicht">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              <div class="md-ellipsis">
+                Übersicht
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Ventyres 3D
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/ventyres3d" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

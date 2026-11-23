@@ -1,0 +1,8 @@
+.md-typeset h4 code { font-size: .95em; }
+.md-typeset table:not([class]) td { vertical-align: top; }
+.md-typeset table.kv { display: table; width: 100%; border-collapse: collapse; font-size: .78rem; margin: 1em 0; }
+.md-typeset table.kv td { border-top: 1px solid var(--md-default-fg-color--lightest); padding: .45em .7em; vertical-align: top; }
+.md-typeset table.kv tr:first-child td { border-top: none; }
+.md-typeset table.kv td:first-child { font-weight: 600; width: 32%; }
+.md-typeset h4 { margin-top: 1.6em; }
+.md-typeset h4 code { font-size: .9em; padding: .2em .5em; border-left: 3px solid var(--md-accent-fg-color); }
