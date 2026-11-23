@@ -1280,7 +1280,7 @@
 <li>space, weight and <strong>dimensions</strong> are enough,</li>
 <li>it is compatible with the load (temperature, food not with poisons, explosives not with other dangerous goods),</li>
 <li><strong>all deadlines</strong> of the trip can still be met,</li>
-<li>sender and receiver lie in the <strong>area</strong> of the trip (100 km of road around every sender/receiver; the first cargo is free).</li>
+<li>sender and receiver lie within the <strong>radius</strong> around the parts already planned (road km; the first cargo is free). You set the radius under Trip planning: <em>Radius for partial loads</em> and separately <em>Radius for partial loads (doubles, HCT, 2x20)</em>.</li>
 </ul>
 </li>
 <li>A company where you have already loaded does not offer a second time.</li>
@@ -1291,18 +1291,20 @@
 <ul>
 <li>Up to <strong>8 jobs</strong> at once. In the main menu every job gets a <strong>tile</strong> (up to 4 below each other, 5–8 next to them), sorted by urgency; the active one is highlighted.</li>
 <li>The <strong>navigation</strong> automatically heads for the next destination that meets its deadline – if another job would then miss its deadline, that one comes first.</li>
-<li>Decide yourself: <strong>right-click a tile</strong> or the button <strong>"Drive here next"</strong>. If your choice puts another deadline at risk, the mod warns you.</li>
+<li>Decide yourself: <strong>click a tile</strong>, then the button <strong>"Drive here next"</strong>. If your choice puts another deadline at risk, the mod warns you.</li>
 <li>The HUD shows up to 4 jobs: the active one at the top, the next 3 below.</li>
 </ul>
 <h2 id="reserving">Reserving<a class="headerlink" href="#reserving" title="Permanent link">&para;</a></h2>
 <ul>
+<li><strong>Reserving replaces the game's cargo market function for setting an offer as the navigation destination.</strong></li>
 <li>An offer you cannot load yet (e.g. because the company is elsewhere) can be <strong>reserved</strong>. It then already takes space, weight and deadline in the planning.</li>
 <li>The navigation takes you to reserved cargo for pick-up; there <strong>"Load reservation"</strong>: drive to the assigned bay and load.</li>
+<li>Important with driving bans: reserved cargo that is exempt from the ban (e.g. on Sundays) already allows the empty run to the pick-up.</li>
 <li>Cancelling a reservation costs nothing. If the offer disappears from the cargo market, the reservation lapses (message).</li>
 </ul>
 <h2 id="load-list">Load list<a class="headerlink" href="#load-list" title="Permanent link">&para;</a></h2>
 <ul>
-<li>When you are <strong>on the premises of a company</strong>, its cargo goes onto the <strong>load list</strong> (<em>Add to load list</em> / <em>Remove from list</em>). The 100 km area rule does not apply here.</li>
+<li>When you are <strong>on the premises of a company</strong>, its cargo goes onto the <strong>load list</strong> (<em>Add to load list</em> / <em>Remove from list</em>). The radius does not apply here.</li>
 <li>With doubles there is a load list per trailer (<em>Load list trailer 1 / 2</em>); cargo that fits on no single trailer only <em>Add to load list (complete)</em>.</li>
 <li>Everything on the load list is loaded in one go.</li>
 </ul>
@@ -1316,10 +1318,12 @@
 <li>After delivering part of a tour the receiver now and then asks "We would have cargo for …" – a <strong>return load</strong> to an open receiver of the tour or to the sender.</li>
 </ul>
 <h2 id="cancelling">Cancelling<a class="headerlink" href="#cancelling" title="Permanent link">&para;</a></h2>
+<p>There is no "quickly cancel and be free". Whoever cancels pays the extra costs of a replacement carrier (cancellation costs, shown beforehand – the less time left until the deadline, the more expensive) and gets no pay for the tour.</p>
 <ul>
-<li><strong>Cancel job</strong> on the tile: you pay the extra costs for a replacement carrier (cancellation costs, shown beforehand).</li>
-<li>With cargo loaded: park the trailer at the next parking area and unhitch it; a replacement carrier takes over.</li>
-<li>Part of a tour: the cargo stays on and goes back to the sender; the tile turns grey. A click on the grey tile continues the job without costs.</li>
+<li><strong>Own trailer, not loaded yet:</strong> <em>Cancel job</em> on the tile – no costs.</li>
+<li><strong>Own trailer, loaded and left the yard:</strong> the cargo is <strong>handed over at the next suitable company</strong> – general cargo, flatbed and lowloader cargo at a logistics centre or forwarder, tanker, silo and tipper cargo at a company that accepts exactly this cargo; it must be open when you arrive. Choose <strong>"Hand over cargo"</strong> there, drive to the unloading bay and unload. Handling costs 8.50 € per unit. If there is no suitable company, the job continues.</li>
+<li><strong>Freight job (provided trailer):</strong> if the trailer is not coupled yet, the job is cancelled at once (with cancellation costs). If it is coupled, park it at the next parking area and unhitch it – a replacement carrier takes over. <em>Continue delivery</em> withdraws the cancellation.</li>
+<li><strong>Part of a tour:</strong> the cargo stays on and goes back to the sender; the tile turns grey. A click on the grey tile continues the job without costs.</li>
 </ul>
 
 

@@ -1280,7 +1280,7 @@
 <li>Platz, Gewicht und <strong>Maße</strong> reichen,</li>
 <li>sie mit der Ladung verträglich ist (Temperatur, Lebensmittel nicht mit Giften, Explosivstoffe nicht mit anderem Gefahrgut),</li>
 <li><strong>alle Fristen</strong> der Fahrt noch zu schaffen sind,</li>
-<li>Absender und Empfänger im <strong>Gebiet</strong> der Fahrt liegen (100 km Straße um jeden Absender/Empfänger; die erste Fracht ist frei).</li>
+<li>Absender und Empfänger im <strong>Umkreis</strong> der schon geplanten Teile liegen (Straßen-km; die erste Fracht ist frei). Den Umkreis stellst du unter Tourenplanung ein: <em>Umkreis für Teilladungen</em> und getrennt <em>Umkreis für Teilladungen (Doubles, HCT, 2x20)</em>.</li>
 </ul>
 </li>
 <li>Bei einer Firma, bei der du schon geladen hast, gibt es kein zweites Angebot.</li>
@@ -1291,18 +1291,20 @@
 <ul>
 <li>Bis zu <strong>8 Aufträge</strong> gleichzeitig. Im Hauptmenü bekommt jeder Auftrag eine <strong>Kachel</strong> (bis 4 untereinander, 5–8 daneben), sortiert nach Dringlichkeit; der aktive ist hervorgehoben.</li>
 <li>Das <strong>Navi</strong> fährt automatisch das nächste Ziel an, das seine Frist schafft – würde dadurch ein anderer Auftrag seine Frist verpassen, kommt der zuerst.</li>
-<li>Selbst bestimmen: <strong>Rechtsklick auf eine Kachel</strong> bzw. Knopf <strong>„Als Nächstes anfahren“</strong>. Gefährdet deine Wahl eine andere Frist, warnt die Mod.</li>
+<li>Selbst bestimmen: <strong>Kachel anklicken</strong>, dann Knopf <strong>„Als Nächstes anfahren“</strong>. Gefährdet deine Wahl eine andere Frist, warnt die Mod.</li>
 <li>Die HUD zeigt bis zu 4 Aufträge: den aktiven oben, darunter die nächsten 3.</li>
 </ul>
 <h2 id="vormerken">Vormerken<a class="headerlink" href="#vormerken" title="Permanent link">&para;</a></h2>
 <ul>
+<li><strong>Vormerken ersetzt im Frachtmarkt die Spielfunktion „Als Navi-Ziel einstellen“.</strong></li>
 <li>Ein Angebot, das du noch nicht laden kannst (z. B. weil die Firma woanders ist), kannst du <strong>vormerken</strong>. Es belegt dann schon Platz, Gewicht und Frist in der Planung.</li>
 <li>Vorgemerkte Frachten fährt das Navi zum Abholen an; dort <strong>„Vormerkung laden“</strong>: zur zugewiesenen Ladespur fahren und beladen.</li>
+<li>Wichtig bei Fahrverboten: Eine vorgemerkte Fracht, die vom Verbot ausgenommen ist (z. B. sonntags), erlaubt dir schon die Leerfahrt zur Abholung.</li>
 <li>Eine Vormerkung zu stornieren kostet nichts. Verschwindet das Angebot aus dem Frachtmarkt, verfällt die Vormerkung (Meldung).</li>
 </ul>
 <h2 id="ladeliste">Ladeliste<a class="headerlink" href="#ladeliste" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Stehst du <strong>auf dem Gelände einer Firma</strong>, kommen deren Frachten auf die <strong>Ladeliste</strong> (<em>Auf Ladeliste</em> / <em>Von Ladeliste nehmen</em>). Hier gilt die 100-km-Gebietsregel nicht.</li>
+<li>Stehst du <strong>auf dem Gelände einer Firma</strong>, kommen deren Frachten auf die <strong>Ladeliste</strong> (<em>Auf Ladeliste</em> / <em>Von Ladeliste nehmen</em>). Hier gilt der Umkreis nicht.</li>
 <li>Bei Doubles gibt es eine Ladeliste je Trailer (<em>Ladeliste Trailer 1 / 2</em>); Frachten, die auf keinen einzelnen Trailer passen, nur <em>Auf Ladeliste komplett</em>.</li>
 <li>Alles auf der Ladeliste wird in einem Beladevorgang geladen.</li>
 </ul>
@@ -1316,10 +1318,12 @@
 <li>Nach dem Abliefern eines Tour-Teils fragt der Empfänger ab und zu „Wir hätten Ladung für …“ – eine <strong>Rückladung</strong> zu einem offenen Empfänger der Tour oder zum Absender.</li>
 </ul>
 <h2 id="stornieren">Stornieren<a class="headerlink" href="#stornieren" title="Permanent link">&para;</a></h2>
+<p>Ein „mal eben stornieren und frei sein“ gibt es nicht. Wer storniert, trägt die Mehrkosten für einen Ersatzfrachtführer (Stornokosten, vorher angezeigt – je kürzer die Restzeit bis zur Lieferfrist, desto teurer) und bekommt für die Tour keinen Lohn.</p>
 <ul>
-<li><strong>Auftrag stornieren</strong> in der Kachel: Du zahlst die Mehrkosten für einen Ersatzfrachtführer (Stornokosten, vorher angezeigt).</li>
-<li>Mit Fracht beladen: Stell den Auflieger auf dem nächsten Parkplatz ab und kupple ihn ab; ein Ersatzfrachtführer übernimmt.</li>
-<li>Teil einer Tour: Die Fracht bleibt drauf und geht zum Absender zurück; die Kachel wird grau. Ein Klick auf die graue Kachel setzt den Auftrag ohne Kosten fort.</li>
+<li><strong>Eigener Auflieger, noch nicht beladen:</strong> <em>Auftrag stornieren</em> in der Kachel – es entstehen keine Kosten.</li>
+<li><strong>Eigener Auflieger, beladen und vom Hof gefahren:</strong> Die Fracht wird bei der <strong>nächsten passenden Firma übergeben</strong> – Stückgut, Flatbed- und Tiefladerfracht bei einem Logistikzentrum bzw. einer Spedition, Tank-, Silo- und Kipperfracht bei einer Firma, die genau diese Fracht annimmt; sie muss bei deiner Ankunft geöffnet haben. Dort <strong>„Fracht übergeben“</strong> wählen, auf die Abladespur fahren und abladen. Der Umschlag kostet 8,50 € je Einheit. Gibt es keine passende Firma, läuft der Auftrag weiter.</li>
+<li><strong>Frachtauftrag (gestellter Auflieger):</strong> Ist der Auflieger noch nicht angekuppelt, wird sofort storniert (mit Stornokosten). Hängt er dran, stellst du ihn auf dem nächsten Parkplatz ab und kuppelst ihn ab – ein Ersatzfrachtführer übernimmt. <em>Lieferung fortsetzen</em> widerruft die Stornierung.</li>
+<li><strong>Teil einer Tour:</strong> Die Fracht bleibt drauf und geht zum Absender zurück; die Kachel wird grau. Ein Klick auf die graue Kachel setzt den Auftrag ohne Kosten fort.</li>
 </ul>
 
 
