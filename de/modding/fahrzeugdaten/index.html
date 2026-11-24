@@ -1982,10 +1982,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mirror_glass_uk-kurzel-pfadpmd" class="md-nav__link">
+  <a href="#mirror_glass_axes-kurzel-locator-camera" class="md-nav__link">
     <span class="md-ellipsis">
       
-        mirror_glass_uk[]: &lt;Kürzel&gt; "&lt;Pfad&gt;.pmd"
+        mirror_glass_axes[]: &lt;Kürzel&gt; locator | camera
       
     </span>
   </a>
@@ -3486,10 +3486,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mirror_glass_uk-kurzel-pfadpmd" class="md-nav__link">
+  <a href="#mirror_glass_axes-kurzel-locator-camera" class="md-nav__link">
     <span class="md-ellipsis">
       
-        mirror_glass_uk[]: &lt;Kürzel&gt; "&lt;Pfad&gt;.pmd"
+        mirror_glass_axes[]: &lt;Kürzel&gt; locator | camera
       
     </span>
   </a>
@@ -4422,8 +4422,11 @@ h    Hauben-/Kotflügelspiegel (cam_h)
 <h5 id="mirror_axes-horizontal-vertical-both"><code>mirror_axes: horizontal | vertical | both</code><a class="headerlink" href="#mirror_axes-horizontal-vertical-both" title="Permanent link">&para;</a></h5>
 <p>in welcher Richtung sich die Spiegel dieses Zubehörs im Spiel verstellen lassen: horizontal = nur links/rechts, vertical = nur hoch/runter, both = beides. Die Pfeile der anderen Richtung sind im Einstellfenster ausgeblendet.</p>
 <p><em>Standard: both</em></p>
-<h5 id="mirror_glass_uk-kurzel-pfadpmd"><code>mirror_glass_uk[]: &lt;Kürzel&gt; "&lt;Pfad&gt;.pmd"</code><a class="headerlink" href="#mirror_glass_uk-kurzel-pfadpmd" title="Permanent link">&para;</a></h5>
-<p>wie mirror_glass[] für das Innenmodell der Rechtslenker (braucht interior_model_override_uk)</p>
+<h5 id="mirror_glass_axes-kurzel-locator-camera"><code>mirror_glass_axes[]: &lt;Kürzel&gt; locator | camera</code><a class="headerlink" href="#mirror_glass_axes-kurzel-locator-camera" title="Permanent link">&para;</a></h5>
+<p>Drehachsen eines Glases, eine Zeile je Glas: camera = Achsen der Spiegelkamera cam_&lt;Kürzel&gt; (wie das Spiegelbild), locator = Achsen des Locators mglass_&lt;Kürzel&gt;. Für Spiegel, deren Kopf schräg am Arm sitzt, die Kamera aber gerade steht: den Locator im Modell so kippen, dass seine Y-Achse der Neigung des Arms folgt (X zur Seite, Z nach hinten wie im Modell). Links/rechts dreht das Glas dann um diese Y-Achse, hoch/runter um die mitgekippte Qürachse. Das Glasmodell bleibt dabei wie im Spiegelmodell (der Locator dreht es nicht mit).</p>
+<div class="highlight"><pre><span></span><code>mirror_glass_axes[]: ds locator
+</code></pre></div>
+<p>Standard: camera wie mirror_glass[] für das Innenmodell der Rechtslenker (braucht interior_model_override_uk)</p>
 <h5 id="mirror_glass_ext_uk-kurzel-pfadpmd"><code>mirror_glass_ext_uk[]: &lt;Kürzel&gt; "&lt;Pfad&gt;.pmd"</code><a class="headerlink" href="#mirror_glass_ext_uk-kurzel-pfadpmd" title="Permanent link">&para;</a></h5>
 <p>wie mirror_glass_ext[] für das Aussenmodell der Rechtslenker (braucht exterior_model_override_uk)</p>
 <h5 id="mirror_rain-kurzel-pfadmat"><code>mirror_rain[]: &lt;Kürzel&gt; "&lt;Pfad&gt;.mat"</code><a class="headerlink" href="#mirror_rain-kurzel-pfadmat" title="Permanent link">&para;</a></h5>
@@ -5071,6 +5074,10 @@ mirror_adjust: electric
 # Verstellrichtung: horizontal (nur links/rechts), vertical (nur hoch/runter) oder both
 # adjustment direction: horizontal (left/right only), vertical (up/down only) or both
 mirror_axes: both
+
+# Drehachsen je Glas: camera (wie Spiegelkamera cam_*) oder locator (Drehung des Locators mglass_*)
+# rotation axes per glass: camera (like mirror camera cam_*) or locator (rotation of locator mglass_*)
+mirror_glass_axes[]: ds locator
 
 # Regentropfen: Material jedes Glases (eigenes Material je Glas)
 # rain drops: material of each glass (a material of its own per glass)

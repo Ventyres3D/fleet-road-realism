@@ -1982,10 +1982,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mirror_glass_uk-slot-pathpmd" class="md-nav__link">
+  <a href="#mirror_glass_axes-slot-locator-camera" class="md-nav__link">
     <span class="md-ellipsis">
       
-        mirror_glass_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+        mirror_glass_axes[]: &lt;slot&gt; locator | camera
       
     </span>
   </a>
@@ -3486,10 +3486,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mirror_glass_uk-slot-pathpmd" class="md-nav__link">
+  <a href="#mirror_glass_axes-slot-locator-camera" class="md-nav__link">
     <span class="md-ellipsis">
       
-        mirror_glass_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"
+        mirror_glass_axes[]: &lt;slot&gt; locator | camera
       
     </span>
   </a>
@@ -4448,8 +4448,11 @@ h    hood / fender mirror (cam_h)
 <h5 id="mirror_axes-horizontal-vertical-both"><code>mirror_axes: horizontal | vertical | both</code><a class="headerlink" href="#mirror_axes-horizontal-vertical-both" title="Permanent link">&para;</a></h5>
 <p>in which direction the mirrors of this accessory can be adjusted in the game: horizontal = only left/right, vertical = only up/down, both = both. The arrows of the other direction are hidden in the adjustment window.</p>
 <p><em>Default: both</em></p>
-<h5 id="mirror_glass_uk-slot-pathpmd"><code>mirror_glass_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"</code><a class="headerlink" href="#mirror_glass_uk-slot-pathpmd" title="Permanent link">&para;</a></h5>
-<p>like mirror_glass[] for the interior model of right-hand drive (needs interior_model_override_uk)</p>
+<h5 id="mirror_glass_axes-slot-locator-camera"><code>mirror_glass_axes[]: &lt;slot&gt; locator | camera</code><a class="headerlink" href="#mirror_glass_axes-slot-locator-camera" title="Permanent link">&para;</a></h5>
+<p>rotation axes of one glass, one line per glass: camera = axes of the mirror camera cam_&lt;slot&gt; (like the mirror image), locator = axes of the locator mglass_&lt;slot&gt;. For mirrors whose head sits slanted on the arm while the camera is straight: tilt the locator in the model so its Y axis follows the slant of the arm (X to the side, Z to the rear as in the model). Left/right then turns the glass around this Y axis, up/down around the tilted cross axis. The glass model stays as in the mirror model (the locator does not rotate it).</p>
+<div class="highlight"><pre><span></span><code>mirror_glass_axes[]: ds locator
+</code></pre></div>
+<p>Default:  camera like mirror_glass[] for the interior model of right-hand drive (needs interior_model_override_uk)</p>
 <h5 id="mirror_glass_ext_uk-slot-pathpmd"><code>mirror_glass_ext_uk[]: &lt;slot&gt; "&lt;path&gt;.pmd"</code><a class="headerlink" href="#mirror_glass_ext_uk-slot-pathpmd" title="Permanent link">&para;</a></h5>
 <p>like mirror_glass_ext[] for the exterior model of right-hand drive (needs exterior_model_override_uk)</p>
 <h5 id="mirror_rain-slot-pathmat"><code>mirror_rain[]: &lt;slot&gt; "&lt;path&gt;.mat"</code><a class="headerlink" href="#mirror_rain-slot-pathmat" title="Permanent link">&para;</a></h5>
@@ -5097,6 +5100,10 @@ mirror_adjust: electric
 # Verstellrichtung: horizontal (nur links/rechts), vertical (nur hoch/runter) oder both
 # adjustment direction: horizontal (left/right only), vertical (up/down only) or both
 mirror_axes: both
+
+# Drehachsen je Glas: camera (wie Spiegelkamera cam_*) oder locator (Drehung des Locators mglass_*)
+# rotation axes per glass: camera (like mirror camera cam_*) or locator (rotation of locator mglass_*)
+mirror_glass_axes[]: ds locator
 
 # Regentropfen: Material jedes Glases (eigenes Material je Glas)
 # rain drops: material of each glass (a material of its own per glass)
