@@ -1586,9 +1586,9 @@ load_mix_in : { ... }        the same on the receiving side
 <p>Adding cargo and tour planning with partial loads:</p>
 <ul>
 <li>"Reserve" on a cargo market offer (replaces the game's "Set as GPS destination") reserves it (also before anything is loaded); taking an offer on the company yard adds it to the trip; at most 8 jobs and reservations together</li>
-<li>every job and reservation takes its share of space and weight; the cargo market then only shows offers that still fit: space, weight, temperature / food / dangerous goods, delivery times, and the area: from the second cargo on, the sender AND the receiver of a new offer must each lie within 100 km (road) of a sender or receiver already in the trip (also abroad); the first cargo is free</li>
+<li>every job and reservation takes its share of space and weight; the cargo market then only shows offers that still fit: space, weight, temperature / food / dangerous goods, delivery times, and the area: from the second cargo on, the sender AND the receiver of a new offer must each lie within the set radius (road) of a sender or receiver already in the trip (also abroad); the player sets the radius in the options ("Radius for partial loads", own value for doubles, HCT and 2x20); the first cargo is free</li>
 <li>a fully planned trailer locks the cargo market until a part is delivered or a reservation is cancelled</li>
-<li>the active job (GPS) is the player's choice (right-click on a job tile in the main menu, or "Drive here next" in Current job), otherwise the nearest destination first unless another job would then miss its delivery time</li>
+<li>the active job (GPS) is the player's choice (right-click on a job tile in the main menu, or click the tile and then "Drive here next"), otherwise the nearest destination first unless another job would then miss its delivery time</li>
 <li>the trip and the reservations are saved with the save game</li>
 </ul>
 <h2 id="2-container-cargo">2. Container cargo<a class="headerlink" href="#2-container-cargo" title="Permanent link">&para;</a></h2>

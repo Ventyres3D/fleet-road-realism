@@ -1070,6 +1070,56 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#engine-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ENGINE SOUND
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ENGINE SOUND">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cylinders-1-16_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cylinders: &lt;1 - 16&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock_strength-0-3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        knock_strength: &lt;0 - 3&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock_tone-04-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        knock_tone: &lt;0.4 - 2&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#truck-chassis" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2524,6 +2574,56 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#engine-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ENGINE SOUND
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ENGINE SOUND">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cylinders-1-16_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cylinders: &lt;1 - 16&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock_strength-0-3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        knock_strength: &lt;0 - 3&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock_tone-04-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        knock_tone: &lt;0.4 - 2&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#truck-chassis" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3726,6 +3826,14 @@
 <div class="highlight"><pre><span></span><code>engine         /def/vehicle/truck/your_truck/engine/your_engine.sii
             -&gt; /def/vehicle/truck/your_truck/engine/your_engine.v3def
 </code></pre></div>
+<div class="highlight"><pre><span></span><code>engine sound   (for sound mods, cold start knock only, see "ENGINE SOUND")
+               next to the sound .sui the engine .sii pulls in via @include:
+               /def/vehicle/truck/your_truck/engine/sound.sui
+            -&gt; /def/vehicle/truck/your_truck/engine/sound.v3def
+               and/or next to the .soundref from sounds[] "engine|...":
+               /def/vehicle/truck/your_truck/engine/sound_engine.soundref
+            -&gt; /def/vehicle/truck/your_truck/engine/sound_engine.v3def
+</code></pre></div>
 <div class="highlight"><pre><span></span><code>truck chassis  /def/vehicle/truck/your_truck/chassis/your_chassis.sii
             -&gt; /def/vehicle/truck/your_truck/chassis/your_chassis.v3def
 </code></pre></div>
@@ -3811,6 +3919,22 @@ whose name starts with "chassis")
 <h5 id="knock_tone-04-2"><code>knock_tone: &lt;0.4 - 2&gt;</code><a class="headerlink" href="#knock_tone-04-2" title="Permanent link">&para;</a></h5>
 <p>pitch of the knock for this engine, so it matches the engine sound; lower = deeper and duller (e.g. big V8), higher = brighter and harder</p>
 <p><em>Default: 1</em></p>
+<h3 id="engine-sound">ENGINE SOUND<a class="headerlink" href="#engine-sound" title="Permanent link">&para;</a></h3>
+<table class="kv">
+<tr><td><code>/def/vehicle/truck/xxxx/engine/sound.v3def</code></td><td>(next to the sound .sui)</td></tr>
+<tr><td><code>/def/vehicle/truck/xxxx/engine/sound_engine.v3def</code></td><td>(next to the .soundref)</td></tr>
+</table>
+
+<p>For sound mods that only replace the sound .sui or only the .soundref: the same three lines as for the cold start knock of the engine, matching your own sound. The most specific value wins: .soundref .v3def before sound .v3def before engine .v3def. A missing line comes from the next file.</p>
+<h5 id="cylinders-1-16_1"><code>cylinders: &lt;1 - 16&gt;</code><a class="headerlink" href="#cylinders-1-16_1" title="Permanent link">&para;</a></h5>
+<p>as for the engine</p>
+<p><em>Default: value of the engine .v3def</em></p>
+<h5 id="knock_strength-0-3_1"><code>knock_strength: &lt;0 - 3&gt;</code><a class="headerlink" href="#knock_strength-0-3_1" title="Permanent link">&para;</a></h5>
+<p>as for the engine</p>
+<p><em>Default: value of the engine .v3def</em></p>
+<h5 id="knock_tone-04-2_1"><code>knock_tone: &lt;0.4 - 2&gt;</code><a class="headerlink" href="#knock_tone-04-2_1" title="Permanent link">&para;</a></h5>
+<p>as for the engine</p>
+<p><em>Default: value of the engine .v3def</em></p>
 <h3 id="truck-chassis">TRUCK CHASSIS<a class="headerlink" href="#truck-chassis" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/chassis/xxxx.v3def
 </code></pre></div>
@@ -5181,6 +5305,98 @@ couple_model: "/vehicle/truck/your_truck/fifthwheel.pmd"
 couple_tilt_front: 10
 couple_tilt_rear: 15
 couple_tilt_rest: 5
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/truck/your_truck/engine/sound.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Motorsound (optional) / engine sound (optional)
+#
+# Datei: gleicher Ordner und Name wie die Sound-.sui der Motor-.sii (@include)
+# File:  same folder and name as the sound .sui of the engine .sii (@include)
+#        /def/vehicle/truck/your_truck/engine/sound.sui
+#        -&gt;  sound.v3def
+#
+# Gilt vor der Motor-.v3def, eine .soundref-.v3def gilt vor dieser Datei.
+# Wins over the engine .v3def, a .soundref .v3def wins over this file.
+
+
+# ---------------------------------------------------------------------------
+# Zahl der Zylinder, ganze Zahl 1-16 (Takt des Kaltstart-Nagelns)
+# Number of cylinders, whole number 1-16 (rate of the cold start knock)
+#
+# Ohne Eintrag gilt der Wert der naechsten Datei.
+# Without entry the value of the next file applies.
+# ---------------------------------------------------------------------------
+
+cylinders: 6
+
+
+# ---------------------------------------------------------------------------
+# Staerke des Kaltstart-Nagelns, 0-3 (1 = normal, 0.5 = halb, 0 = aus)
+# Strength of the cold start knock, 0-3 (1 = normal, 0.5 = half, 0 = off)
+#
+# Ohne Eintrag gilt der Wert der naechsten Datei.
+# Without entry the value of the next file applies.
+# ---------------------------------------------------------------------------
+
+knock_strength: 1
+
+
+# ---------------------------------------------------------------------------
+# Tonhoehe des Kaltstart-Nagelns, 0.4-2 (1 = normal, kleiner = tiefer/dumpfer)
+# Pitch of the cold start knock, 0.4-2 (1 = normal, lower = deeper/duller)
+#
+# Ohne Eintrag gilt der Wert der naechsten Datei.
+# Without entry the value of the next file applies.
+# ---------------------------------------------------------------------------
+
+knock_tone: 0.7
+</code></pre></div>
+</details>
+<details class="example">
+<summary>def/vehicle/truck/your_truck/engine/sound_engine.v3def</summary>
+<div class="highlight"><pre><span></span><code># Fleet &amp; Road Realism - Motorsound (optional) / engine sound (optional)
+#
+# Datei: gleicher Ordner und Name wie die .soundref aus sounds[] "engine|..."
+# File:  same folder and name as the .soundref from sounds[] "engine|..."
+#        /def/vehicle/truck/your_truck/engine/sound_engine.soundref
+#        -&gt;  sound_engine.v3def
+#
+# Gilt vor der Sound-.v3def und der Motor-.v3def.
+# Wins over the sound .v3def and the engine .v3def.
+
+
+# ---------------------------------------------------------------------------
+# Zahl der Zylinder, ganze Zahl 1-16 (Takt des Kaltstart-Nagelns)
+# Number of cylinders, whole number 1-16 (rate of the cold start knock)
+#
+# Ohne Eintrag gilt der Wert der naechsten Datei.
+# Without entry the value of the next file applies.
+# ---------------------------------------------------------------------------
+
+cylinders: 6
+
+
+# ---------------------------------------------------------------------------
+# Staerke des Kaltstart-Nagelns, 0-3 (1 = normal, 0.5 = halb, 0 = aus)
+# Strength of the cold start knock, 0-3 (1 = normal, 0.5 = half, 0 = off)
+#
+# Ohne Eintrag gilt der Wert der naechsten Datei.
+# Without entry the value of the next file applies.
+# ---------------------------------------------------------------------------
+
+knock_strength: 1
+
+
+# ---------------------------------------------------------------------------
+# Tonhoehe des Kaltstart-Nagelns, 0.4-2 (1 = normal, kleiner = tiefer/dumpfer)
+# Pitch of the cold start knock, 0.4-2 (1 = normal, lower = deeper/duller)
+#
+# Ohne Eintrag gilt der Wert der naechsten Datei.
+# Without entry the value of the next file applies.
+# ---------------------------------------------------------------------------
+
+knock_tone: 0.7
 </code></pre></div>
 </details>
 <details class="example">
