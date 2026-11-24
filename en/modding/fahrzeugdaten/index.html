@@ -1392,10 +1392,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#registration-own-next-prev" class="md-nav__link">
+  <a href="#registration-own-next-prev-none" class="md-nav__link">
     <span class="md-ellipsis">
       
-        registration: own | next | prev
+        registration: own | next | prev | none
       
     </span>
   </a>
@@ -2896,10 +2896,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#registration-own-next-prev" class="md-nav__link">
+  <a href="#registration-own-next-prev-none" class="md-nav__link">
     <span class="md-ellipsis">
       
-        registration: own | next | prev
+        registration: own | next | prev | none
       
     </span>
   </a>
@@ -4059,8 +4059,17 @@ company trailer: /def/vehicle/trailer/xxxx/chassis_xxxx.v3def
 <h5 id="king_pin_load-tonnes-or-kg"><code>king_pin_load: &lt;tonnes or kg&gt;</code><a class="headerlink" href="#king_pin_load-tonnes-or-kg" title="Permanent link">&para;</a></h5>
 <p>load on the king pin (semi-trailers only; without it the trailer counts as a drawbar trailer)</p>
 <p><em>Default: by number of axles: 1 -&gt; 10 t, otherwise 12 t (only together with the default gross weight)</em></p>
-<h5 id="registration-own-next-prev"><code>registration: own | next | prev</code><a class="headerlink" href="#registration-own-next-prev" title="Permanent link">&para;</a></h5>
-<p>own = own registration next = belongs to the part behind it prev = belongs to the part in front of it</p>
+<h5 id="registration-own-next-prev-none"><code>registration: own | next | prev | none</code><a class="headerlink" href="#registration-own-next-prev-none" title="Permanent link">&para;</a></h5>
+<p>own = own registration next = belongs to the part behind it prev = belongs to the part in front of it none = no registration (e.g. swap body as a trailer with invisible</p>
+<div class="highlight"><pre><span></span><code>       wheels)
+</code></pre></div>
+<p>"registration: none": the part is not a vehicle as far as registration goes, but a body or load:</p>
+<ul>
+<li>no entry in the registration office, no registration tile in the service shop, no click on the plate in the trailer manager</li>
+<li>no plates (no temporary plate when bought either), no vehicle papers</li>
+<li>no vehicle tax, no insurance, no fines for registration</li>
+</ul>
+<p>The vehicle the swap body sits on stays registered as usual.</p>
 <p>Owned trailers with more than one chassis (B-double, HCT, semi-trailer on a converter dolly, full trailer with turntable) are a chain of parts in the game. Without a "registration" line every part is a vehicle of its own: own entry in the registration office, own plate, own tax and insurance. That is correct for semi-trailers and for converter dollies, which are registered vehicles of their own in reality.</p>
 <p>"registration: next" or "registration: prev" joins a chassis with its neighbour. Use it only for parts that are not a vehicle of their own in reality, e.g. the turntable axle (front part) of a full trailer with turntable steering. Joined parts are one vehicle:</p>
 <ul>

@@ -1392,10 +1392,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#registration-own-next-prev" class="md-nav__link">
+  <a href="#registration-own-next-prev-none" class="md-nav__link">
     <span class="md-ellipsis">
       
-        registration: own | next | prev
+        registration: own | next | prev | none
       
     </span>
   </a>
@@ -2896,10 +2896,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#registration-own-next-prev" class="md-nav__link">
+  <a href="#registration-own-next-prev-none" class="md-nav__link">
     <span class="md-ellipsis">
       
-        registration: own | next | prev
+        registration: own | next | prev | none
       
     </span>
   </a>
@@ -4049,8 +4049,17 @@ Firmenauflieger: /def/vehicle/trailer/xxxx/chassis_xxxx.v3def
 <h5 id="king_pin_load-tonnen-oder-kg"><code>king_pin_load: &lt;Tonnen oder kg&gt;</code><a class="headerlink" href="#king_pin_load-tonnen-oder-kg" title="Permanent link">&para;</a></h5>
 <p>Last auf dem Königszapfen (nur Sattelauflieger; fehlt sie, gilt der Auflieger als Deichselanhänger)</p>
 <p><em>Standard: nach Achszahl: 1 -&gt; 10 t, sonst 12 t (nur zusammen mit dem Standard-Gesamtgewicht)</em></p>
-<h5 id="registration-own-next-prev"><code>registration: own | next | prev</code><a class="headerlink" href="#registration-own-next-prev" title="Permanent link">&para;</a></h5>
-<p>own = eigene Zulassung next = gehört zum Teil dahinter prev = gehört zum Teil davor</p>
+<h5 id="registration-own-next-prev-none"><code>registration: own | next | prev | none</code><a class="headerlink" href="#registration-own-next-prev-none" title="Permanent link">&para;</a></h5>
+<p>own = eigene Zulassung next = gehört zum Teil dahinter prev = gehört zum Teil davor none = keine Zulassung (z. B. Wechselbrücke als Auflieger mit</p>
+<div class="highlight"><pre><span></span><code>       unsichtbaren Rädern)
+</code></pre></div>
+<p>"registration: none": das Teil ist kein Fahrzeug im Sinne der Zulassung, sondern ein Aufbau bzw. Ladung:</p>
+<ul>
+<li>kein Eintrag in der Zulassungsstelle, keine Zulassungs-Kachel in der Werkstatt, kein Klick auf das Kennzeichen im Auflieger-Manager</li>
+<li>keine Kennzeichen (auch beim Kauf kein Kurzzeitkennzeichen), keine Fahrzeugpapiere</li>
+<li>keine Kfz-Steuer, keine Versicherung, keine Strafen wegen Zulassung</li>
+</ul>
+<p>Das Fahrzeug, auf dem die Wechselbrücke sitzt, bleibt normal zugelassen.</p>
 <p>Eigene Auflieger mit mehr als einem Chassis (B-Double, HCT, Sattelauflieger auf einem Dolly, Drehschemelanhänger) sind im Spiel eine Kette aus Teilen. Ohne "registration"-Zeile ist jeder Teil ein eigenes Fahrzeug: eigener Eintrag in der Zulassungsstelle, eigenes Kennzeichen, eigene Steuer und Versicherung. Das ist richtig für Sattelauflieger und für Dollys, die in echt eigene zugelassene Fahrzeuge sind.</p>
 <p>"registration: next" oder "registration: prev" verbindet ein Chassis mit seinem Nachbarn. Nur für Teile verwenden, die in echt kein eigenes Fahrzeug sind, z. B. die Drehschemelachse (vorderer Teil) eines Drehschemelanhängers. Verbundene Teile sind ein Fahrzeug:</p>
 <ul>
