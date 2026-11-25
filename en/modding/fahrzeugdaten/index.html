@@ -1144,10 +1144,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#type-tractor-rigid" class="md-nav__link">
+  <a href="#type-tractor-rigid-swapbody" class="md-nav__link">
     <span class="md-ellipsis">
       
-        type: tractor | rigid
+        type: tractor | rigid | swapbody
       
     </span>
   </a>
@@ -1379,6 +1379,17 @@
   
     <nav class="md-nav" aria-label="TRAILER CHASSIS">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-semitrailer-dolly-drawbar-centeraxle-swapbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type: semitrailer | dolly | drawbar | centeraxle | swapbody
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#king_pin_load-tonnes-or-kg" class="md-nav__link">
@@ -2648,10 +2659,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#type-tractor-rigid" class="md-nav__link">
+  <a href="#type-tractor-rigid-swapbody" class="md-nav__link">
     <span class="md-ellipsis">
       
-        type: tractor | rigid
+        type: tractor | rigid | swapbody
       
     </span>
   </a>
@@ -2883,6 +2894,17 @@
   
     <nav class="md-nav" aria-label="TRAILER CHASSIS">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-semitrailer-dolly-drawbar-centeraxle-swapbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type: semitrailer | dolly | drawbar | centeraxle | swapbody
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#king_pin_load-tonnes-or-kg" class="md-nav__link">
@@ -3871,9 +3893,9 @@ whose name starts with "chassis")
 <li>weights: tonnes (values up to 100, e.g. 18.00) or kilograms (above 100, e.g. 18000)</li>
 <li>decimal point or decimal comma (18.50 or 18,50), no thousands separator</li>
 <li>emission: whole number 0-7</li>
-<li>type: tractor or rigid</li>
+<li>type: tractor, rigid or swapbody (truck); semitrailer, dolly, drawbar, centeraxle or swapbody (trailer)</li>
 <li>suspension: air or leaf</li>
-<li>registration: own, next or prev</li>
+<li>registration: own, next, prev or none</li>
 <li>loading: own, next or prev</li>
 <li>load_split: true or false</li>
 <li>cable_connect: metres above 0 up to 20 (e.g. 1.2)</li>
@@ -3939,8 +3961,14 @@ whose name starts with "chassis")
 <div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/chassis/xxxx.v3def
 </code></pre></div>
 <h4 id="general_1">General<a class="headerlink" href="#general_1" title="Permanent link">&para;</a></h4>
-<h5 id="type-tractor-rigid"><code>type: tractor | rigid</code><a class="headerlink" href="#type-tractor-rigid" title="Permanent link">&para;</a></h5>
-<p>tractor = tractor unit for semi-trailers rigid = rigid truck (load on its own frame)</p>
+<h5 id="type-tractor-rigid-swapbody"><code>type: tractor | rigid | swapbody</code><a class="headerlink" href="#type-tractor-rigid-swapbody" title="Permanent link">&para;</a></h5>
+<p>tractor = tractor unit for semi-trailers<br>rigid = rigid truck (load on its own frame)<br>swapbody = swap body carrier (chassis for swap bodies); tax and papers as rigid, in the German registration certificate „Wechselfahrgestell“</p>
+<p>Which trailers fit (fixed combinations, freight jobs with a company trailer, quick jobs): what counts is the <code>type</code> of the front part of the trailer (see TRAILER CHASSIS)</p>
+<div class="highlight"><pre><span></span><code>tractor   semitrailer only
+rigid     dolly, drawbar, centeraxle
+swapbody  dolly, drawbar, centeraxle and swapbody
+</code></pre></div>
+<p>Jobs that do not fit are only hidden for this truck, the offer stays.</p>
 <p><em>Default: tractor</em></p>
 <h5 id="fixed_plate-country-countrycode"><code>fixed_plate: "&lt;country&gt;" | "&lt;country&gt;|&lt;code&gt;"</code><a class="headerlink" href="#fixed_plate-country-countrycode" title="Permanent link">&para;</a></h5>
 <p>plates fixed in the model (without the game's plate locator), e.g. for packs with real, fixed plates on the vehicle</p>
@@ -4056,12 +4084,24 @@ couple_tilt_rest: 5
 <div class="highlight"><pre><span></span><code>/def/vehicle/trailer_owned/xxxx/chassis/xxxx.v3def
 company trailer: /def/vehicle/trailer/xxxx/chassis_xxxx.v3def
 </code></pre></div>
+<h5 id="type-semitrailer-dolly-drawbar-centeraxle-swapbody"><code>type: semitrailer | dolly | drawbar | centeraxle | swapbody</code><a class="headerlink" href="#type-semitrailer-dolly-drawbar-centeraxle-swapbody" title="Permanent link">&para;</a></h5>
+<p>kind of this part, as it is in reality</p>
+<ul>
+<li><code>semitrailer</code> = semi-trailer (rests with king_pin_load on the part in front)</li>
+<li><code>dolly</code> = converter dolly (axle unit with drawbar and fifth wheel)</li>
+<li><code>drawbar</code> = drawbar trailer or the turntable axle of a full trailer</li>
+<li><code>centeraxle</code> = centre-axle trailer</li>
+<li><code>swapbody</code> = the swap body itself (trailer with invisible wheels): no registration (as "registration: none"), fits only trucks with "type: swapbody"</li>
+</ul>
+<p>dolly, drawbar and centeraxle have no king pin load (king_pin_load is ignored). In the papers: semitrailer = semi-trailer, centeraxle = centre-axle trailer, drawbar and dolly = trailer.</p>
+<p>For trailers made of several parts every part gets its own type; for fixed combinations and jobs only the front part counts (see TRUCK CHASSIS, type). Also applies to company trailers.</p>
+<p><em>Default: semitrailer</em></p>
 <h5 id="king_pin_load-tonnes-or-kg"><code>king_pin_load: &lt;tonnes or kg&gt;</code><a class="headerlink" href="#king_pin_load-tonnes-or-kg" title="Permanent link">&para;</a></h5>
-<p>load on the king pin (semi-trailers only; without it the trailer counts as a drawbar trailer)</p>
-<p><em>Default: by number of axles: 1 -&gt; 10 t, otherwise 12 t (only together with the default gross weight)</em></p>
+<p>load on the king pin (semitrailer only)</p>
+<p><em>Default: by number of axles: 1 -&gt; 10 t, otherwise 12 t</em></p>
 <h5 id="registration-own-next-prev-none"><code>registration: own | next | prev | none</code><a class="headerlink" href="#registration-own-next-prev-none" title="Permanent link">&para;</a></h5>
 <p>own = own registration next = belongs to the part behind it prev = belongs to the part in front of it none = no registration (e.g. swap body as a trailer with invisible</p>
-<div class="highlight"><pre><span></span><code>       wheels)
+<div class="highlight"><pre><span></span><code>       wheels; automatic with "type: swapbody")
 </code></pre></div>
 <p>"registration: none": the part is not a vehicle as far as registration goes, but a body or load:</p>
 <ul>
@@ -4089,22 +4129,22 @@ company trailer: /def/vehicle/trailer/xxxx/chassis_xxxx.v3def
 </code></pre></div>
 <p>Give every part the values it has on its own - nothing has to be split.</p>
 <p>Example 1: full trailer with turntable, 2 axles, 18 t (one vehicle)</p>
-<div class="highlight"><pre><span></span><code>turntable axle (front)   registration: next
+<div class="highlight"><pre><span></span><code>turntable axle (front)   type: drawbar
+                         registration: next
                          gross_vehicle_weight: 9.00
-                         (no king_pin_load = drawbar, nothing on the truck)
-rear part                gross_vehicle_weight: 9.00
-                         (no king_pin_load)
+                         (drawbar, nothing on the truck)
+rear part                (no type = semitrailer, rests on the turntable)
+                         gross_vehicle_weight: 18.00
+                         king_pin_load: 9.00
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>-&gt; 1 vehicle, 2 axles, 9 + 9 = 18 t, no king pin load on the truck
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>The same result with the rear part carried by the turntable:
-rear part gross_vehicle_weight: 18.00 and king_pin_load: 9.00
--&gt; 9 + 18 - 9 = 18 t
+<div class="highlight"><pre><span></span><code>-&gt; 1 vehicle, 2 axles, 9 + 18 - 9 = 18 t, no king pin load on the truck,
+   fits rigid and swapbody
 </code></pre></div>
 <p>Example 2: semi-trailer on a converter dolly (two vehicles, no "registration" line)</p>
-<div class="highlight"><pre><span></span><code>converter dolly          gross_vehicle_weight: 18.00
-                         (no king_pin_load = drawbar)
-semi-trailer             gross_vehicle_weight: 39.00
+<div class="highlight"><pre><span></span><code>converter dolly          type: dolly
+                         gross_vehicle_weight: 18.00
+semi-trailer             (no type = semitrailer)
+                         gross_vehicle_weight: 39.00
                          king_pin_load: 12.00
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>-&gt; 2 vehicles with 2 registrations, each taxed with its own values
@@ -4113,6 +4153,7 @@ semi-trailer             gross_vehicle_weight: 39.00
 <p>Example 3: HCT semi-trailer + converter dolly + semi-trailer</p>
 <table class="kv">
 <tr><td>no &quot;registration&quot; lines</td><td>-&gt; 3 vehicles (semi-trailer, dolly, semi-trailer)</td></tr>
+<tr><td>dolly &quot;type: dolly&quot;, semi-trailers without type</td><td>-&gt; fits tractor units only (front part semitrailer)</td></tr>
 </table>
 
 <p>"prev" on the first part or "next" on the last part of a trailer is an error (see below), the part then counts as "own". Default:  own</p>
@@ -4660,6 +4701,10 @@ the truck that has the lines is read)
 # File:  same folder and name as the chassis .sii of this link
 #        /def/vehicle/trailer/your_company_trailer/chassis_ca.sii  -&gt;  chassis_ca.v3def
 
+# Art: Zentralachsanhaenger
+# kind: centre-axle trailer
+type: centeraxle
+
 # hinterer Zentralachsanhaenger (ohne Dolly): eigene Ladeeinheit
 # rear centre-axle trailer (no dolly): loading unit of its own
 loading: own
@@ -4779,6 +4824,10 @@ trailer_brace_use[1]: loading
 # Only the lines for splitting, cables and sounds are shown; the other lines
 # (gross_vehicle_weight, king_pin_load, ...) work as in your_trailer/chassis.
 
+# Art: Dolly
+# kind: converter dolly
+type: dolly
+
 # Dolly: bleibt unter dem hinteren Sattelauflieger
 # converter dolly: stays under the rear semi-trailer
 loading: next
@@ -4879,10 +4928,30 @@ anim_distance: 2
 #
 # Ohne diese Datei haengen Gesamtgewicht und Sattellast von der Achszahl ab:
 # 1 -&gt; 20 t / 10 t, 2 -&gt; 30 t / 12 t, 3 und mehr -&gt; 39 t / 12 t, Federung air,
-# registration own.
+# registration own, type semitrailer.
 # Without this file the gross weight and the king pin load depend on the
 # number of axles: 1 -&gt; 20 t / 10 t, 2 -&gt; 30 t / 12 t, 3 or more -&gt; 39 t / 12 t,
-# suspension air, registration own.
+# suspension air, registration own, type semitrailer.
+
+
+# ---------------------------------------------------------------------------
+# Art dieses Teils, so wie er in echt ist:
+#   semitrailer = Sattelauflieger (Standard)
+#   dolly       = Dolly
+#   drawbar     = Deichselanhaenger / Drehschemelachse
+#   centeraxle  = Zentralachsanhaenger
+#   swapbody    = Wechselbruecke selbst (keine Zulassung, nur an swapbody-Lkw)
+# Fuer feste Gespanne und Auftraege zaehlt der vorderste Teil des Aufliegers.
+# Kind of this part, as it is in reality:
+#   semitrailer = semi-trailer (default)
+#   dolly       = converter dolly
+#   drawbar     = drawbar trailer / turntable axle
+#   centeraxle  = centre-axle trailer
+#   swapbody    = the swap body itself (no registration, only on swapbody trucks)
+# For fixed combinations and jobs the front part of the trailer counts.
+# ---------------------------------------------------------------------------
+
+type: semitrailer
 
 
 # ---------------------------------------------------------------------------
@@ -4922,11 +4991,11 @@ gross_vehicle_weight: 39.00
 # Ausserdem: Kroatien, Bosnien und Herzegowina und Litauen (Sattelauflieger nach
 # gross_vehicle_weight - king_pin_load), Sattelauflieger sind in Slowenien frei,
 # eigene Tarife fuer Sattelauflieger in Montenegro, Nordmazedonien und Lettland.
-# Bei Deichselanhaengern weglassen (kein Koenigszapfen).
+# Nur bei type semitrailer (dolly, drawbar, centeraxle: keine Sattellast).
 # Also: Croatia, Bosnia and Herzegovina and Lithuania (semi-trailers by
 # gross_vehicle_weight - king_pin_load), semi-trailers are free in Slovenia,
 # own tariffs for semi-trailers in Montenegro, North Macedonia and Latvia.
-# Leave it out for drawbar trailers (no king pin).
+# Only for type semitrailer (dolly, drawbar, centeraxle: no king pin load).
 # ---------------------------------------------------------------------------
 
 king_pin_load: 12.00
@@ -5168,8 +5237,17 @@ washer_spot[1]: -0.50;2.10;0.95
 
 
 # ---------------------------------------------------------------------------
-# Art des Lkw: tractor (Sattelzugmaschine) oder rigid (Solo-Lkw)
-# Kind of truck: tractor (tractor unit for semi-trailers) or rigid (rigid truck)
+# Art des Lkw: tractor (Sattelzugmaschine), rigid (Solo-Lkw) oder swapbody
+# (Wechselbrueckenfahrzeug; Steuer wie rigid)
+# Kind of truck: tractor (tractor unit for semi-trailers), rigid (rigid truck)
+# or swapbody (swap body carrier; tax as rigid)
+#
+# Passende Auflieger (feste Gespanne, Auftraege mit Firmenauflieger):
+#   tractor = semitrailer, rigid = dolly/drawbar/centeraxle,
+#   swapbody = dolly/drawbar/centeraxle/swapbody
+# Fitting trailers (fixed combinations, jobs with a company trailer):
+#   tractor = semitrailer, rigid = dolly/drawbar/centeraxle,
+#   swapbody = dolly/drawbar/centeraxle/swapbody
 #
 # Wofuer: eigene Tarife fuer Sattelzugmaschinen und Solo-Lkw: Schweizer
 #         kantonale Motorfahrzeugsteuer, franzoesische TSVR, italienische IPT

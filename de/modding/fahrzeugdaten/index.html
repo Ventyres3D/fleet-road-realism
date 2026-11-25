@@ -1144,10 +1144,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#type-tractor-rigid" class="md-nav__link">
+  <a href="#type-tractor-rigid-swapbody" class="md-nav__link">
     <span class="md-ellipsis">
       
-        type: tractor | rigid
+        type: tractor | rigid | swapbody
       
     </span>
   </a>
@@ -1379,6 +1379,17 @@
   
     <nav class="md-nav" aria-label="CHASSIS AUFLIEGER">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-semitrailer-dolly-drawbar-centeraxle-swapbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type: semitrailer | dolly | drawbar | centeraxle | swapbody
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#king_pin_load-tonnen-oder-kg" class="md-nav__link">
@@ -2648,10 +2659,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#type-tractor-rigid" class="md-nav__link">
+  <a href="#type-tractor-rigid-swapbody" class="md-nav__link">
     <span class="md-ellipsis">
       
-        type: tractor | rigid
+        type: tractor | rigid | swapbody
       
     </span>
   </a>
@@ -2883,6 +2894,17 @@
   
     <nav class="md-nav" aria-label="CHASSIS AUFLIEGER">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-semitrailer-dolly-drawbar-centeraxle-swapbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type: semitrailer | dolly | drawbar | centeraxle | swapbody
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#king_pin_load-tonnen-oder-kg" class="md-nav__link">
@@ -3870,9 +3892,9 @@ die .sii, deren Name mit "chassis" beginnt)
 <li>Gewichte: Tonnen (Werte bis 100, z. B. 18.00) oder Kilogramm (über 100, z. B. 18000)</li>
 <li>Dezimalpunkt oder Dezimalkomma (18.50 oder 18,50), kein Tausendertrenner</li>
 <li>emission: ganze Zahl 0-7</li>
-<li>type: tractor oder rigid</li>
+<li>type: tractor, rigid oder swapbody (Lkw); semitrailer, dolly, drawbar, centeraxle oder swapbody (Auflieger)</li>
 <li>suspension: air oder leaf</li>
-<li>registration: own, next oder prev</li>
+<li>registration: own, next, prev oder none</li>
 <li>loading: own, next oder prev</li>
 <li>load_split: true oder false</li>
 <li>cable_connect: Meter grösser 0 bis 20 (z. B. 1.2)</li>
@@ -3938,8 +3960,14 @@ die .sii, deren Name mit "chassis" beginnt)
 <div class="highlight"><pre><span></span><code>/def/vehicle/truck/xxxx/chassis/xxxx.v3def
 </code></pre></div>
 <h4 id="allgemein_1">Allgemein<a class="headerlink" href="#allgemein_1" title="Permanent link">&para;</a></h4>
-<h5 id="type-tractor-rigid"><code>type: tractor | rigid</code><a class="headerlink" href="#type-tractor-rigid" title="Permanent link">&para;</a></h5>
-<p>tractor = Sattelzugmaschine rigid = Solo-Lkw (Ladung auf dem eigenen Rahmen)</p>
+<h5 id="type-tractor-rigid-swapbody"><code>type: tractor | rigid | swapbody</code><a class="headerlink" href="#type-tractor-rigid-swapbody" title="Permanent link">&para;</a></h5>
+<p>tractor = Sattelzugmaschine<br>rigid = Solo-Lkw (Ladung auf dem eigenen Rahmen)<br>swapbody = Wechselbrückenfahrzeug (Fahrgestell für Wechselaufbauten); Steuer und Papiere wie rigid, im deutschen Fahrzeugschein „Wechselfahrgestell“</p>
+<p>Welche Auflieger passen (feste Gespanne, Frachtaufträge mit Firmenauflieger, Schnellaufträge): es zählt der <code>type</code> des vordersten Teils des Aufliegers (siehe CHASSIS AUFLIEGER)</p>
+<div class="highlight"><pre><span></span><code>tractor   nur semitrailer
+rigid     dolly, drawbar, centeraxle
+swapbody  dolly, drawbar, centeraxle und swapbody
+</code></pre></div>
+<p>Unpassende Aufträge werden für diesen Lkw nur ausgeblendet, das Angebot bleibt bestehen.</p>
 <p><em>Standard: tractor</em></p>
 <h5 id="fixed_plate-land-landkurzel"><code>fixed_plate: "&lt;land&gt;" | "&lt;land&gt;|&lt;Kürzel&gt;"</code><a class="headerlink" href="#fixed_plate-land-landkurzel" title="Permanent link">&para;</a></h5>
 <p>Kennzeichen fest im Modell (ohne Kennzeichen-Locator des Spiels), z. B. bei Paketen mit echten, festen Kennzeichen am Fahrzeug</p>
@@ -4046,12 +4074,24 @@ couple_tilt_rest: 5
 <div class="highlight"><pre><span></span><code>/def/vehicle/trailer_owned/xxxx/chassis/xxxx.v3def
 Firmenauflieger: /def/vehicle/trailer/xxxx/chassis_xxxx.v3def
 </code></pre></div>
+<h5 id="type-semitrailer-dolly-drawbar-centeraxle-swapbody"><code>type: semitrailer | dolly | drawbar | centeraxle | swapbody</code><a class="headerlink" href="#type-semitrailer-dolly-drawbar-centeraxle-swapbody" title="Permanent link">&para;</a></h5>
+<p>Art dieses Teils, so wie er in echt ist</p>
+<ul>
+<li><code>semitrailer</code> = Sattelauflieger (liegt mit king_pin_load auf dem Teil davor)</li>
+<li><code>dolly</code> = Dolly (Achsaggregat mit Deichsel und Sattelkupplung)</li>
+<li><code>drawbar</code> = Deichselanhänger bzw. Drehschemelachse eines Drehschemelanhängers</li>
+<li><code>centeraxle</code> = Zentralachsanhänger</li>
+<li><code>swapbody</code> = die Wechselbrücke selbst (Auflieger mit unsichtbaren Rädern): keine Zulassung (wie "registration: none"), passt nur an Lkw mit "type: swapbody"</li>
+</ul>
+<p>dolly, drawbar und centeraxle haben keine Sattellast (king_pin_load wird ignoriert). In den Papieren: semitrailer = Sattelanhänger, centeraxle = Zentralachsanhänger, drawbar und dolly = Anhänger.</p>
+<p>Bei mehrteiligen Aufliegern bekommt jeder Teil seinen eigenen Typ; für feste Gespanne und Aufträge zählt nur der vorderste Teil (siehe CHASSIS LKW, type). Gilt auch für Firmenauflieger.</p>
+<p><em>Standard: semitrailer</em></p>
 <h5 id="king_pin_load-tonnen-oder-kg"><code>king_pin_load: &lt;Tonnen oder kg&gt;</code><a class="headerlink" href="#king_pin_load-tonnen-oder-kg" title="Permanent link">&para;</a></h5>
-<p>Last auf dem Königszapfen (nur Sattelauflieger; fehlt sie, gilt der Auflieger als Deichselanhänger)</p>
-<p><em>Standard: nach Achszahl: 1 -&gt; 10 t, sonst 12 t (nur zusammen mit dem Standard-Gesamtgewicht)</em></p>
+<p>Last auf dem Königszapfen (nur semitrailer)</p>
+<p><em>Standard: nach Achszahl: 1 -&gt; 10 t, sonst 12 t</em></p>
 <h5 id="registration-own-next-prev-none"><code>registration: own | next | prev | none</code><a class="headerlink" href="#registration-own-next-prev-none" title="Permanent link">&para;</a></h5>
 <p>own = eigene Zulassung next = gehört zum Teil dahinter prev = gehört zum Teil davor none = keine Zulassung (z. B. Wechselbrücke als Auflieger mit</p>
-<div class="highlight"><pre><span></span><code>       unsichtbaren Rädern)
+<div class="highlight"><pre><span></span><code>       unsichtbaren Rädern; bei "type: swapbody" automatisch)
 </code></pre></div>
 <p>"registration: none": das Teil ist kein Fahrzeug im Sinne der Zulassung, sondern ein Aufbau bzw. Ladung:</p>
 <ul>
@@ -4079,22 +4119,22 @@ Firmenauflieger: /def/vehicle/trailer/xxxx/chassis_xxxx.v3def
 </code></pre></div>
 <p>Jedem Teil die Werte geben, die er für sich hat - aufteilen muss man nichts.</p>
 <p>Beispiel 1: Drehschemelanhänger, 2 Achsen, 18 t (ein Fahrzeug)</p>
-<div class="highlight"><pre><span></span><code>Drehschemelachse (vorne) registration: next
+<div class="highlight"><pre><span></span><code>Drehschemelachse (vorne) type: drawbar
+                         registration: next
                          gross_vehicle_weight: 9.00
-                         (kein king_pin_load = Deichsel, nichts auf dem Lkw)
-hinterer Teil            gross_vehicle_weight: 9.00
-                         (kein king_pin_load)
+                         (Deichsel, nichts auf dem Lkw)
+hinterer Teil            (kein type = semitrailer, liegt auf dem Drehschemel)
+                         gross_vehicle_weight: 18.00
+                         king_pin_load: 9.00
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>-&gt; 1 Fahrzeug, 2 Achsen, 9 + 9 = 18 t, keine Sattellast auf dem Lkw
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Dasselbe Ergebnis, wenn der hintere Teil auf dem Drehschemel liegt:
-hinterer Teil gross_vehicle_weight: 18.00 und king_pin_load: 9.00
--&gt; 9 + 18 - 9 = 18 t
+<div class="highlight"><pre><span></span><code>-&gt; 1 Fahrzeug, 2 Achsen, 9 + 18 - 9 = 18 t, keine Sattellast auf dem Lkw,
+   passt an rigid und swapbody
 </code></pre></div>
 <p>Beispiel 2: Sattelauflieger auf einem Dolly (zwei Fahrzeuge, keine "registration"-Zeile)</p>
-<div class="highlight"><pre><span></span><code>Dolly                    gross_vehicle_weight: 18.00
-                         (kein king_pin_load = Deichsel)
-Sattelauflieger          gross_vehicle_weight: 39.00
+<div class="highlight"><pre><span></span><code>Dolly                    type: dolly
+                         gross_vehicle_weight: 18.00
+Sattelauflieger          (kein type = semitrailer)
+                         gross_vehicle_weight: 39.00
                          king_pin_load: 12.00
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>-&gt; 2 Fahrzeuge mit 2 Zulassungen, jedes mit seinen eigenen Werten besteuert
@@ -4102,6 +4142,7 @@ Sattelauflieger          gross_vehicle_weight: 39.00
 </code></pre></div>
 <p>Beispiel 3: HCT Sattelauflieger + Dolly + Sattelauflieger</p>
 <p>keine "registration"-Zeilen -&gt; 3 Fahrzeuge (Sattelauflieger, Dolly, Sattelauflieger)</p>
+<p>Dolly <code>type: dolly</code>, die Sattelauflieger ohne type -&gt; passt nur an Sattelzugmaschinen (vorderster Teil semitrailer)</p>
 <p>"prev" am ersten Teil oder "next" am letzten Teil eines Aufliegers ist ein Fehler (siehe unten), der Teil gilt dann als "own". Standard: own</p>
 <h5 id="fixed_plate-land-landkurzel_1"><code>fixed_plate: "&lt;land&gt;" | "&lt;land&gt;|&lt;Kürzel&gt;"</code><a class="headerlink" href="#fixed_plate-land-landkurzel_1" title="Permanent link">&para;</a></h5>
 <p>Kennzeichen fest im Modell (ohne Kennzeichen-Locator des Spiels), z. B. bei Paketen mit echten, festen Kennzeichen am Fahrzeug</p>
@@ -4634,6 +4675,10 @@ Zubehör des Lkw, das die Zeilen hat)
 # File:  same folder and name as the chassis .sii of this link
 #        /def/vehicle/trailer/your_company_trailer/chassis_ca.sii  -&gt;  chassis_ca.v3def
 
+# Art: Zentralachsanhaenger
+# kind: centre-axle trailer
+type: centeraxle
+
 # hinterer Zentralachsanhaenger (ohne Dolly): eigene Ladeeinheit
 # rear centre-axle trailer (no dolly): loading unit of its own
 loading: own
@@ -4753,6 +4798,10 @@ trailer_brace_use[1]: loading
 # Only the lines for splitting, cables and sounds are shown; the other lines
 # (gross_vehicle_weight, king_pin_load, ...) work as in your_trailer/chassis.
 
+# Art: Dolly
+# kind: converter dolly
+type: dolly
+
 # Dolly: bleibt unter dem hinteren Sattelauflieger
 # converter dolly: stays under the rear semi-trailer
 loading: next
@@ -4853,10 +4902,30 @@ anim_distance: 2
 #
 # Ohne diese Datei haengen Gesamtgewicht und Sattellast von der Achszahl ab:
 # 1 -&gt; 20 t / 10 t, 2 -&gt; 30 t / 12 t, 3 und mehr -&gt; 39 t / 12 t, Federung air,
-# registration own.
+# registration own, type semitrailer.
 # Without this file the gross weight and the king pin load depend on the
 # number of axles: 1 -&gt; 20 t / 10 t, 2 -&gt; 30 t / 12 t, 3 or more -&gt; 39 t / 12 t,
-# suspension air, registration own.
+# suspension air, registration own, type semitrailer.
+
+
+# ---------------------------------------------------------------------------
+# Art dieses Teils, so wie er in echt ist:
+#   semitrailer = Sattelauflieger (Standard)
+#   dolly       = Dolly
+#   drawbar     = Deichselanhaenger / Drehschemelachse
+#   centeraxle  = Zentralachsanhaenger
+#   swapbody    = Wechselbruecke selbst (keine Zulassung, nur an swapbody-Lkw)
+# Fuer feste Gespanne und Auftraege zaehlt der vorderste Teil des Aufliegers.
+# Kind of this part, as it is in reality:
+#   semitrailer = semi-trailer (default)
+#   dolly       = converter dolly
+#   drawbar     = drawbar trailer / turntable axle
+#   centeraxle  = centre-axle trailer
+#   swapbody    = the swap body itself (no registration, only on swapbody trucks)
+# For fixed combinations and jobs the front part of the trailer counts.
+# ---------------------------------------------------------------------------
+
+type: semitrailer
 
 
 # ---------------------------------------------------------------------------
@@ -4896,11 +4965,11 @@ gross_vehicle_weight: 39.00
 # Ausserdem: Kroatien, Bosnien und Herzegowina und Litauen (Sattelauflieger nach
 # gross_vehicle_weight - king_pin_load), Sattelauflieger sind in Slowenien frei,
 # eigene Tarife fuer Sattelauflieger in Montenegro, Nordmazedonien und Lettland.
-# Bei Deichselanhaengern weglassen (kein Koenigszapfen).
+# Nur bei type semitrailer (dolly, drawbar, centeraxle: keine Sattellast).
 # Also: Croatia, Bosnia and Herzegovina and Lithuania (semi-trailers by
 # gross_vehicle_weight - king_pin_load), semi-trailers are free in Slovenia,
 # own tariffs for semi-trailers in Montenegro, North Macedonia and Latvia.
-# Leave it out for drawbar trailers (no king pin).
+# Only for type semitrailer (dolly, drawbar, centeraxle: no king pin load).
 # ---------------------------------------------------------------------------
 
 king_pin_load: 12.00
@@ -5142,8 +5211,17 @@ washer_spot[1]: -0.50;2.10;0.95
 
 
 # ---------------------------------------------------------------------------
-# Art des Lkw: tractor (Sattelzugmaschine) oder rigid (Solo-Lkw)
-# Kind of truck: tractor (tractor unit for semi-trailers) or rigid (rigid truck)
+# Art des Lkw: tractor (Sattelzugmaschine), rigid (Solo-Lkw) oder swapbody
+# (Wechselbrueckenfahrzeug; Steuer wie rigid)
+# Kind of truck: tractor (tractor unit for semi-trailers), rigid (rigid truck)
+# or swapbody (swap body carrier; tax as rigid)
+#
+# Passende Auflieger (feste Gespanne, Auftraege mit Firmenauflieger):
+#   tractor = semitrailer, rigid = dolly/drawbar/centeraxle,
+#   swapbody = dolly/drawbar/centeraxle/swapbody
+# Fitting trailers (fixed combinations, jobs with a company trailer):
+#   tractor = semitrailer, rigid = dolly/drawbar/centeraxle,
+#   swapbody = dolly/drawbar/centeraxle/swapbody
 #
 # Wofuer: eigene Tarife fuer Sattelzugmaschinen und Solo-Lkw: Schweizer
 #         kantonale Motorfahrzeugsteuer, franzoesische TSVR, italienische IPT
