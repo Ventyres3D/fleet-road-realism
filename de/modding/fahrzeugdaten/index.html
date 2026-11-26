@@ -1864,6 +1864,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#chassis-alle-lkw-und-auflieger-liftachse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LIFTACHSE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIFTACHSE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#axle_load_max-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        axle_load_max[]: &lt;kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#chassis-alle-lkw-und-auflieger-kennzeichen-hinten" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3774,6 +3802,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#chassis-alle-lkw-und-auflieger-liftachse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LIFTACHSE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIFTACHSE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#axle_load_max-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        axle_load_max[]: &lt;kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#chassis-alle-lkw-und-auflieger-kennzeichen-hinten" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5197,6 +5253,21 @@ trailer_brace_down_sound[0]: "/sound/your_trailer.bank#legs/down"
 <h5 id="suspension-air-leaf"><code>suspension: air | leaf</code><a class="headerlink" href="#suspension-air-leaf" title="Permanent link">&para;</a></h5>
 <p>air = Luftfederung (oder gleichwertig) der Antriebsachse(n) bzw. Aufliegerachsen leaf = jede andere Federung</p>
 <p><em>Standard: air</em></p>
+<h4 id="chassis-alle-lkw-und-auflieger-liftachse">LIFTACHSE<a class="headerlink" href="#chassis-alle-lkw-und-auflieger-liftachse" title="Permanent link">&para;</a></h4>
+<h5 id="axle_load_max-kg"><code>axle_load_max[]: &lt;kg&gt;</code><a class="headerlink" href="#axle_load_max-kg" title="Permanent link">&para;</a></h5>
+<p>zulässige Achslast je Achse in kg, eine Zeile je Achse von vorne nach hinten (gleiche Reihenfolge wie liftable_axle[] in der sii), auch die Liftachse. Mit diesem Eintrag richtet sich die Liftachsen-Automatik des Spiels nach der Achslast statt nach dem Frachtgewicht:</p>
+<ul>
+<li>Liftachse oben und eine feste Achse liegt über ihrem Wert - die Liftachse geht runter</li>
+<li>Liftachse unten: Anheben per Taste nur, wenn danach keine feste Achse über ihrem Wert läge, sonst Meldung "Achslast zu hoch"</li>
+<li>Lkw und Auflieger gelten jeder für sich</li>
+<li>kerb_weight[] in der sii muss stimmen, sonst stimmen die Achslasten nicht (z. B. bei Wechselbrückenfahrzeugen kein Gewicht der Brücke im Lkw, die Brücke bringt ihr eigenes mit)</li>
+<li>ist die Automatik in den Spieloptionen aus, passiert nichts</li>
+</ul>
+<div class="highlight"><pre><span></span><code>axle_load_max[]: 8000     # Vorderachse
+axle_load_max[]: 11500    # Antriebsachse
+axle_load_max[]: 7500     # Liftachse
+</code></pre></div>
+<p><em>Standard: Regel des Spiels (Fracht über 21 t, oder über 16 t und schneller als 20 km/h)</em></p>
 <h4 id="chassis-alle-lkw-und-auflieger-kennzeichen-hinten">KENNZEICHEN HINTEN<a class="headerlink" href="#chassis-alle-lkw-und-auflieger-kennzeichen-hinten" title="Permanent link">&para;</a></h4>
 <h5 id="plate_depth_rear-mm"><code>plate_depth_rear: &lt;mm&gt;</code><a class="headerlink" href="#plate_depth_rear-mm" title="Permanent link">&para;</a></h5>
 <p>Kennzeichen hinten vor/zurück, mm (siehe "plate_depth_front" bei CHASSIS LKW)</p>
