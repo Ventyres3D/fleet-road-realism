@@ -1864,6 +1864,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#all-chassis-truck-and-trailer-liftachse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LIFT AXLE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIFT AXLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#axle_load_max-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        axle_load_max[]: &lt;kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#all-chassis-truck-and-trailer-kennzeichen-hinten" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3774,6 +3802,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#all-chassis-truck-and-trailer-liftachse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LIFT AXLE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIFT AXLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#axle_load_max-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        axle_load_max[]: &lt;kg&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#all-chassis-truck-and-trailer-kennzeichen-hinten" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5223,6 +5279,21 @@ trailer_brace_down_sound[0]: "/sound/your_trailer.bank#legs/down"
 <h5 id="suspension-air-leaf"><code>suspension: air | leaf</code><a class="headerlink" href="#suspension-air-leaf" title="Permanent link">&para;</a></h5>
 <p>air = air suspension (or equivalent) of the driven axle(s) / trailer axles leaf = any other suspension</p>
 <p><em>Default: air</em></p>
+<h4 id="all-chassis-truck-and-trailer-liftachse">LIFT AXLE<a class="headerlink" href="#all-chassis-truck-and-trailer-liftachse" title="Permanent link">&para;</a></h4>
+<h5 id="axle_load_max-kg"><code>axle_load_max[]: &lt;kg&gt;</code><a class="headerlink" href="#axle_load_max-kg" title="Permanent link">&para;</a></h5>
+<p>permissible load per axle in kg, one line per axle from front to rear (same order as liftable_axle[] in the sii), the lift axle included. With this entry the game's automatic lift axle goes by the axle load instead of the cargo weight:</p>
+<ul>
+<li>lift axle up and a fixed axle is above its value - the lift axle goes down</li>
+<li>lift axle down: raising by key only if afterwards no fixed axle would be above its value, otherwise message "axle load too high"</li>
+<li>truck and trailer each count on their own</li>
+<li>kerb_weight[] in the sii must be right, otherwise the axle loads are wrong (e.g. on swap body carriers no weight of the swap body in the truck, the swap body brings its own)</li>
+<li>if the automatic is off in the game options, nothing happens</li>
+</ul>
+<div class="highlight"><pre><span></span><code>axle_load_max[]: 8000     # front axle
+axle_load_max[]: 11500    # drive axle
+axle_load_max[]: 7500     # lift axle
+</code></pre></div>
+<p><em>Default:  the game's rule (cargo above 21 t, or above 16 t and faster than 20 km/h)</em></p>
 <h4 id="all-chassis-truck-and-trailer-kennzeichen-hinten">REAR PLATE<a class="headerlink" href="#all-chassis-truck-and-trailer-kennzeichen-hinten" title="Permanent link">&para;</a></h4>
 <h5 id="plate_depth_rear-mm"><code>plate_depth_rear: &lt;mm&gt;</code><a class="headerlink" href="#plate_depth_rear-mm" title="Permanent link">&para;</a></h5>
 <p>rear plate forward/back, mm (see "plate_depth_front" under TRUCK CHASSIS)</p>
