@@ -1275,6 +1275,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#model_override-pathpmd_truck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision_override-pathpmc_truck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        collision_override: "&lt;path&gt;.pmc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chassis_use-pathsii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chassis_use: "&lt;path&gt;.sii"
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1352,6 +1385,34 @@
     <span class="md-ellipsis">
       
         couple_rest_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+                <li class="md-nav__item">
+  <a href="#swap-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SWAP BODY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SWAP BODY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swp_col" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swp_col {
       
     </span>
   </a>
@@ -1561,6 +1622,17 @@
     <span class="md-ellipsis">
       
         dbl_coupling {
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight_distribution-swapbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        weight_distribution: swapbody
       
     </span>
   </a>
@@ -2790,6 +2862,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#model_override-pathpmd_truck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        model_override: "&lt;path&gt;.pmd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision_override-pathpmc_truck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        collision_override: "&lt;path&gt;.pmc"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chassis_use-pathsii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chassis_use: "&lt;path&gt;.sii"
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2867,6 +2972,34 @@
     <span class="md-ellipsis">
       
         couple_rest_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+                <li class="md-nav__item">
+  <a href="#swap-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SWAP BODY
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SWAP BODY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swp_col" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        swp_col {
       
     </span>
   </a>
@@ -3076,6 +3209,17 @@
     <span class="md-ellipsis">
       
         dbl_coupling {
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight_distribution-swapbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        weight_distribution: swapbody
       
     </span>
   </a>
@@ -4052,6 +4196,21 @@ Default:  0
 <h5 id="greece_export_rotate_front-degrees"><code>greece_export_rotate_front: &lt;degrees&gt;</code><a class="headerlink" href="#greece_export_rotate_front-degrees" title="Permanent link">&para;</a></h5>
 <p>Greek export plate front tilt, degrees</p>
 <p><em>Default: 0</em></p>
+<h5 id="model_override-pathpmd_truck"><code>model_override: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#model_override-pathpmd_truck" title="Permanent link">&para;</a></h5>
+<p>own chassis model (.pmd), instead of model (and detail_model) from the chassis .sii</p>
+<p><em>Default: model of the game</em></p>
+<h5 id="collision_override-pathpmc_truck"><code>collision_override: "&lt;path&gt;.pmc"</code><a class="headerlink" href="#collision_override-pathpmc_truck" title="Permanent link">&para;</a></h5>
+<p>own collision (.pmc), instead of collision from the chassis .sii</p>
+<p><em>Default: collision of the game</em></p>
+<h5 id="chassis_use-pathsii"><code>chassis_use: "&lt;path&gt;.sii"</code><a class="headerlink" href="#chassis_use-pathsii" title="Permanent link">&para;</a></h5>
+<p>with the mod, this chassis runs as the chassis named here</p>
+<ul>
+<li>the save game keeps this chassis - without the mod the truck drives as before</li>
+<li>all values of this v3def come from the v3def of the chassis named here - this v3def only contains this line</li>
+</ul>
+<div class="highlight"><pre><span></span><code>chassis_use: "/def/vehicle/truck/your_truck/chassis/normal.sii"
+</code></pre></div>
+<p><em>Default: the chassis itself</em></p>
 <h4 id="tilting-fifth-wheel">TILTING FIFTH WHEEL<a class="headerlink" href="#tilting-fifth-wheel" title="Permanent link">&para;</a></h4>
 <p>The fifth wheel plate can tilt around its bearing. When coupled it follows the longitudinal tilt of the trailer relative to the truck, also while driving under a trailer front, otherwise it falls back to its rest position. A sound plays when it hits the trailer and when it falls back, louder or quieter depending on the force. The plate is a model of its own at a locator of the chassis model:</p>
 <div class="highlight"><pre><span></span><code>couple_model: "/vehicle/truck/your_truck/fifthwheel.pmd"
@@ -4080,6 +4239,25 @@ couple_tilt_rest: 5
 <h5 id="couple_rest_soundn-soundref-or-bankevent-no-sound"><code>couple_rest_sound[n]: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#couple_rest_soundn-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h5>
 <p>sound when the plate falls back to its rest position</p>
 <p><em>Default: sound of the mod (/sound/lphd/fifthwheel.bank#rest)</em></p>
+<h4 id="swap-body">SWAP BODY<a class="headerlink" href="#swap-body" title="Permanent link">&para;</a></h4>
+<p>On trucks with "type: swapbody", a swap body couples at the locator "swapbody" of the chassis model; the locator "hook" stays for trailers. The locator "hook" of the swap body is where the locator "swapbody" of the truck sits when the body rests on it.</p>
+<h5 id="swp_col"><code>swp_col {</code><a class="headerlink" href="#swp_col" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code>    ...
+</code></pre></div>
+<p>} swap body mounting</p>
+<p>Shapes the swap body rests on and with which the truck lifts it. They work like the coupling guides of the game (pmc parts "adv_cpling") and are only on while a swap body is coupled or being coupled; otherwise they are off.</p>
+<div class="highlight"><pre><span></span><code>swp_col {
+    box : 0;1.15;2.10 : 0;0;0 : 0.10;0.06;0.40
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>box : x;y;z : rotX;rotY;rotZ : sizeX;sizeY;sizeZ
+capsule | cylinder : x;y;z : rotX;rotY;rotZ : scaleX;scaleZ
+</code></pre></div>
+<ul>
+<li>position in metres, rotation in degrees, sizes - all as ZModeler shows them for the chassis model</li>
+<li>several lines, one shape each</li>
+<li>instead of the block, the pmc of the chassis may contain parts named "swp_cpling"</li>
+</ul>
 <h3 id="trailer-chassis">TRAILER CHASSIS<a class="headerlink" href="#trailer-chassis" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>/def/vehicle/trailer_owned/xxxx/chassis/xxxx.v3def
 company trailer: /def/vehicle/trailer/xxxx/chassis_xxxx.v3def
@@ -4339,6 +4517,15 @@ capsule | cylinder : x;y;z : rotX;rotY;rotZ : scaleX;scaleZ
 <li>several lines, one shape each</li>
 <li>instead of the block, the pmc of the chassis may hold parts named "dbl_cpling"</li>
 </ul>
+<h5 id="weight_distribution-swapbody"><code>weight_distribution: swapbody</code><a class="headerlink" href="#weight_distribution-swapbody" title="Permanent link">&para;</a></h5>
+<p>swap body without wheels</p>
+<ul>
+<li>parked, it stands on its legs, front and rear</li>
+<li>coupled, the truck carries the whole load</li>
+<li>the locator "hook" is where the locator "swapbody" of the truck sits</li>
+<li>only "swapbody" in the v3def, other values belong in the .sii</li>
+</ul>
+<p><em>Default: from the .sii</em></p>
 <h5 id="model_override-pathpmd"><code>model_override: "&lt;path&gt;.pmd"</code><a class="headerlink" href="#model_override-pathpmd" title="Permanent link">&para;</a></h5>
 <p>own chassis model (.pmd)</p>
 <p>Replaces the chassis model of the game and adds support legs, e.g. for a part of a double that can stand on its own:</p>
