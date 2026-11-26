@@ -1412,7 +1412,7 @@
   <a href="#swp_col" class="md-nav__link">
     <span class="md-ellipsis">
       
-        swp_col {
+        swp_col { … }
       
     </span>
   </a>
@@ -1621,7 +1621,7 @@
   <a href="#dbl_coupling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        dbl_coupling {
+        dbl_coupling { … }
       
     </span>
   </a>
@@ -2999,7 +2999,7 @@
   <a href="#swp_col" class="md-nav__link">
     <span class="md-ellipsis">
       
-        swp_col {
+        swp_col { … }
       
     </span>
   </a>
@@ -3208,7 +3208,7 @@
   <a href="#dbl_coupling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        dbl_coupling {
+        dbl_coupling { … }
       
     </span>
   </a>
@@ -4242,10 +4242,8 @@ couple_tilt_rest: 5
 <p><em>Default: sound of the mod (/sound/lphd/fifthwheel.bank#rest)</em></p>
 <h4 id="swap-body">SWAP BODY<a class="headerlink" href="#swap-body" title="Permanent link">&para;</a></h4>
 <p>On trucks with "type: swapbody", a swap body couples at the locator "swapbody" of the chassis model; the locator "hook" stays for trailers. The locator "hook" of the swap body is where the locator "swapbody" of the truck sits when the body rests on it.</p>
-<h5 id="swp_col"><code>swp_col {</code><a class="headerlink" href="#swp_col" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code>    ...
-</code></pre></div>
-<p>} swap body mounting</p>
+<h5 id="swp_col"><code>swp_col { … }</code><a class="headerlink" href="#swp_col" title="Permanent link">&para;</a></h5>
+<p>swap body mounting</p>
 <p>Shapes the swap body rests on and with which the truck lifts it. They work like the coupling guides of the game (pmc parts "adv_cpling") and are only on while a swap body is coupled or being coupled; otherwise they are off.</p>
 <div class="highlight"><pre><span></span><code>swp_col {
     box : 0;1.15;2.10 : 0;0;0 : 0.10;0.06;0.40
@@ -4500,10 +4498,8 @@ trailer_brace_down_sound[0]: "/sound/your_trailer.bank#legs/down"
 <h5 id="trailer_brace_down_sound-soundref-or-bankevent-no-sound"><code>trailer_brace_down_sound: &lt;.soundref or .bank#event, - = no sound&gt;</code><a class="headerlink" href="#trailer_brace_down_sound-soundref-or-bankevent-no-sound" title="Permanent link">&para;</a></h5>
 <p>sound when the support legs go down as the DLL parks a part of a double; per leg with [n] (see "trailer_brace_up_sound")</p>
 <p><em>Default: game sound</em></p>
-<h5 id="dbl_coupling"><code>dbl_coupling {</code><a class="headerlink" href="#dbl_coupling" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code>    ...
-</code></pre></div>
-<p>} coupling guide when re-coupling</p>
+<h5 id="dbl_coupling"><code>dbl_coupling { … }</code><a class="headerlink" href="#dbl_coupling" title="Permanent link">&para;</a></h5>
+<p>coupling guide when re-coupling</p>
 <p>Shapes that guide the parts into each other when a detached part of an own double is coupled again (coupling jaw at the rear of the front part, drawbar eye or king pin at the front of the detached part). They work like the game's own guides (pmc parts "adv_cpling"): soft, without impact, and only while that part is being coupled; otherwise they are off.</p>
 <div class="highlight"><pre><span></span><code>dbl_coupling {
     box : 0;0.543118;5.146128 : 0;0;0 : 0.099903;0.063770;0.153327

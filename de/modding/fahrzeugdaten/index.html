@@ -1412,7 +1412,7 @@
   <a href="#swp_col" class="md-nav__link">
     <span class="md-ellipsis">
       
-        swp_col {
+        swp_col { … }
       
     </span>
   </a>
@@ -1621,7 +1621,7 @@
   <a href="#dbl_coupling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        dbl_coupling {
+        dbl_coupling { … }
       
     </span>
   </a>
@@ -2999,7 +2999,7 @@
   <a href="#swp_col" class="md-nav__link">
     <span class="md-ellipsis">
       
-        swp_col {
+        swp_col { … }
       
     </span>
   </a>
@@ -3208,7 +3208,7 @@
   <a href="#dbl_coupling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        dbl_coupling {
+        dbl_coupling { … }
       
     </span>
   </a>
@@ -4232,10 +4232,8 @@ couple_tilt_rest: 5
 <p><em>Standard: Ton der Mod (/sound/lphd/fifthwheel.bank#rest)</em></p>
 <h4 id="wechselbrucke">WECHSELBRÜCKE<a class="headerlink" href="#wechselbrucke" title="Permanent link">&para;</a></h4>
 <p>Bei Lkw mit "type: swapbody" kuppelt eine Wechselbrücke am Locator "swapbody" des Chassis-Modells, der Locator "hook" bleibt für Anhänger. Der Locator "hook" der Wechselbrücke liegt dort, wo der Locator "swapbody" des Lkw sitzt, wenn die Brücke aufliegt.</p>
-<h5 id="swp_col"><code>swp_col {</code><a class="headerlink" href="#swp_col" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code>    ...
-</code></pre></div>
-<p>} Aufnahme der Wechselbrücke</p>
+<h5 id="swp_col"><code>swp_col { … }</code><a class="headerlink" href="#swp_col" title="Permanent link">&para;</a></h5>
+<p>Aufnahme der Wechselbrücke</p>
 <p>Formen, auf denen die Wechselbrücke aufliegt und mit denen der Lkw sie anhebt. Sie wirken wie die Fanghilfen des Spiels (pmc-Teile "adv_cpling") und sind nur an, solange eine Wechselbrücke angekuppelt ist oder angekuppelt wird; sonst sind sie aus.</p>
 <div class="highlight"><pre><span></span><code>swp_col {
     box : 0;1.15;2.10 : 0;0;0 : 0.10;0.06;0.40
@@ -4474,10 +4472,8 @@ trailer_brace_down_sound[0]: "/sound/your_trailer.bank#legs/down"
 <h5 id="trailer_brace_down_sound-soundref-oder-bankevent-kein-ton"><code>trailer_brace_down_sound: &lt;.soundref oder .bank#event, - = kein Ton&gt;</code><a class="headerlink" href="#trailer_brace_down_sound-soundref-oder-bankevent-kein-ton" title="Permanent link">&para;</a></h5>
 <p>Ton beim Herunterfahren der Stützen, wenn die DLL einen Teil eines Doubles abstellt; je Stütze mit [n] (siehe "trailer_brace_up_sound")</p>
 <p><em>Standard: Ton des Spiels</em></p>
-<h5 id="dbl_coupling"><code>dbl_coupling {</code><a class="headerlink" href="#dbl_coupling" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code>    ...
-</code></pre></div>
-<p>} Fanghilfe beim Wiederankuppeln</p>
+<h5 id="dbl_coupling"><code>dbl_coupling { … }</code><a class="headerlink" href="#dbl_coupling" title="Permanent link">&para;</a></h5>
+<p>Fanghilfe beim Wiederankuppeln</p>
 <p>Formen, die die Teile ineinander führen, wenn ein abgekuppelter Teil eines eigenen Doubles wieder angekuppelt wird (Fangmaul hinten am vorderen Teil, Zugöse bzw. Königszapfen vorne am abgekuppelten Teil). Sie wirken wie die Fanghilfen des Spiels (pmc-Teile "adv_cpling"): weich, ohne Stoss, und nur solange dieser Teil angekuppelt wird; sonst sind sie aus.</p>
 <div class="highlight"><pre><span></span><code>dbl_coupling {
     box : 0;0.543118;5.146128 : 0;0;0 : 0.099903;0.063770;0.153327
